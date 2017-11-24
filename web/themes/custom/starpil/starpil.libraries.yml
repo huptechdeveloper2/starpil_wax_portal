@@ -1,0 +1,14 @@
+global-styling:
+  css:
+    theme:
+      css/library/font-awesome.min.css: {}
+      css/library/owl.carousel.css: {}
+      css/md-font.css: {}
+      css/starpil.css: {}
+      css/style.css: {}
+  js:
+    js/jquery.owl.carousel.js: {}
+    js/jquery.appear.min.js: {}
+    js/perfect-scrollbar.min.js: {}
+    js/jquery.easing.min.js: {}
+    js/scripts.js: {}
