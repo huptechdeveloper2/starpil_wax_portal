@@ -1,0 +1,23 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+      css/md-font.css: {}
+      css/library/animate.css: {}
+      css/library/bootstrap.min.css: {}
+      css/library/font-awesome.min.css: {}
+      css/library/magnific-popup.css: {}
+      css/library/owl.carousel.css: {}
+  js:
+    js/scripts.js: {}
+    js/library/bootstrap.min.js: {}
+    js/library/jquery.appear.min.js: {}
+    js/library/jquery.easing.min.js: {}
+    js/library/jquery.magnific-popup.min.js: {}
+    js/library/jquery.owl.carousel.js: {}
+    js/library/perfect-scrollbar.min.js: {}
+    js/library/bootstrap.min.js: {}
+    js/library/bootstrap.min.js: {}
+    js/library/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
