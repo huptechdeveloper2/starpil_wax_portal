@@ -11,7 +11,7 @@ dependencies:
 id: footercopyright
 theme: megacourse
 region: second_footer
-weight: 0
+weight: -9
 provider: null
 plugin: 'block_content:b9de9efd-aff7-42a1-9431-50b84adc01f4'
 settings:

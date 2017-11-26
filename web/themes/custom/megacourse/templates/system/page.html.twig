@@ -162,10 +162,10 @@
 {% endblock %}
 
 
-<footer class="footer {{ container }}" role="contentinfo">
+<footer id="footer" class="footer" role="contentinfo">
   {% if page.first_footer %}
     {% block first_footer %}
-      <div class="first-footer">
+      <div class="upper-footer">
         <div class="container">
           <div class="row">
             {{ page.first_footer }}
@@ -174,40 +174,59 @@
       </div>
     {% endblock %}
   {% endif %}
+
   <!-- new custom footer for four blocks -->
-  {% if page.first_one %}
-    {% block first_one %}
-      <div class="first_one col-md-3">
-        {{ page.first_one }}
+  <div class="first-footer">
+    <div class="container">
+      <div class="row">
+        {% if page.first_one %}
+          {% block first_one %}
+            <div class="first_one col-md-3">
+              <div class="widget megacourse">
+                {{ page.first_one }}
+              </div>
+            </div>
+          {% endblock %}
+        {% endif %}
+
+
+        {% if page.first_two %}
+          {% block first_two %}
+            <div class="first_two">
+              {{ page.first_two }}
+            </div>
+          {% endblock %}
+        {% endif %}
+
+
+        {% if page.first_three %}
+          {% block first_three %}
+            <div class="first_three">
+              {{ page.first_three }} 
+            </div>
+          {% endblock %}
+        {% endif %}
+
+
+        {% if page.first_four %}
+          {% block first_four %}
+            <div class="first_four">
+              {{ page.first_four }}
+            </div>
+          {% endblock %}
+        {% endif %}
       </div>
-    {% endblock %}
-  {% endif %}
-  {% if page.first_two %}
-    {% block first_two %}
-      <div class="first_two col-md-3">
-        {{ page.first_two }}
-      </div>
-    {% endblock %}
-  {% endif %}
-  {% if page.first_three %}
-    {% block first_three %}
-      <div class="first_three col-md-3">
-        {{ page.first_three }}
-      </div>
-    {% endblock %}
-  {% endif %}
-  {% if page.first_four %}
-    {% block first_four %}
-      <div class="first_four col-md-3">
-        {{ page.first_four }}
-      </div>
-    {% endblock %}
-  {% endif %}
+    </div>
+  </div>
 
   {% if page.second_footer %}
     {% block second_footer %}
       <div class="second-footer">
-        {{ page.second_footer }}
+        <div class="container">
+          <div class="contact">
+            {{ page.second_footer }}
+          </div>
+        </div>
       </div>
     {% endblock %}
   {% endif %}

@@ -10,8 +10,8 @@ dependencies:
     - megacourse
 id: quicklinks
 theme: megacourse
-region: first_footer
-weight: -6
+region: first_three
+weight: -10
 provider: null
 plugin: 'system_menu_block:quick-links'
 settings:

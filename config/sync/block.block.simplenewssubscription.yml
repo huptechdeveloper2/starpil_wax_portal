@@ -8,8 +8,8 @@ dependencies:
     - megacourse
 id: simplenewssubscription
 theme: megacourse
-region: first_footer
-weight: -5
+region: first_four
+weight: -10
 provider: null
 plugin: simplenews_subscription_block
 settings:
