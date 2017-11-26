@@ -5,6 +5,7 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  change_pwd_page: 0
   ckeditor: 0
   color: 0
   comment: 0
@@ -14,6 +15,7 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
+  deactivate_account: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
@@ -35,6 +37,7 @@ module:
   search: 0
   shortcut: 0
   simplenews: 0
+  smtp: 0
   social_login: 0
   system: 0
   taxonomy: 0
