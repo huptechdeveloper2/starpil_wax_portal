@@ -36,6 +36,15 @@
             $('.view-grid').removeClass('active');
         });
 
+        //Footer Newsletter
+        var news_message = $('.news_letter .inner form #edit-message').text();
+        $( ".news_letter .inner .letter-heading h3" ).append('<p>' + news_message +'</p>' );
+
+        $('.news_letter .inner form').wrap('<div class="letter"></div>');
+
+        $('.news_letter .inner form #edit-subscribe').text('Submit Now');
+        $(".news_letter .inner form #edit-subscribe").removeClass("button js-form-submit form-submit btn-default btn course-btn-tab").addClass("mc-btn btn-style-2");
+
 
         /*==============================
             Account info

@@ -2681,6 +2681,12 @@ footer#footer.footer-style-2 {
   border-bottom: 4px solid #37ABF2;
   z-index: 9;
 }
+.first-footer .news_letter .form-type-email label {
+  display: none;
+}
+.news_letter .inner form .js-form-item-message {
+  display: none;
+}
 .first-footer .news_letter .inner {
   position: relative;
   z-index: 3;
