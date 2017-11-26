@@ -174,6 +174,35 @@
       </div>
     {% endblock %}
   {% endif %}
+  <!-- new custom footer for four blocks -->
+  {% if page.first_one %}
+    {% block first_one %}
+      <div class="first_one col-md-3">
+        {{ page.first_one }}
+      </div>
+    {% endblock %}
+  {% endif %}
+  {% if page.first_two %}
+    {% block first_two %}
+      <div class="first_two col-md-3">
+        {{ page.first_two }}
+      </div>
+    {% endblock %}
+  {% endif %}
+  {% if page.first_three %}
+    {% block first_three %}
+      <div class="first_three col-md-3">
+        {{ page.first_three }}
+      </div>
+    {% endblock %}
+  {% endif %}
+  {% if page.first_four %}
+    {% block first_four %}
+      <div class="first_four col-md-3">
+        {{ page.first_four }}
+      </div>
+    {% endblock %}
+  {% endif %}
 
   {% if page.second_footer %}
     {% block second_footer %}

@@ -25,4 +25,7 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_course_about_judgement: true
+  field_course_goal: true
+  field_course_introduction: true

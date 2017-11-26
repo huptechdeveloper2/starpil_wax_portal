@@ -1,0 +1,8 @@
+uuid: aa07560f-67a0-4cd6-9687-104ab4c1658f
+langcode: en
+status: true
+dependencies: {  }
+id: user-profile
+label: 'User Profile'
+description: 'This is menu link block for user profile page'
+locked: false
