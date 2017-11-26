@@ -1,0 +1,21 @@
+uuid: 17f8ae50-e47c-430c-a029-8c9e56dd4666
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_about_judgement
+    - node.type.course
+  module:
+    - text
+id: node.course.field_course_about_judgement
+field_name: field_course_about_judgement
+entity_type: node
+bundle: course
+label: 'Course About Judgement'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

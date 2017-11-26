@@ -1,0 +1,50 @@
+uuid: 2da3e916-55a1-4a25-a52c-c14f7448968e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.course.body
+    - field.field.node.course.field_course_about_judgement
+    - field.field.node.course.field_course_goal
+    - field.field.node.course.field_course_introduction
+    - node.type.course
+  module:
+    - text
+    - user
+id: node.course.default
+targetEntityType: node
+bundle: course
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_course_about_judgement:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_course_goal:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_course_introduction:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

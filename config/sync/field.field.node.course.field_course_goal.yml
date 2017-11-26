@@ -1,0 +1,21 @@
+uuid: 7e2486e3-b70c-4f6e-b038-42cb3b6edcfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_goal
+    - node.type.course
+  module:
+    - text
+id: node.course.field_course_goal
+field_name: field_course_goal
+entity_type: node
+bundle: course
+label: 'Course Goal'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

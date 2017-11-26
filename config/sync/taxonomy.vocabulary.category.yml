@@ -1,0 +1,9 @@
+uuid: 891c6bba-8ea6-43bd-ae24-7ef7427fd96a
+langcode: en
+status: true
+dependencies: {  }
+name: Category
+vid: category
+description: 'Defines course category'
+hierarchy: 0
+weight: 0
