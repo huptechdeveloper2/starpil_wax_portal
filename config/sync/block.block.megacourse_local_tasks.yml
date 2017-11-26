@@ -1,0 +1,22 @@
+uuid: 8f391a39-dc9c-4218-96e8-069fd480fcf3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - megacourse
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: megacourse_local_tasks
+theme: megacourse
+region: header
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

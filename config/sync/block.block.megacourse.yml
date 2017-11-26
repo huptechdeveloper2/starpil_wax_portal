@@ -1,0 +1,25 @@
+uuid: 978803fc-ff6c-4952-8429-1828f4b37b28
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d54d8321-f42f-4f7b-8f71-0798d877ffcf'
+  module:
+    - block_content
+  theme:
+    - megacourse
+id: megacourse
+theme: megacourse
+region: first_footer
+weight: -8
+provider: null
+plugin: 'block_content:d54d8321-f42f-4f7b-8f71-0798d877ffcf'
+settings:
+  id: 'block_content:d54d8321-f42f-4f7b-8f71-0798d877ffcf'
+  label: MegaCourse
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

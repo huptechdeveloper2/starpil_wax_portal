@@ -1,0 +1,19 @@
+uuid: 58992b4e-2f48-4583-a8b0-904d8af5e377
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_information
+    - field.storage.block_content.field_footer_copyright
+id: block_content.footer_information.field_footer_copyright
+field_name: field_footer_copyright
+entity_type: block_content
+bundle: footer_information
+label: 'Footer Copyright'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

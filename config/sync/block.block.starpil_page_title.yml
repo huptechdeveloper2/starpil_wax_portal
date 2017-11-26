@@ -1,0 +1,20 @@
+uuid: 1529c7e4-eddf-4313-ab0c-1e14481b3e4f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - starpil
+_core:
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+id: starpil_page_title
+theme: starpil
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

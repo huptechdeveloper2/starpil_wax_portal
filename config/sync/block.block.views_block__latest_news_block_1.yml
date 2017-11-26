@@ -1,0 +1,24 @@
+uuid: 9332339b-951e-492e-83f3-67e47d099801
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_news
+  module:
+    - views
+  theme:
+    - megacourse
+id: views_block__latest_news_block_1
+theme: megacourse
+region: first_footer
+weight: -7
+provider: null
+plugin: 'views_block:latest_news-block_1'
+settings:
+  id: 'views_block:latest_news-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

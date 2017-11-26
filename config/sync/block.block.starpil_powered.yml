@@ -1,0 +1,22 @@
+uuid: afa1cc14-b183-4be6-a603-5e6b7fe5bc0b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - starpil
+_core:
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: starpil_powered
+theme: starpil
+region: footer
+weight: -10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

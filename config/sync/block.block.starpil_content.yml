@@ -1,0 +1,22 @@
+uuid: 69b7b4cc-5125-418f-be27-9fb99f1459f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - starpil
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: starpil_content
+theme: starpil
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

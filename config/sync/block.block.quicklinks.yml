@@ -1,0 +1,24 @@
+uuid: 0603d76a-5d42-4447-bc72-74e6089f02fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.quick-links
+  module:
+    - system
+  theme:
+    - megacourse
+id: quicklinks
+theme: megacourse
+region: first_footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:quick-links'
+settings:
+  id: 'system_menu_block:quick-links'
+  label: 'Quick Links'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 97b805c3-eb12-4983-aa0e-a677cb5ab97d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - starpil
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: starpil_local_tasks
+theme: starpil
+region: header
+weight: 10
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

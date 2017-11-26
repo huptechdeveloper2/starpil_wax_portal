@@ -1,0 +1,19 @@
+uuid: df224f3f-3d0b-4712-9010-394d7b924d31
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+id: block_content.field_footer_email
+field_name: field_footer_email
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

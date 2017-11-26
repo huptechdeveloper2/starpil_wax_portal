@@ -1,0 +1,24 @@
+uuid: b1ab2816-cfd1-4b78-a550-72cd0ec4d456
+langcode: en
+status: true
+dependencies:
+  module:
+    - simplenews
+  theme:
+    - megacourse
+id: simplenewssubscription
+theme: megacourse
+region: first_footer
+weight: -5
+provider: null
+plugin: simplenews_subscription_block
+settings:
+  id: simplenews_subscription_block
+  label: 'Simplenews subscription'
+  provider: simplenews
+  label_display: visible
+  newsletters:
+    default: default
+  message: 'Stay informed - subscribe to our newsletter.'
+  unique_id: 2f6b7997-397b-4b02-a426-405e5c8fe1d5
+visibility: {  }

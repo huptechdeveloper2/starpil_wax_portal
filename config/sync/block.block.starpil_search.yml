@@ -1,0 +1,22 @@
+uuid: 4d1f0eee-a009-4728-b338-a4c0ac55342c
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - starpil
+_core:
+  default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
+id: starpil_search
+theme: starpil
+region: sidebar_second
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

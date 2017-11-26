@@ -1,0 +1,23 @@
+uuid: 55e96aea-9928-44ec-afb5-d25ee74e6b7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_information
+    - field.storage.block_content.field_footer_phone
+  module:
+    - link
+id: block_content.footer_information.field_footer_phone
+field_name: field_footer_phone
+entity_type: block_content
+bundle: footer_information
+label: 'Footer Phone'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

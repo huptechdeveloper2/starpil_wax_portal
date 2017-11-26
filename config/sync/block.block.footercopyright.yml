@@ -1,0 +1,25 @@
+uuid: 0554f52e-eea1-4fad-a2df-19590fab8aa8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b9de9efd-aff7-42a1-9431-50b84adc01f4'
+  module:
+    - block_content
+  theme:
+    - megacourse
+id: footercopyright
+theme: megacourse
+region: second_footer
+weight: 0
+provider: null
+plugin: 'block_content:b9de9efd-aff7-42a1-9431-50b84adc01f4'
+settings:
+  id: 'block_content:b9de9efd-aff7-42a1-9431-50b84adc01f4'
+  label: 'Footer: Copyright'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
