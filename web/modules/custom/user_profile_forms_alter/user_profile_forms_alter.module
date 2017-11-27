@@ -1,0 +1,16 @@
+<?php
+
+
+use Drupal\Core\Form\FormStateInterface;
+
+/*******
+******Implement hook_form_alter();
+********/
+
+function user_profile_forms_alter_form_alter(&$form, FormStateInterface $form_state, $form_id){
+	
+	if ($form_id == 'change_pwd_form' || $form_id == 'simplenews_subscriber_account_form' || $form_id == 'user_notification_tab' || $form_id == 'user_form') {
+		$form['#prefix'] = '<div class="avatar-acount">';
+        $form['#suffix'] = '</div>';
+	}
+}

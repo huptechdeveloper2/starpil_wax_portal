@@ -1,0 +1,5 @@
+name: User Profile Forms Alter
+type: module
+description: 'To alter the user Profile Forms'
+core: 8.x
+package: custom
