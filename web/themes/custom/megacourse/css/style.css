@@ -1451,6 +1451,7 @@ table.mc-table tbody .new .submissions a:before {
   color: #fff;
   line-height: 65px;
   padding: 0 17px;
+  text-decoration: none;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
@@ -1540,6 +1541,7 @@ table.mc-table tbody .new .submissions a:before {
   font-size: 14px;
   line-height: 36px;
   padding: 0 38px;
+  text-decoration: none;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -8101,6 +8103,7 @@ footer#footer.footer-style-2 {
   }
   .navigation .menu li a {
     display: block;
+    text-decoration: none;
     line-height: 3em;
   }
   .navigation .menu li.menu-item-has-children a {
@@ -8140,6 +8143,7 @@ footer#footer.footer-style-2 {
   }
   .navigation .menu .sub-menu li a {
     padding: 0 17px;
+    text-decoration: none;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;

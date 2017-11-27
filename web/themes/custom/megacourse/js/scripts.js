@@ -45,6 +45,11 @@
         $('.news_letter .inner form #edit-subscribe').text('Submit Now');
         $(".news_letter .inner form #edit-subscribe").removeClass("button js-form-submit form-submit btn-default btn course-btn-tab").addClass("mc-btn btn-style-2");
 
+        //Main Navigation Header
+        $(".navigation .menu li").first().removeClass("menu-item-has-children").addClass("current-menu-item");
+        $(".navigation .menu .menu-item-has-children:nth-child(2)").not('.navigation .menu .sub-menu .menu-item-has-children:nth-child(2)').addClass("megamenu col-4");
+
+
 
         /*==============================
             Account info

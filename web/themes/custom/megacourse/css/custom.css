@@ -7,3 +7,19 @@
     color: #fff;
     margin: 10px 0;
 }
+
+.page-top-link {
+	float: left;
+	width: 100%;
+	background: #fff;
+}
+
+.page-top-link .region-sitetop {
+	float: right;
+}
+
+.page-top-link .block-login-popup {
+	float: left;
+	display: inline-block;
+	padding: 5px 10px;
+} 
