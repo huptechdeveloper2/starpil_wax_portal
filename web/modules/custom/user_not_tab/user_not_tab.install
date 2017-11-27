@@ -1,0 +1,28 @@
+<?php
+
+function user_not_tab_schema() {
+  $schema['user_not_tab'] = array(
+    'fields' => array(
+      'id'=>array(
+        'type'=>'serial',
+        'not null' => TRUE,
+      ),
+      'notifyuid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "User's {users}.uid.",
+      ),
+      'get_notify'=>array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "User will get notification",
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+
+  return $schema;
+
+}

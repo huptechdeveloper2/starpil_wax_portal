@@ -1,0 +1,4 @@
+user_not_tab.account_tab:
+  title: Notifications
+  route_name: user_not_tab.account
+  base_route: entity.user.canonical

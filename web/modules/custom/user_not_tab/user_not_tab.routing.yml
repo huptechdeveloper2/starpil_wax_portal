@@ -1,0 +1,8 @@
+user_not_tab.account:
+  path: '/user/{user}/edit-notification'
+  defaults: 
+    _form: '\Drupal\user_not_tab\Form\UserNotTab'
+    _title: 'Privacy'
+  requirements:
+    _permission: 'access content'
+    user: \d+
