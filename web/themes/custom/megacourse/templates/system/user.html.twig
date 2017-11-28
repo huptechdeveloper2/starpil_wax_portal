@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ *
+ * @ingroup themeable
+ */
+#}
+<article{{ attributes }}>
+  {% if content %}
+    <div class="avatar-acount">
+    <div class="changes-avatar">
+        <div class="img-acount">{{- content -}}</div>
+    </div>   
+    <div class="info-acount">
+        <h3 class="md black">{{ username }}</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+        <div class="profile-email-address">
+            <div class="profile-email">
+                <h5>Email</h5>
+                <p>{{ umail }}</p>
+            </div>
+            <div class="profile-address">
+                <h5>Password</h5>
+                <p>Hanoi , Vietnam</p>
+            </div>
+        </div>
+    </div>
+</div>
+  {% endif %}
+</article>

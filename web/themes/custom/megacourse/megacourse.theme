@@ -17,3 +17,16 @@ function megacourse_theme_suggestions_block_alter(array &$suggestions, array $va
     array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
   }
 }
+
+// get user profile fields to use in template file
+
+function megacourse_preprocess_user(&$variables) {
+
+	$user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+  /** @var User $account */
+  $account = $variables['elements']['#user'];
+
+  $variables['username'] = $account->getDisplayName();
+  $variables['umail'] = $user->get('mail')->value;
+  //$variables['upicture'] = $picture = $user->get('user_picture')->entity->url();
+}

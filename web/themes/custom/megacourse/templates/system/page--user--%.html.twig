@@ -96,6 +96,16 @@
 
 {# Main #}
 {% block main %}
+
+<!-- user-top header section -->
+  {% if page.top_header %}
+        {% block top_header %}
+          <div class="user-top-header" role="heading">
+            {{ page.top_header }}
+          </div>
+        {% endblock %}
+  {% endif %}
+   <!-- end of user-top-hrader-section -->
 <div class="profile">
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
     <div class="row">
