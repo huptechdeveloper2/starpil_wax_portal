@@ -38,6 +38,7 @@
         "drupal/smtp": "^1.0@beta",
         "drupal/social_login": "^1.6",
         "drupal/video": "^1.2",
+        "drupal/webform": "^5.0@beta",
         "drush/drush": "~8.0|^9.0.0-beta8",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
