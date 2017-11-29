@@ -1,8 +1,0 @@
-uuid: 7aa96c22-73a0-4fb0-806e-1b7a53843c61
-langcode: en
-status: true
-dependencies: {  }
-id: user-content-bar
-label: 'User Content Bar'
-description: ''
-locked: false

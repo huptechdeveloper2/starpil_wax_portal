@@ -1,0 +1,6 @@
+name: User Content Bar
+description: Creates a Block Showing User Content bar Link For Login User.
+package: custom
+type: module
+version: 1.0
+core: 8.x

@@ -25,5 +25,7 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  linked_username: true
   member_for: true
+  private_message_link: true
   simplenews: true

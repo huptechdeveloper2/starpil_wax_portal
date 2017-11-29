@@ -1,0 +1,26 @@
+uuid: dfde1a6a-c619-473c-859a-bb5ed865e92c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user_content_bar
+  theme:
+    - megacourse
+id: usercontentbarblock
+theme: megacourse
+region: top_header
+weight: -11
+provider: null
+plugin: user_content_bar_block
+settings:
+  id: user_content_bar_block
+  label: 'User Content Bar Block'
+  provider: user_content_bar
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user\r\n/user/*\r\n/private_messages\r\n/private_messages/*"
+    negate: false
+    context_mapping: {  }
