@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/user/*'
+    pages: "/user/*\r\n/private_messages\r\n/private_message/*"
     negate: false
     context_mapping: {  }
