@@ -23,3 +23,72 @@
 	display: inline-block;
 	padding: 5px 10px;
 } 
+/*form submit button*/
+.btn-success {
+	background-color: #37ABF2;
+	color: white;
+	/*display: inline-block;
+    border: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px !important;
+    padding: 0 20px;
+    text-align: center;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;*/
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open>.dropdown-toggle.btn-success {
+	background-color: #37ABF2;
+	color: white;
+	/*display: inline-block;
+    border: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px !important;
+    padding: 0 20px;
+    text-align: center;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;*/
+}
+
+/*private-message page*/
+#private-message-page .private-message-thread-full .field--name-private-messages #load-previous-messages-button-wrapper {
+	border: none;
+}
+
+#private-message-page .private-message-thread-full .field--name-private-messages .private-message {
+	border: none;
+}
+
+
+/*private message inbox*/
+.block-private-message-inbox-block .private-message-thread{
+	border: none;
+	border-bottom: 1px solid #eee;
+	display: block;
+    overflow: hidden;
+    padding: 25px 20px;
+}
+
+.block-private-message-inbox-block .private-message-thread .private-message-inbox-thread-link {
+
+}
