@@ -1,0 +1,8 @@
+uuid: 6de973a8-17a0-4950-a3af-0befce61b94e
+langcode: en
+status: true
+dependencies: {  }
+id: 0edf114a-f9c3-40ab-a6c3-a7504639b0c8
+label: 'Menu token link configuration'
+linkid: 'internal:/user/[current-user:uid]/edit-notification'
+configurationSerialized: 'a:4:{s:18:"menu_token_enabled";i:1;s:36:"remove_if_replacement_is_not_present";i:0;s:4:"node";a:2:{i:0;s:4:"none";i:1;i:0;}s:4:"user";a:2:{i:0;s:4:"none";i:1;i:0;}}'

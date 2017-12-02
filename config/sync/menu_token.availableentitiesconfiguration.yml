@@ -1,0 +1,17 @@
+available_entities:
+  node: node
+  user: user
+  block_content: 0
+  comment: 0
+  contact_message: 0
+  file: 0
+  pm_thread_delete_time: 0
+  pm_thread_access_time: 0
+  private_message_thread: 0
+  private_message: 0
+  shortcut: 0
+  simplenews_subscriber: 0
+  taxonomy_term: 0
+  menu_link_content: 0
+_core:
+  default_config_hash: w4lg2w4ee2Ig5VjqsctKuiSFEuhYXm2KaAMk6Qg1ZxM

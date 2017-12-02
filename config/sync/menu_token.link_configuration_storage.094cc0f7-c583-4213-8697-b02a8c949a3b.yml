@@ -1,0 +1,8 @@
+uuid: e1ec5f1e-09d2-442e-817d-1fc189de3f65
+langcode: en
+status: true
+dependencies: {  }
+id: 094cc0f7-c583-4213-8697-b02a8c949a3b
+label: 'Menu token link configuration'
+linkid: 'internal:/user/[current-user:uid]/change-password'
+configurationSerialized: 'a:4:{s:18:"menu_token_enabled";i:1;s:36:"remove_if_replacement_is_not_present";i:0;s:4:"node";a:2:{i:0;s:4:"none";i:1;i:0;}s:4:"user";a:2:{i:0;s:4:"none";i:1;i:0;}}'
