@@ -1,0 +1,14 @@
+uuid: 2540f482-11c6-46fe-bcc7-c3e935453302
+langcode: en
+status: true
+dependencies: {  }
+name: user_profile_image_192_192_
+label: 'User Profile Image (192 * 192)'
+effects:
+  7efc6022-0db8-4f74-bc89-df26cb67b0dd:
+    uuid: 7efc6022-0db8-4f74-bc89-df26cb67b0dd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 192
+      height: 192

@@ -1,4 +1,8 @@
-.footer { padding-top: 0; }
+.footer { 
+	padding-top: 0;
+	margin-top: 0;
+
+ }
 
 .megacourse h2 {
     font-family: 'Lato', sans-serif;
@@ -93,4 +97,41 @@
     display: block;
     overflow: hidden;
     padding: 25px 20px;
+}
+#private-message-page .private-message-recipients {
+	font-size: 22px;
+}
+#private-message-page .private-message-recipients .username a {
+	font-size: 22px;
+    color: black;
+    pointer-events: none;
+}
+.private_message_thread_delete_link_wrapper {
+	margin-bottom: 20px;
+}
+.private_message_thread_delete_link_wrapper a {
+	border-radius: 5%;
+    padding: 7px;
+    background-color: red;
+    color: white;
+    font-weight: 600;
+}
+#private-message-page .private-message-thread-messages .field__items .field--item .field--name-message{
+	border-bottom: 1px solid #eee;
+}
+.path-private-messages .region-header .local-actions li a {
+	display: none;
+}
+.alert-success {
+    color: #3c763d;!important
+}
+.block-private-message-inbox-block .private-message-recipients {
+	font-weight: 600;
+    font-size: 16px;
+}
+.block-private-message-inbox-block .private-message-inbox .field--name-created {
+	float: right;
+}
+.private-message-add-form .form-submit {
+	float: right;
 }

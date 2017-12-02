@@ -1,11 +1,10 @@
 uuid: 85e4bd17-2f8b-48fc-ba88-2cf3575d27c9
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.user_profile_image_name
   module:
-    - system
     - views
   theme:
     - megacourse
@@ -23,9 +22,4 @@ settings:
   views_label: ''
   items_per_page: none
   context_mapping: {  }
-visibility:
-  request_path:
-    id: request_path
-    pages: '/user/*'
-    negate: false
-    context_mapping: {  }
+visibility: {  }

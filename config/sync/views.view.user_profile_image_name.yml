@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.user.user_picture
     - image.style.medium
+    - image.style.user_profile_image_192_192_
   module:
     - image
     - user
@@ -109,7 +110,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: medium
+            image_style: user_profile_image_192_192_
             image_link: ''
           group_column: ''
           group_columns: {  }
