@@ -135,3 +135,22 @@
 .private-message-add-form .form-submit {
 	float: right;
 }
+#private-message-page .private-message-recipients .username{
+	margin-top: 4px;
+}
+.path-private-message {
+	background-color: #EEE;
+}
+.path-private-message #private-message-add-form #thread-members-display-container label {
+	margin-right: 15px;
+	font-weight: 600;
+}
+.path-private-message #private-message-add-form #thread-members-display-container {
+	margin-bottom: 1%;
+}
+.path-private-message #private-message-add-form .field--name-message label {
+	font-weight: 600;
+}
+.path-private-message #private-message-add-form {
+	margin-bottom: 10%;
+}
