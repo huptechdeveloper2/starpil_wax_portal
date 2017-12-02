@@ -123,8 +123,8 @@
 	display: none;
 }
 .alert-success {
-    color: #3c763d;!important
-    background-color: #d6e9c6;!important
+    color: #3c763d !important;
+    background-color: #d6e9c6 !important;
 }
 .block-private-message-inbox-block .private-message-recipients {
 	font-weight: 600;
