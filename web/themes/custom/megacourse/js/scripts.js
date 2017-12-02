@@ -6,7 +6,7 @@
         Learning();
         scrollStyle();
 
-        $(".feature-slider").owlCarousel({
+        jQuery(".feature-slider").owlCarousel({
             autoPlay: 10000,
             items: 4,
             itemsDesktop : [1199,4],
@@ -21,33 +21,33 @@
 
 
 
-        $('.view-grid').on('click', function() {
-            $('.categories-content .content').attr('class', 'content grid');
-            $('.grid').addClass('fade-1');
-            $('.list').removeClass('fade-2');
-            $(this).addClass('active');
-            $('.view-list').removeClass('active');
+        jQuery('.view-grid').on('click', function() {
+            jQuery('.categories-content .content').attr('class', 'content grid');
+            jQuery('.grid').addClass('fade-1');
+            jQuery('.list').removeClass('fade-2');
+            jQuery(this).addClass('active');
+            jQuery('.view-list').removeClass('active');
         });
-        $('.view-list').on('click', function() {
-            $('.categories-content .content').attr('class', 'content list');
-            $('.list').addClass('fade-2');
-            $('.grid').removeClass('fade-1');
-            $(this).addClass('active');
-            $('.view-grid').removeClass('active');
+        jQuery('.view-list').on('click', function() {
+            jQuery('.categories-content .content').attr('class', 'content list');
+            jQuery('.list').addClass('fade-2');
+            jQuery('.grid').removeClass('fade-1');
+            jQuery(this).addClass('active');
+            jQuery('.view-grid').removeClass('active');
         });
 
         //Footer Newsletter
-        var news_message = $('.news_letter .inner form #edit-message').text();
-        $( ".news_letter .inner .letter-heading h3" ).append('<p>' + news_message +'</p>' );
+        var news_message = jQuery('.news_letter .inner form #edit-message').text();
+        jQuery( ".news_letter .inner .letter-heading h3" ).append('<p>' + news_message +'</p>' );
 
-        $('.news_letter .inner form').wrap('<div class="letter"></div>');
+        jQuery('.news_letter .inner form').wrap('<div class="letter"></div>');
 
-        $('.news_letter .inner form #edit-subscribe').text('Submit Now');
-        $(".news_letter .inner form #edit-subscribe").removeClass("button js-form-submit form-submit btn-default btn course-btn-tab").addClass("mc-btn btn-style-2");
+        jQuery('.news_letter .inner form #edit-subscribe').text('Submit Now');
+        jQuery(".news_letter .inner form #edit-subscribe").removeClass("button js-form-submit form-submit btn-default btn course-btn-tab").addClass("mc-btn btn-style-2");
 
         //Main Navigation Header
-        $(".navigation .menu li").first().removeClass("menu-item-has-children").addClass("current-menu-item");
-        $(".navigation .menu .menu-item-has-children:nth-child(2)").not('.navigation .menu .sub-menu .menu-item-has-children:nth-child(2)').addClass("megamenu col-4");
+        jQuery(".navigation .menu li").first().removeClass("menu-item-has-children").addClass("current-menu-item");
+        jQuery(".navigation .menu .menu-item-has-children:nth-child(2)").not('.navigation .menu .sub-menu .menu-item-has-children:nth-child(2)').addClass("megamenu col-4");
 
 
 
@@ -55,53 +55,53 @@
             Account info
         ==============================*/
 
-        var $toggleList = $('.list-account-info .list-item .toggle-list');
-        $('html').on('click', function() {
-            $toggleList.stop().removeClass('toggle-message-add');
-            $('.list-account-info .item-click').stop().removeClass('active-ac');
+        var jQuerytoggleList = jQuery('.list-account-info .list-item .toggle-list');
+        jQuery('html').on('click', function() {
+            jQuerytoggleList.stop().removeClass('toggle-message-add');
+            jQuery('.list-account-info .item-click').stop().removeClass('active-ac');
         });
-        $('.list-account-info .list-item').on('click', function(event) {
+        jQuery('.list-account-info .list-item').on('click', function(event) {
             event.stopPropagation();
         });
-        $('.list-account-info .item-click').on('click', function(event) {
-            if ($(this).hasClass('active-ac') == false) {
-                $('.list-account-info .item-click').removeClass('active-ac');
-                $toggleList.stop().removeClass('toggle-message-add');
+        jQuery('.list-account-info .item-click').on('click', function(event) {
+            if (jQuery(this).hasClass('active-ac') == false) {
+                jQuery('.list-account-info .item-click').removeClass('active-ac');
+                jQuerytoggleList.stop().removeClass('toggle-message-add');
             }
-            $(this).toggleClass('active-ac');
-            $(this).siblings('.toggle-list')
+            jQuery(this).toggleClass('active-ac');
+            jQuery(this).siblings('.toggle-list')
                 .stop()
                 .toggleClass('toggle-message-add');
             
         });
 
-        $.each($('.content-bar'), function() {
-            var widthList = $(this).find('li').outerWidth(),
-                totalList = $(this).find('li').length;
-            $(this).find('ul').width(widthList * totalList + 20);
+        jQuery.each(jQuery('.content-bar'), function() {
+            var widthList = jQuery(this).find('li').outerWidth(),
+                totalList = jQuery(this).find('li').length;
+            jQuery(this).find('ul').width(widthList * totalList + 20);
         });
         
 
         /*==============================
             PROGRESS BAR
         ==============================*/
-        $('.current-progress').appear(function () {
-            $('.current-progress .progress-run').addClass('progress-run-add');
-            var percent = $('.current-progress .count').text();
-            $('.progress-run-add').width(percent);
+        jQuery('.current-progress').appear(function () {
+            jQuery('.current-progress .progress-run').addClass('progress-run-add');
+            var percent = jQuery('.current-progress .count').text();
+            jQuery('.progress-run-add').width(percent);
         });
 
 
         /*==============================
             PERCENT LEARN
         ==============================*/
-        $('.percent-learn').appear(function () {
-            $(this)
+        jQuery('.percent-learn').appear(function () {
+            jQuery(this)
                 .siblings('.percent-learn-bar')
                     .find('.percent-learn-run')
                         .addClass('percent-learn-run-add');
-            var percentLearn = $(this).text();
-            var context = $(this).siblings('.percent-learn-bar').find('.percent-learn-run-add');
+            var percentLearn = jQuery(this).text();
+            var context = jQuery(this).siblings('.percent-learn-bar').find('.percent-learn-run-add');
             context.width(percentLearn);
         });
 
@@ -112,14 +112,14 @@
         var current_fs, next_fs, previous_fs;
         var left, opacity, scale;
         var animating;
-        $(".form-checkout .next").on('click', function() {
+        jQuery(".form-checkout .next").on('click', function() {
             if(animating) return false;
             animating = true;
             
-            current_fs = $(this).closest('fieldset');
-            next_fs = $(this).closest('fieldset').next();
+            current_fs = jQuery(this).closest('fieldset');
+            next_fs = jQuery(this).closest('fieldset').next();
             
-            $(".form-checkout #bar li").eq($("fieldset").index(next_fs)).addClass("active");
+            jQuery(".form-checkout #bar li").eq(jQuery("fieldset").index(next_fs)).addClass("active");
             
             //show the next fieldset
             next_fs.show();
@@ -148,41 +148,41 @@
             });
         });
 
-        $(".submit").on('click', function() {
+        jQuery(".submit").on('click', function() {
             return false;
         });
         formCheckoutCal();
 
-        $('#page-wrap').append('<div class="overlayForm"></div>');
-        $('.take-this-course').on('click', function() {
-            $('.form-checkout, .overlayForm').fadeIn(400);
-            $(window).trigger('resize');
+        jQuery('#page-wrap').append('<div class="overlayForm"></div>');
+        jQuery('.take-this-course').on('click', function() {
+            jQuery('.form-checkout, .overlayForm').fadeIn(400);
+            jQuery(window).trigger('resize');
             return false;
         });
         
-        $('.closeForm').on('click', function() {
-            $('.form-checkout, .overlayForm').fadeOut(400);
+        jQuery('.closeForm').on('click', function() {
+            jQuery('.form-checkout, .overlayForm').fadeOut(400);
         });
-        $('.closeForm').trigger('click');
+        jQuery('.closeForm').trigger('click');
 
         /*==============================
             TABS STYLE LINE
         ==============================*/
-        if ($('.nav-tabs').length) {
-            $.each($('.nav-tabs'), function() {
-                var tabsItem = $(this).find('a'),
-                    tabs = $(this),
+        if (jQuery('.nav-tabs').length) {
+            jQuery.each(jQuery('.nav-tabs'), function() {
+                var tabsItem = jQuery(this).find('a'),
+                    tabs = jQuery(this),
                     leftActive = tabs.find('.active').children('a').position().left,
                     widthActive = tabs.find('.active').children('a').width();
                 tabs.append('<li class="tabs-hr"></li>');
-                $('.tabs-hr').css({
+                jQuery('.tabs-hr').css({
                     left: leftActive,
                     width: widthActive
                 });
                 tabsItem.on('click', function() {
-                    var left = $(this).position().left,
-                        width = $(this).width();
-                    $('.tabs-hr').animate({
+                    var left = jQuery(this).position().left,
+                        width = jQuery(this).width();
+                    jQuery('.tabs-hr').animate({
                         left: left,
                         width: width
                     }, 500, 'easeInOutExpo');
@@ -193,13 +193,13 @@
         /*==============================
             FOOTER STYLE 2
         ==============================*/
-        var $footerStyle2 = $('footer#footer.footer-style-2'),
+        var $footerStyle2 = jQuery('footer#footer.footer-style-2'),
             heightFooter =  $footerStyle2.height();
         $footerStyle2.appendTo('body');
         $footerStyle2.siblings('#page-wrap').css('marginBottom', heightFooter);
 
 
-        $('.question-sidebar ul, .list-message, .list-notification').wrap('<div class="list-wrap"></div>');
+        jQuery('.question-sidebar ul, .list-message, .list-notification').wrap('<div class="list-wrap"></div>');
     }
     /*==============================
         Mobile check
@@ -212,24 +212,24 @@
     }
 
     function formCheckoutCal() {
-        var heightWindow = $(window).height(),
-            heightForm = $('.form-checkout .container').outerHeight(),
+        var heightWindow = jQuery(window).height(),
+            heightForm = jQuery('.form-checkout .container').outerHeight(),
             formMiddle = (heightWindow - heightForm - 80) / 2;
-        $('.form-checkout').css('top', formMiddle);
+        jQuery('.form-checkout').css('top', formMiddle);
     }
 
     /*==============================
         MC SELECT
     ==============================*/
     function mdselect() {
-        $('.mc-select').find('select.select').each(function() {
-            var selected = $(this).find('option:selected').text();
-            $(this)
+        jQuery('.mc-select').find('select.select').each(function() {
+            var selected = jQuery(this).find('option:selected').text();
+            jQuery(this)
                 .css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
                 .after('<span class="select">' + selected + '</span>' + '<i class="fa fa-angle-down"></i>')
                 .change(function(){
-                    var val = $('option:selected',this).text();
-                    $(this).next().text(val);
+                    var val = jQuery('option:selected',this).text();
+                    jQuery(this).next().text(val);
                 });
         });
     }
@@ -238,54 +238,54 @@
         Learning
     ==============================*/
     function Learning() {
-        var $navListBody = $('.top-nav-list').find('.list-item-body');
+        var $navListBody = jQuery('.top-nav-list').find('.list-item-body');
         var width = $navListBody.closest('.top-nav-list').width() - 1;
         $navListBody.width(width);
-        if ($('.top-nav-list').children('li').hasClass('active')) {
-            $('.learning-section')
+        if (jQuery('.top-nav-list').children('li').hasClass('active')) {
+            jQuery('.learning-section')
                 .toggleClass('learning-section-fly')
                 .css('paddingRight', width);
         }
-        $('.top-nav-list').find('.outline-learn, .discussion-learn, .note-learn').on('click', '> a', function(e) {
+        jQuery('.top-nav-list').find('.outline-learn, .discussion-learn, .note-learn').on('click', '> a', function(e) {
             e.preventDefault();
-            if ($(this).parent().hasClass('active') == false) {
-                $('.top-nav-list').children('li').removeClass('active');
+            if (jQuery(this).parent().hasClass('active') == false) {
+                jQuery('.top-nav-list').children('li').removeClass('active');
             }
-            $(this).parent().toggleClass('active');
-            if ($(this).parent().hasClass('active')) {
-                $('.learning-section')
+            jQuery(this).parent().toggleClass('active');
+            if (jQuery(this).parent().hasClass('active')) {
+                jQuery('.learning-section')
                     .addClass('learning-section-fly')
                     .css('paddingRight', width);
             } else {
-                $('.learning-section')
+                jQuery('.learning-section')
                     .removeClass('learning-section-fly')
                     .css('paddingRight', '0');
             }
         });
-        $('html').on('click', function() {
+        jQuery('html').on('click', function() {
             $navListBody.removeClass('item-fly');
             $navListBody.parent('li').removeClass('active');
-            $('.learning-section')
+            jQuery('.learning-section')
                 .removeClass('learning-section-fly')
                 .css('paddingRight', '0');
         });
-        $('.top-nav-list, .list-item-body').on('click', function(event) {
+        jQuery('.top-nav-list, .list-item-body').on('click', function(event) {
             event.stopPropagation();
         });
     }
     function setHeightRespon() {
-        var windowHeight = $(window).height(),
+        var windowHeight = jQuery(window).height(),
             w = window.innerWidth;
-        $('.learn-section').css('min-height', windowHeight);
+        jQuery('.learn-section').css('min-height', windowHeight);
 
         if (w < 992) {
-            $('.question-content-wrap').find('.question-sidebar').height('auto');
-            $('.question-content-wrap').find('.score-sb').find('.list-wrap').height('auto').css('max-height', '300px');
+            jQuery('.question-content-wrap').find('.question-sidebar').height('auto');
+            jQuery('.question-content-wrap').find('.score-sb').find('.list-wrap').height('auto').css('max-height', '300px');
         } else if (w >= 992) {
-            var height = $('.question-content-wrap').find('.question-content').height() + 30;
+            var height = jQuery('.question-content-wrap').find('.question-content').height() + 30;
             var heightUl = height - 90;
-            $('.question-content-wrap').find('.score-sb').find('.list-wrap').height(heightUl).css('max-height', 'none');
-            $('.question-content-wrap').find('.question-sidebar').height(height);
+            jQuery('.question-content-wrap').find('.score-sb').find('.list-wrap').height(heightUl).css('max-height', 'none');
+            jQuery('.question-content-wrap').find('.question-sidebar').height(height);
         }
     }
 
@@ -293,9 +293,9 @@
         SET HEIGHT MESSAGE SB
     ==============================*/
     function setHeightMessagesb() {
-        if ($('.list-item-body').length) {
-            var heightlist = $(window).height() - $('.list-item-body').css('margin-top').split('px')[0];
-            $('.list-item-body').height(heightlist);
+        if (jQuery('.list-item-body').length) {
+            var heightlist = jQuery(window).height() - jQuery('.list-item-body').css('margin-top').split('px')[0];
+            jQuery('.list-item-body').height(heightlist);
         }
     }
 
@@ -305,27 +305,27 @@
         SCROLL STYLE
     ==============================*/
     function scrollbar() {
-        var $scrollbar = $('.question-sidebar .list-wrap, .messages .list-wrap, .message-sb .list-wrap, .notification .list-wrap, .list-item-body, .table-wrap .tbody');
+        var $scrollbar = jQuery('.question-sidebar .list-wrap, .messages .list-wrap, .message-sb .list-wrap, .notification .list-wrap, .list-item-body, .table-wrap .tbody');
         $scrollbar.perfectScrollbar({
             maxScrollbarLength: 150,
         });
         $scrollbar.perfectScrollbar('update');
 
-        $('.content-bar').perfectScrollbar({
+        jQuery('.content-bar').perfectScrollbar({
             maxScrollbarLength: 150,
             suppressScrollY: true,
             useBothWheelAxes: true,
         });
-        $('.content-bar').perfectScrollbar('update');
+        jQuery('.content-bar').perfectScrollbar('update');
     }
     function scrollStyle() {
         scrollbar();
-        $(window).on('load', function() {
-            if ($('.content-bar').length > 0) {
-                var  currentPosition =$('.content-bar').find('.current').position().left;
-                var  prevCurrentWidth =$('.content-bar').find('.current').prev().width();
+        jQuery(window).on('load', function() {
+            if (jQuery('.content-bar').length > 0) {
+                var  currentPosition =jQuery('.content-bar').find('.current').position().left;
+                var  prevCurrentWidth =jQuery('.content-bar').find('.current').prev().width();
                 setTimeout(function() {
-                    $('.content-bar').animate({
+                    jQuery('.content-bar').animate({
                         scrollLeft: currentPosition - prevCurrentWidth
                     }, 400);
                 }, 100);
@@ -334,20 +334,20 @@
     }
 
     function uploadFile() {
-        $('.up-file').delegate('a', 'click', function(e) {
+        jQuery('.up-file').delegate('a', 'click', function(e) {
             e.preventDefault();
-            $(this).siblings('input[type="file"]').trigger('click');
+            jQuery(this).siblings('input[type="file"]').trigger('click');
         });
-        $('.up-file').delegate('input[type="file"]', 'change', function() {
-            var nameFile = $(this).val().replace(/\\/g, '/').replace(/.*\//, '');
-            $(this).siblings('input[type="hidden"]').val(nameFile);
+        jQuery('.up-file').delegate('input[type="file"]', 'change', function() {
+            var nameFile = jQuery(this).val().replace(/\\/g, '/').replace(/.*\//, '');
+            jQuery(this).siblings('input[type="hidden"]').val(nameFile);
             readURL(this);
         });
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
                 reader.onload = function (e) {
-                    $('.changes-avatar')
+                    jQuery('.changes-avatar')
                         .find('img')
                             .attr('src', e.target.result)
                             .width(140);
@@ -361,8 +361,8 @@
 
     /*==========  Slider Home ==========*/
     function SliderHome(){
-        if($('#slide-home').length){
-            $('#slide-home').owlCarousel({
+        if(jQuery('#slide-home').length){
+            jQuery('#slide-home').owlCarousel({
                 autoPlay: 10000,
                 navigation: false,
                 pagination: true,
@@ -376,19 +376,19 @@
 
     /*==========  Resize Slider Home ==========*/
     function ResizeSliderHome() {
-        if($('#slide-home')) {
-            var parentWidth = $('.slide-cn').innerWidth(),
-              imgWidth = $('.item-inner').width(),
-              imgHeight = $('.item-inner').height(),
+        if(jQuery('#slide-home')) {
+            var parentWidth = jQuery('.slide-cn').innerWidth(),
+              imgWidth = jQuery('.item-inner').width(),
+              imgHeight = jQuery('.item-inner').height(),
               scale = parentWidth/imgWidth,
               ratio = imgWidth/imgHeight,
               heightItem = parentWidth/ratio;
 
-          $('.slide-item').css({'height': heightItem});
+          jQuery('.slide-item').css({'height': heightItem});
 
-          if ($(window).width() <= 1200) {
+          if (jQuery(window).width() <= 1200) {
 
-            $('.item-inner').css({
+            jQuery('.item-inner').css({
               '-webkit-transform': 'scale(' + scale + ')',
               '-moz-transform': 'scale(' + scale + ')',
               '-ms-transform': 'scale(' + scale + ')',
@@ -397,7 +397,7 @@
 
           } else {
 
-            $('.item-inner').css({
+            jQuery('.item-inner').css({
                 '-webkit-transform': 'scale(1)',
                 '-moz-transform': 'scale(1)',
                 '-ms-transform': 'scale(1)',
@@ -409,32 +409,32 @@
     }
          
 
-    $(document).ready(function() {
+    jQuery(document).ready(function() {
         main();
         setHeightRespon();
         uploadFile();
         setHeightMessagesb();
         scrollbar();
-        $('.nav-tabs').wrap('<div class="nav-tabs-wrap"></div>');
+        jQuery('.nav-tabs').wrap('<div class="nav-tabs-wrap"></div>');
 
-        $('.open-menu').on('click', function() {
-            $(this).toggleClass('toggle-active');
-            $('.navigation .menu, .search-box').slideToggle(300);
+        jQuery('.open-menu').on('click', function() {
+            jQuery(this).toggleClass('toggle-active');
+            jQuery('.navigation .menu, .search-box').slideToggle(300);
         });
-        $('.menu-item-has-children').on('click', '> .toggle-sub', function(evt) {
+        jQuery('.menu-item-has-children').on('click', '> .toggle-sub', function(evt) {
             evt.preventDefault();
-            $(this).next().slideToggle(300);
-            $(this).prev().toggleClass('mobile-active');
+            jQuery(this).next().slideToggle(300);
+            jQuery(this).prev().toggleClass('mobile-active');
         });
     });
-    $(window).load(function() {
+    jQuery(window).load(function() {
         ResizeSliderHome();
     });
 
-    $(window).on('resize', function() {
+    jQuery(window).on('resize', function() {
         formCheckoutCal();
     });
-    $(window).on('resize', function() {
+    jQuery(window).on('resize', function() {
         setHeightRespon();
         setHeightMessagesb();
         scrollbar();
@@ -442,19 +442,19 @@
         ResizeSliderHome();
 
         if (window.innerWidth < 1200) {
-            $('.navigation .menu, .search-box').css('display', 'none');
-            if ($('.menu-item-has-children').children('.toggle-sub').length === 0 && $('.menu-item-has-children').children('.toggle-sub').length < 1)
-                $('.menu-item-has-children > a').after('<span class="toggle-sub">Toggle</span>');
-            $('html').on('click', function() {
-                $('.open-menu').removeClass('toggle-active');
-                $('.navigation .menu, .search-box').slideUp(300);
+            jQuery('.navigation .menu, .search-box').css('display', 'none');
+            if (jQuery('.menu-item-has-children').children('.toggle-sub').length === 0 && jQuery('.menu-item-has-children').children('.toggle-sub').length < 1)
+                jQuery('.menu-item-has-children > a').after('<span class="toggle-sub">Toggle</span>');
+            jQuery('html').on('click', function() {
+                jQuery('.open-menu').removeClass('toggle-active');
+                jQuery('.navigation .menu, .search-box').slideUp(300);
             });
-            $('.navigation .menu, .open-menu, .search-box').on('click', function(evt) {
+            jQuery('.navigation .menu, .open-menu, .search-box').on('click', function(evt) {
                 evt.stopPropagation();
             });
         } else {
-            $('.navigation .menu, .search-box').css('display', 'inline-block');
-            $('.toggle-sub').remove();
+            jQuery('.navigation .menu, .search-box').css('display', 'inline-block');
+            jQuery('.toggle-sub').remove();
         }
     }).trigger('resize');;
     
