@@ -1,0 +1,32 @@
+diff --git a/ajaxify_submit_forms.module b/ajaxify_submit_forms.module
+index cfbe720..4a33987 100644
+--- a/ajaxify_submit_forms.module
++++ b/ajaxify_submit_forms.module
+@@ -7,6 +7,7 @@
+ 
+ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Ajax\AjaxResponse;
++use Drupal\Core\Ajax\RedirectCommand;
+ use Drupal\Core\Ajax\HtmlCommand;
+ use Drupal\Core\Ajax\PrependCommand;
+ use Drupal\Core\Render\Element\StatusMessages;
+@@ -47,7 +48,7 @@ function ajaxify_submit_forms_form_alter(&$form, &$form_state, $form_id) {
+ /**
+  * Implements ajaxify_submit_forms_form_ajax_callback().
+  */
+-function ajaxify_submit_forms_form_ajax_callback($form, FormStateInterface & $form_state) {
++function ajaxify_submit_forms_form_ajax_callback($form, FormStateInterface &$form_state) {
+   $form_id = $form['form_id']['#value'];
+ 
+   $selector = "ajaxify_submit_form_" . $form_id;
+@@ -68,7 +69,9 @@ function ajaxify_submit_forms_form_ajax_callback($form, FormStateInterface & $fo
+     // Default reload the page printing the status message.
+     $output[] = $messages;
+     $output[] = $form;
+-    $response->addCommand(new HtmlCommand($render_selector, $output));
++    $command = new RedirectCommand('/user');
++    $response->addCommand($command);
++    // $response->addCommand(new HtmlCommand($render_selector, $output));
+   }
+ 
+   return $response;
