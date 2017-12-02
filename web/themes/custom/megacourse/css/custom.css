@@ -89,6 +89,10 @@
     padding: 25px 20px;
 }
 
-.block-private-message-inbox-block .private-message-thread .private-message-inbox-thread-link {
-
+#private-message-page {
+	position: relative;
+    background-color: white;
+    display: block;
+    overflow: hidden;
+    padding: 25px 20px;
 }

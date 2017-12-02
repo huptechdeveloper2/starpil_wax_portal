@@ -8,8 +8,8 @@ dependencies:
     - megacourse
 id: registerformpopup
 theme: megacourse
-region: navigation_collapsible
-weight: 0
+region: sitetop
+weight: -8
 provider: null
 plugin: register_form_popup
 settings:

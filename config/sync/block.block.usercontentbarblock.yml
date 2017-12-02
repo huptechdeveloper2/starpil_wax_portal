@@ -1,16 +1,15 @@
-uuid: dfde1a6a-c619-473c-859a-bb5ed865e92c
+uuid: a64fe18b-ddb1-4bb9-ba8a-3e9681dc05e2
 langcode: en
 status: true
 dependencies:
   module:
-    - system
     - user_content_bar
   theme:
     - megacourse
 id: usercontentbarblock
 theme: megacourse
 region: top_header
-weight: -11
+weight: -10
 provider: null
 plugin: user_content_bar_block
 settings:
@@ -18,9 +17,4 @@ settings:
   label: 'User Content Bar Block'
   provider: user_content_bar
   label_display: '0'
-visibility:
-  request_path:
-    id: request_path
-    pages: "/user\r\n/user/*\r\n/private_messages\r\n/private_messages/*"
-    negate: false
-    context_mapping: {  }
+visibility: {  }

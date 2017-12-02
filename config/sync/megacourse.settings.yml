@@ -4,14 +4,32 @@ schemas:
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
-  url: 'http://localhost/starpil_wax_portal/web/themes/contrib/bootstrap/favicon.ico'
+  url: 'http://dev.saulortiz.us/themes/custom/megacourse/favicon.ico'
   use_default: true
+logo:
+  path: 'public://logo1_0.png'
+  url: ''
+  use_default: true
+region_wells:
+  sitetop: ''
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  first_footer: ''
+  first_one: ''
+  first_two: ''
+  first_three: ''
+  first_four: ''
+  second_footer: ''
+table_responsive: '-1'
+table: ''
 features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
   node_user_picture: true
-logo:
-  path: ''
-  url: ''
-  use_default: true

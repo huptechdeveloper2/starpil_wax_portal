@@ -1,6 +1,6 @@
 uuid: 85e4bd17-2f8b-48fc-ba88-2cf3575d27c9
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.user_profile_image_name

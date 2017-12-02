@@ -11,7 +11,7 @@ _core:
 id: megacourse_messages
 theme: megacourse
 region: header
-weight: -9
+weight: -5
 provider: null
 plugin: system_messages_block
 settings:

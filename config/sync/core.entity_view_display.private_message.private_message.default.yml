@@ -1,4 +1,4 @@
-uuid: 63afed98-385d-4e0d-a913-42a315242ad6
+uuid: 4f384be5-263d-474e-ae8c-08ec19282443
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - private_message
     - text
 _core:
-  default_config_hash: bY60CRy-1iA05ELhvP1G7mki9KT4YbhNEoh-HzFbwAw
+  default_config_hash: thuPEzjJFe49tMwLtSGT0wmytbl0PZWaqtDWtBZM9XA
 id: private_message.private_message.default
 targetEntityType: private_message
 bundle: private_message
@@ -30,7 +30,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   owner:
-    label: inline
+    label: hidden
     type: entity_reference_entity_view
     weight: 1
     region: content

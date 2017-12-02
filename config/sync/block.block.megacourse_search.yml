@@ -1,6 +1,6 @@
 uuid: 5363629b-0672-45cb-ba40-2e413712cbeb
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - search
@@ -11,7 +11,7 @@ _core:
 id: megacourse_search
 theme: megacourse
 region: navigation_collapsible
-weight: -5
+weight: -8
 provider: null
 plugin: search_form_block
 settings:

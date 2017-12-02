@@ -18,14 +18,11 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 0
+    weight: 100
     region: content
     settings: {  }
     third_party_settings: {  }
   links:
-    weight: 1
+    weight: 101
     region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden:
-  private_message_link: true
+hidden: {  }

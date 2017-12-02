@@ -1,6 +1,6 @@
-uuid: 67d4b800-81f6-4fce-a3c6-9f1743175fa3
+uuid: 20bfd1bf-3f26-4ffa-8e80-87f153a80241
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.user_profile_image_name
@@ -9,14 +9,14 @@ dependencies:
     - views
   theme:
     - megacourse
-id: views_block__user_profile_image_name_block_2
+id: views_block__user_profile_image_name_block_1_2
 theme: megacourse
 region: top_header
-weight: -11
+weight: -9
 provider: null
-plugin: 'views_block:user_profile_image_name-block_2'
+plugin: 'views_block:user_profile_image_name-block_1'
 settings:
-  id: 'views_block:user_profile_image_name-block_2'
+  id: 'views_block:user_profile_image_name-block_1'
   label: ''
   provider: views
   label_display: '0'
