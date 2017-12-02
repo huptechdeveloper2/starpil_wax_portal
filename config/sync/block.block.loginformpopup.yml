@@ -9,7 +9,7 @@ dependencies:
 id: loginformpopup
 theme: megacourse
 region: sitetop
-weight: -9
+weight: -11
 provider: null
 plugin: login_form_popup
 settings:
