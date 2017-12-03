@@ -9,6 +9,7 @@ global-styling:
       css/library/owl.carousel.css: {}
       css/style.css: {}
       css/custom.css: {}
+      css/flexslider.css: {}
   js:
     js/scripts.js: {}
     js/library/bootstrap.min.js: {}
@@ -17,5 +18,8 @@ global-styling:
     js/library/jquery.magnific-popup.min.js: {}
     js/library/jquery.owl.carousel.js: {}
     js/library/perfect-scrollbar.min.js: {}
+    js/library/jquery.flexslider-min.js: {}
+    js/library/jquery.flexslider.js: {}
   dependencies:
     - core/jquery
+

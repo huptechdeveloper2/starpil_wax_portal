@@ -1,0 +1,38 @@
+uuid: 66ec8786-b9b7-4df6-938f-5cfe2ce922f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.home_page_slider.body
+    - field.field.node.home_page_slider.field_slider_image
+    - node.type.home_page_slider
+  module:
+    - image
+    - text
+    - user
+id: node.home_page_slider.default
+targetEntityType: node
+bundle: home_page_slider
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_slider_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  private_message_link: true
