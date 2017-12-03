@@ -43,7 +43,7 @@ options:
   pausePlay: false
   pauseText: Pause
   playText: Play
-  pauseOnAction: true
+  pauseOnAction: false
   pauseOnHover: false
   controlsContainer: .flex-control-nav-container
   manualControls: ''
