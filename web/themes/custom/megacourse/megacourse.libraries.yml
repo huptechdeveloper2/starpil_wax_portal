@@ -10,12 +10,11 @@ global-styling:
       css/style.css: {}
       css/custom.css: {}
   js:
-    js/scripts.js: {}
-    js/library/bootstrap.min.js: {}
     js/library/jquery.appear.min.js: {}
     js/library/jquery.easing.min.js: {}
     js/library/jquery.magnific-popup.min.js: {}
     js/library/jquery.owl.carousel.js: {}
     js/library/perfect-scrollbar.min.js: {}
+    js/scripts.js: {}
   dependencies:
     - core/jquery
