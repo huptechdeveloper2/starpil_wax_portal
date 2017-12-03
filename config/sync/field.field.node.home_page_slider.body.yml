@@ -1,0 +1,22 @@
+uuid: ff2c16f0-d20a-4aa4-8515-a1ab31abd193
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.home_page_slider
+  module:
+    - text
+id: node.home_page_slider.body
+field_name: body
+entity_type: node
+bundle: home_page_slider
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
