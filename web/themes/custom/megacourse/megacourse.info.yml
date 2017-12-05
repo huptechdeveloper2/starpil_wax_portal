@@ -16,6 +16,7 @@ regions:
   slide: 'slide'
   top_header: 'User page Top Header'
   content: 'Content'
+  front_hoe_it_works: 'front how it works'
   sidebar_first: 'Primary'
   sidebar_second: 'Secondary'
   first_footer: 'Upper Footer'

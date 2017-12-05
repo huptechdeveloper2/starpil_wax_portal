@@ -1,0 +1,25 @@
+uuid: 7d578a09-606f-4cde-930d-4a91f628084c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f3a047d2-2daf-41d5-9f10-220a4576c6c8'
+  module:
+    - block_content
+  theme:
+    - megacourse
+id: howitworkshomepageblock
+theme: megacourse
+region: front_hoe_it_works
+weight: 0
+provider: null
+plugin: 'block_content:f3a047d2-2daf-41d5-9f10-220a4576c6c8'
+settings:
+  id: 'block_content:f3a047d2-2daf-41d5-9f10-220a4576c6c8'
+  label: 'How It Works Home Page Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

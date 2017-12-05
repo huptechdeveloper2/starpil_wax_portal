@@ -1,0 +1,14 @@
+uuid: c5930100-87e9-4836-b1ee-63a79bcd2a26
+langcode: en
+status: true
+dependencies: {  }
+name: blog_image_view_170_170_
+label: 'Blog Image View (170*170)'
+effects:
+  77bfcef1-bad1-4bf7-881f-917520ec9836:
+    uuid: 77bfcef1-bad1-4bf7-881f-917520ec9836
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 170
+      height: 170

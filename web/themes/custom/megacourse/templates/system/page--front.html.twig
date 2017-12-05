@@ -185,6 +185,15 @@
     </div>
   </div>
 {% endblock %}
+	
+	<!-- How it Works -->
+  {% if page.front_hoe_it_works %}
+    {% block front_hoe_it_works %}
+      <div class="front-hoe-it-works">
+        {{ page.front_hoe_it_works }}
+      </div>
+      {% endblock %}
+  {% endif %}
 
 
 <footer id="footer" class="footer" role="contentinfo">

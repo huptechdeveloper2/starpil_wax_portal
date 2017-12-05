@@ -1,0 +1,30 @@
+uuid: b60c175a-1af5-41fb-8dc0-9fba359fa6c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blogs_listing
+  module:
+    - system
+    - views
+  theme:
+    - megacourse
+id: views_block__blogs_listing_block_1
+theme: megacourse
+region: sidebar_second
+weight: -12
+provider: null
+plugin: 'views_block:blogs_listing-block_1'
+settings:
+  id: 'views_block:blogs_listing-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /blogs
+    negate: false
+    context_mapping: {  }
