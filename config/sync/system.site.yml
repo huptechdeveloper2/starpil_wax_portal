@@ -3,8 +3,8 @@ name: 'Starpil Wax'
 mail: jigish.chauhan20@gmail.com
 slogan: ''
 page:
-  403: ''
-  404: ''
+  403: /node/2
+  404: /node/2
   front: /node/2
 admin_compact_mode: false
 weight_select_max: 100

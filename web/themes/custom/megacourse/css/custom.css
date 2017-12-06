@@ -1,3 +1,16 @@
+
+
+/*##################### forms #######################*/
+.form-item input {
+    width: auto !important;
+    margin-top: 0 !important;
+}
+.form-item input[type="checkbox"] {
+    height: auto !important;
+}
+
+
+
 .footer { 
 	padding-top: 0;
 	margin-top: 0;
