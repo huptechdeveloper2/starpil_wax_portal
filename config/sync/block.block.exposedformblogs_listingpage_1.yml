@@ -5,6 +5,7 @@ dependencies:
   config:
     - views.view.blogs_listing
   module:
+    - ctools
     - system
     - views
   theme:
@@ -27,3 +28,10 @@ visibility:
     pages: "/blogs\r\n/blogs/*\r\n/node/*"
     negate: false
     context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      blogs: blogs
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
