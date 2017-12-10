@@ -9,6 +9,8 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
+  - 'access cart'
+  - 'access checkout'
   - 'access comments'
   - 'access content'
   - 'access shortcuts'
@@ -23,3 +25,4 @@ permissions:
   - 'subscribe to newsletters'
   - 'use private messaging system'
   - 'use text format basic_html'
+  - 'view commerce_product'
