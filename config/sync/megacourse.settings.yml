@@ -7,9 +7,9 @@ favicon:
   url: 'http://dev.saulortiz.us/themes/custom/megacourse/favicon.ico'
   use_default: true
 logo:
-  path: 'public://logo1_0.png'
+  path: 'public://logo1_2_0.png'
   url: ''
-  use_default: true
+  use_default: false
 region_wells:
   sitetop: ''
   navigation: ''
@@ -17,7 +17,10 @@ region_wells:
   header: ''
   highlighted: ''
   help: ''
+  slide: ''
+  top_header: ''
   content: ''
+  front_hoe_it_works: ''
   sidebar_first: ''
   sidebar_second: ''
   first_footer: ''

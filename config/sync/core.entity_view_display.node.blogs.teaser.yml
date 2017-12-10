@@ -26,4 +26,8 @@ content:
     weight: 100
     region: content
 hidden:
+  field_blog_category: true
+  field_blog_image: true
+  field_quote_author: true
+  field_testimonial_quote: true
   private_message_link: true
