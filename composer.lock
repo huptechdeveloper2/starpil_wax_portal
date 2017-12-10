@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d56726b704eb53b5a1e008c767088fcf",
+    "content-hash": "dd72e65da43ac2b7fc30a583f45c4cdb",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4053,6 +4053,137 @@
             "homepage": "https://www.drupal.org/project/video",
             "support": {
                 "source": "http://cgit.drupalcode.org/video"
+            }
+        },
+        {
+            "name": "drupal/votingapi",
+            "version": "3.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/votingapi",
+                "reference": "8.x-3.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/votingapi-8.x-3.0-alpha2.zip",
+                "reference": "8.x-3.0-alpha2",
+                "shasum": "d4e4c2857beefdac6fd1152185a8e1be3ea6afe5"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-alpha2",
+                    "datestamp": "1468999039",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "ChrisKennedy",
+                    "homepage": "https://www.drupal.org/user/32005"
+                },
+                {
+                    "name": "FatGuyLaughing",
+                    "homepage": "https://www.drupal.org/user/377114"
+                },
+                {
+                    "name": "Scott Reynolds",
+                    "homepage": "https://www.drupal.org/user/60009"
+                },
+                {
+                    "name": "eaton",
+                    "homepage": "https://www.drupal.org/user/16496"
+                },
+                {
+                    "name": "moshe weitzman",
+                    "homepage": "https://www.drupal.org/user/23"
+                },
+                {
+                    "name": "pedrorocha",
+                    "homepage": "https://www.drupal.org/user/218937"
+                },
+                {
+                    "name": "torotil",
+                    "homepage": "https://www.drupal.org/user/865256"
+                }
+            ],
+            "description": "Voting API",
+            "homepage": "http://drupal.org/project/votingapi",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/votingapi",
+                "issues": "http://drupal.org/project/issues/votingapi"
+            }
+        },
+        {
+            "name": "drupal/votingapi_widgets",
+            "version": "1.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/votingapi_widgets",
+                "reference": "8.x-1.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/votingapi_widgets-8.x-1.0-alpha3.zip",
+                "reference": "8.x-1.0-alpha3",
+                "shasum": "a8654448561e001512fe21f42d649041e0a57a43"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/votingapi": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha3",
+                    "datestamp": "1480330327",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Andre-B",
+                    "homepage": "https://www.drupal.org/user/1772408"
+                },
+                {
+                    "name": "Erik Seifert",
+                    "homepage": "https://www.drupal.org/user/161429"
+                }
+            ],
+            "description": "Voting API Widgets",
+            "homepage": "https://www.drupal.org/project/votingapi_widgets",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/votingapi_widgets",
+                "issues": "https://www.drupal.org/project/issues/votingapi_widgets"
             }
         },
         {
@@ -8642,6 +8773,8 @@
         "drupal/private_message": 10,
         "drupal/simplenews": 15,
         "drupal/smtp": 10,
+        "drupal/votingapi": 15,
+        "drupal/votingapi_widgets": 15,
         "drupal/webform": 10
     },
     "prefer-stable": true,

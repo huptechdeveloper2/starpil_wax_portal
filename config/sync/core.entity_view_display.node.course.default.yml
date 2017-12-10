@@ -7,10 +7,14 @@ dependencies:
     - field.field.node.course.field_course_about_judgement
     - field.field.node.course.field_course_goal
     - field.field.node.course.field_course_introduction
+    - field.field.node.course.field_introduction_video
+    - field.field.node.course.field_voting
     - node.type.course
   module:
     - text
     - user
+    - video
+    - votingapi_widgets
 id: node.course.default
 targetEntityType: node
 bundle: course
@@ -44,7 +48,31 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_introduction_video:
+    weight: 106
+    label: above
+    settings:
+      autoplay: true
+      width: '854'
+      height: '480'
+    third_party_settings: {  }
+    type: video_embed_player
+    region: content
+  field_voting:
+    weight: 105
+    label: above
+    settings:
+      style: default
+      show_results: '1'
+      readonly: 0
+      values: {  }
+    third_party_settings: {  }
+    type: voting_api_formatter
+    region: content
   links:
     weight: 100
     region: content
-hidden: {  }
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  private_message_link: true

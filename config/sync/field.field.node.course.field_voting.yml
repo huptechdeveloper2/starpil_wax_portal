@@ -1,0 +1,27 @@
+uuid: 2e74007a-e7a7-4e78-9fd2-2ed6faa9c5c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_voting
+    - node.type.course
+  module:
+    - votingapi_widgets
+id: node.course.field_voting
+field_name: field_voting
+entity_type: node
+bundle: course
+label: voting
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    status: '1'
+default_value_callback: ''
+settings:
+  anonymous_window: '-1'
+  user_window: '-1'
+  result_function: vote_average
+  widget_format: fivestar
+field_type: voting_api_field
