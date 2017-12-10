@@ -1,5 +1,8 @@
 
-
+/*////// home page slider //////////*/
+.flexslider {
+    border: 0 !important;
+}
 /*##################### forms #######################*/
 .form-item input {
     width: auto !important;

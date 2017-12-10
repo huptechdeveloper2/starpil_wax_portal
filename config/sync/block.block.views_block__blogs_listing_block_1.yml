@@ -5,7 +5,6 @@ dependencies:
   config:
     - views.view.blogs_listing
   module:
-    - node
     - system
     - views
   theme:
@@ -26,13 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/blogs\r\n/blogs/*\r\n/node/*"
+    pages: "/blogs\r\n/blog/*"
     negate: false
     context_mapping: {  }
-  node_type:
-    id: node_type
-    bundles:
-      blogs: blogs
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
