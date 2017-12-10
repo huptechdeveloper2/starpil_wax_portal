@@ -42,6 +42,7 @@
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.0",
         "drupal/private_message": "^1.0@beta",
+        "drupal/recreate_block_content": "^2.0",
         "drupal/simplenews": "^1.0@alpha",
         "drupal/smtp": "^1.0@beta",
         "drupal/social_login": "^1.6",

@@ -1,4 +1,5 @@
 module:
+  address: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
   ajaxify_submit_forms: 0
@@ -22,6 +23,7 @@ module:
   editor: 0
   entity: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -32,6 +34,7 @@ module:
   history: 0
   image: 0
   imce: 0
+  inline_entity_form: 0
   libraries: 0
   link: 0
   login_popup: 0
@@ -45,6 +48,7 @@ module:
   private_message: 0
   quickedit: 0
   rdf: 0
+  recreate_block_content: 0
   search: 0
   shortcut: 0
   simplenews: 0

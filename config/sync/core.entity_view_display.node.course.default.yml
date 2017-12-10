@@ -55,8 +55,12 @@ content:
       autoplay: true
       width: '854'
       height: '480'
+      controls: true
+      loop: false
+      muted: false
+      preload: none
     third_party_settings: {  }
-    type: video_embed_player
+    type: video_player_list
     region: content
   field_voting:
     weight: 105
