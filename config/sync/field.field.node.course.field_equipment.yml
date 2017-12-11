@@ -1,0 +1,19 @@
+uuid: eea16b05-d8f2-4f65-978d-557a42e7bdd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_equipment
+    - node.type.course
+id: node.course.field_equipment
+field_name: field_equipment
+entity_type: node
+bundle: course
+label: Equipment
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

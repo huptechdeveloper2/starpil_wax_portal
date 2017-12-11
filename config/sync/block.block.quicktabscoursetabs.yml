@@ -1,0 +1,34 @@
+uuid: 0bd44090-fd45-4885-bad7-ef867e995ee1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - quicktabs
+    - system
+  theme:
+    - megacourse
+id: quicktabscoursetabs
+theme: megacourse
+region: content
+weight: 0
+provider: null
+plugin: 'quicktabs_block:course_tabs'
+settings:
+  id: 'quicktabs_block:course_tabs'
+  label: 'QuickTabs - Course Tabs'
+  provider: quicktabs
+  label_display: visible
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      course: course
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '/node/*'
+    negate: false
+    context_mapping: {  }

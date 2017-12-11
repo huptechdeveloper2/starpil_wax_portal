@@ -1,17 +1,17 @@
-uuid: 343c80f1-d90b-4541-aec2-90ba3722d627
+uuid: 99cd5899-fe19-4013-8736-7aba2aa8022b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_introduction_video
+    - field.storage.node.field_teacher_introduction_video
     - node.type.course
   module:
     - video
-id: node.course.field_introduction_video
-field_name: field_introduction_video
+id: node.course.field_teacher_introduction_video
+field_name: field_teacher_introduction_video
 entity_type: node
 bundle: course
-label: 'Introduction Video'
+label: 'Teacher Introduction Video'
 description: ''
 required: false
 translatable: false

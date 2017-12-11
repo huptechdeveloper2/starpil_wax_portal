@@ -1,0 +1,21 @@
+uuid: 2f9081a7-5f0a-433b-ab38-3d9a538bdf5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_open_date
+    - node.type.course
+  module:
+    - datetime
+id: node.course.field_open_date
+field_name: field_open_date
+entity_type: node
+bundle: course
+label: 'Open Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

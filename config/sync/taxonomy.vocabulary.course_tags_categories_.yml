@@ -1,0 +1,9 @@
+uuid: 2f17b650-11d2-4bec-9b03-7aa94395572a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Course Tags(categories)'
+vid: course_tags_categories_
+description: ''
+hierarchy: 0
+weight: 0

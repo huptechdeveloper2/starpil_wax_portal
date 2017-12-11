@@ -5,16 +5,21 @@ dependencies:
   config:
     - field.field.node.course.body
     - field.field.node.course.field_course_about_judgement
+    - field.field.node.course.field_course_category
     - field.field.node.course.field_course_goal
     - field.field.node.course.field_course_introduction
-    - field.field.node.course.field_introduction_video
-    - field.field.node.course.field_voting
+    - field.field.node.course.field_duration_of_course
+    - field.field.node.course.field_equipment
+    - field.field.node.course.field_open_date
+    - field.field.node.course.field_outline
+    - field.field.node.course.field_teacher_introduction_video
     - node.type.course
   module:
+    - datetime
+    - file
     - text
     - user
     - video
-    - votingapi_widgets
 id: node.course.default
 targetEntityType: node
 bundle: course
@@ -34,6 +39,14 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_course_category:
+    weight: 112
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_course_goal:
     weight: 103
     label: above
@@ -48,30 +61,47 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_introduction_video:
-    weight: 106
+  field_duration_of_course:
+    weight: 110
     label: above
     settings:
-      autoplay: true
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_equipment:
+    weight: 111
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_open_date:
+    weight: 109
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_outline:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_teacher_introduction_video:
+    weight: 113
+    label: above
+    settings:
       width: '854'
       height: '480'
-      controls: true
-      loop: false
-      muted: false
-      preload: none
+      autoplay: true
     third_party_settings: {  }
-    type: video_player_list
-    region: content
-  field_voting:
-    weight: 105
-    label: above
-    settings:
-      style: default
-      show_results: '1'
-      readonly: 0
-      values: {  }
-    third_party_settings: {  }
-    type: voting_api_formatter
+    type: video_embed_player
     region: content
   links:
     weight: 100
@@ -79,4 +109,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  addtoany: true
   private_message_link: true

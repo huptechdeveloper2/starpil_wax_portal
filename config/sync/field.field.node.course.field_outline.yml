@@ -1,0 +1,27 @@
+uuid: b6c87546-4cee-46b1-926b-a178b07cb809
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_outline
+    - node.type.course
+  module:
+    - file
+id: node.course.field_outline
+field_name: field_outline
+entity_type: node
+bundle: course
+label: Outline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf'
+  max_filesize: 100mb
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

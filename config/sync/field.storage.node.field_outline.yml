@@ -1,26 +1,22 @@
-uuid: 80417fec-a099-4384-b919-5ae21d2da6d5
+uuid: 8f7cd2bb-8fad-4d21-9c8c-2ed7b4bd761f
 langcode: en
 status: true
 dependencies:
   module:
     - file
     - node
-    - video
-id: node.field_introduction_video
-field_name: field_introduction_video
+id: node.field_outline
+field_name: field_outline
 entity_type: node
-type: video
+type: file
 settings:
-  default_video:
-    uuid: null
-    data: null
-  target_type: file
   display_field: false
   display_default: false
   uri_scheme: public
-module: video
+  target_type: file
+module: file
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

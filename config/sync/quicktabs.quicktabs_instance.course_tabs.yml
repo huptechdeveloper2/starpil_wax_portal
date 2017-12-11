@@ -1,0 +1,132 @@
+uuid: b77b5019-e6ab-4900-8b47-2d931beb4dcf
+langcode: en
+status: true
+dependencies: {  }
+id: course_tabs
+label: 'Course Tabs'
+renderer: ui_tabs
+options:
+  quick_tabs:
+    ajax: '0'
+  accordion_tabs:
+    jquery_ui:
+      collapsible: 0
+      heightStyle: auto
+hide_empty_tabs: 0
+default_tab: '0'
+configuration_data:
+  -
+    title: Introduction
+    weight: '0'
+    type: view_content
+    content:
+      block_content:
+        options:
+          bid: addtoany_block
+          block_title: ''
+          display_title: 0
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: '1'
+      view_content:
+        options:
+          vid: courses_quick_tabs
+          display: page_1
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: ''
+  -
+    title: Outline
+    weight: '0'
+    type: view_content
+    content:
+      block_content:
+        options:
+          bid: addtoany_block
+          block_title: ''
+          display_title: 0
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: '1'
+      view_content:
+        options:
+          vid: courses_quick_tabs
+          display: block_1
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: ''
+  -
+    title: Review
+    weight: '0'
+    type: block_content
+    content:
+      block_content:
+        options:
+          bid: addtoany_block
+          block_title: ''
+          display_title: 0
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: '1'
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: ''
+  -
+    title: Student
+    weight: '0'
+    type: block_content
+    content:
+      block_content:
+        options:
+          bid: addtoany_block
+          block_title: ''
+          display_title: 0
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: '1'
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: ''
+  -
+    title: Comment
+    weight: '0'
+    type: block_content
+    content:
+      block_content:
+        options:
+          bid: addtoany_block
+          block_title: ''
+          display_title: 0
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: '1'
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: ''

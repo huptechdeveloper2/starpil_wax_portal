@@ -1,0 +1,18 @@
+uuid: e5f03866-2662-4c70-980a-f4948edb97dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_payment_example
+id: offline_payment
+label: 'Offline Payment'
+weight: null
+plugin: example_offsite_redirect
+configuration:
+  redirect_method: post
+  display_label: 'ExampOffline Paymentle'
+  mode: test
+  payment_method_types:
+    - credit_card
+conditions: {  }
+conditionOperator: AND
