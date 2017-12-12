@@ -42,6 +42,7 @@ third_party_settings:
       children:
         - body
         - field_teacher_introduction_video
+        - field_teacher_video
         - field_open_date
         - field_duration_of_course
         - field_course_category
@@ -83,7 +84,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -96,7 +97,7 @@ content:
     type: text_textarea
     region: content
   field_course_category:
-    weight: 6
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -121,7 +122,7 @@ content:
     type: text_textarea
     region: content
   field_duration_of_course:
-    weight: 5
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -129,7 +130,7 @@ content:
     type: string_textfield
     region: content
   field_equipment:
-    weight: 7
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -137,7 +138,7 @@ content:
     type: string_textfield
     region: content
   field_open_date:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
@@ -154,7 +155,7 @@ content:
     settings:
       file_extensions: 'mp4 ogv webm'
       file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
-      max_filesize: '50 MB'
+      max_filesize: ''
       uri_scheme: public
       progress_indicator: throbber
     third_party_settings: {  }

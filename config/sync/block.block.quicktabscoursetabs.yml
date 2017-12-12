@@ -1,6 +1,6 @@
 uuid: 0bd44090-fd45-4885-bad7-ef867e995ee1
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - node
@@ -18,7 +18,7 @@ settings:
   id: 'quicktabs_block:course_tabs'
   label: 'QuickTabs - Course Tabs'
   provider: quicktabs
-  label_display: visible
+  label_display: '0'
 visibility:
   node_type:
     id: node_type

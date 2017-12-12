@@ -259,3 +259,24 @@
     font-size: 14px;
     font-weight: 700;
 }
+
+
+/*//////////////////// courses ///////////////////////////*/
+.page-node-type-course {
+    background-color: #eee;
+}
+.page-node-type-course .ui-widget-content {
+    border: 0;
+    background: #eee;
+}
+.page-node-type-course .ui-widget-header {
+    border: 0;
+    background: #eee;
+}
+.page-node-type-course .ui-widget-header li{
+    margin-right: 1%;
+    padding: 0 1%;
+}
+.page-node-type-course .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    border: 0;
+}

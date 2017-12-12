@@ -30,3 +30,7 @@ function megacourse_preprocess_user(&$variables) {
   $variables['umail'] = $user->get('mail')->value;
   //$variables['upicture'] = $picture = $user->get('user_picture')->entity->url();
 }
+
+function megacourse_preprocess_node(&$variables) {
+  $variables['coursetabsblock'] = entity_load('block', 'quicktabscoursetabs')->getPlugin()->build(); 
+}
