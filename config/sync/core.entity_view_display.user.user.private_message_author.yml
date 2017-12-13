@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.private_message_author
+    - field.field.user.user.commerce_remote_id
     - field.field.user.user.user_picture
   module:
     - user
@@ -20,7 +21,9 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  commerce_remote_id: true
   member_for: true
   private_message_link: true
+  profile_customer: true
   simplenews: true
   user_picture: true
