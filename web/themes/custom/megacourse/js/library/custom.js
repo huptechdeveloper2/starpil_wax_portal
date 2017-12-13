@@ -10,4 +10,9 @@ jQuery( ".private-message-inbox-thread-link" ).click(function() {
   window.load();
 });
 
+jQuery( document ).ready(function() {
+    jQuery("#navbar-collapse ul li:last-child").addClass("last-item");
+});
+
+
 })(jQuery);
