@@ -1,12 +1,13 @@
-uuid: b6c87546-4cee-46b1-926b-a178b07cb809
+uuid: 2a4c1387-c275-49ae-90a4-5ec4d05bb12a
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_outline
     - node.type.course
+    - paragraphs.paragraphs_type.outline
   module:
-    - file
+    - entity_reference_revisions
 id: node.course.field_outline
 field_name: field_outline
 entity_type: node
@@ -18,10 +19,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'txt pdf'
-  max_filesize: 100mb
-  description_field: false
-  handler: 'default:file'
-  handler_settings: {  }
-field_type: file
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      outline: outline
+    target_bundles_drag_drop:
+      outline:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

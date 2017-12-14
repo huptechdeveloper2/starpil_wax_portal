@@ -7,10 +7,12 @@ dependencies:
     - field.field.user.user.field_biography
     - field.field.user.user.field_first_name
     - field.field.user.user.field_last_name
+    - field.field.user.user.field_you_wan_a_be
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
+    - options
     - text
     - user
 _core:
@@ -42,6 +44,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_you_wan_a_be:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   user_picture:
     type: image

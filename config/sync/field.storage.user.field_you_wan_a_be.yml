@@ -1,0 +1,27 @@
+uuid: 30743b73-b2ae-40af-be0f-b049f35687c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_you_wan_a_be
+field_name: field_you_wan_a_be
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Teacher
+      label: Teacher
+    -
+      value: Student
+      label: Student
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

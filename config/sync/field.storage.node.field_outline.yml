@@ -1,22 +1,20 @@
-uuid: 8f7cd2bb-8fad-4d21-9c8c-2ed7b4bd761f
+uuid: 8a49a038-6624-4541-9ab9-adc06718122d
 langcode: en
 status: true
 dependencies:
   module:
-    - file
+    - entity_reference_revisions
     - node
+    - paragraphs
 id: node.field_outline
 field_name: field_outline
 entity_type: node
-type: file
+type: entity_reference_revisions
 settings:
-  display_field: false
-  display_default: false
-  uri_scheme: public
-  target_type: file
-module: file
+  target_type: paragraph
+module: entity_reference_revisions
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

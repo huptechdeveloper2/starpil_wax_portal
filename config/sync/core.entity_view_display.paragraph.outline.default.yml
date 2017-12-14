@@ -1,0 +1,45 @@
+uuid: f4f0f5f7-b44d-481f-8274-30564be834e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.outline.field_outline_file
+    - field.field.paragraph.outline.field_outline_image
+    - field.field.paragraph.outline.field_outline_video
+    - paragraphs.paragraphs_type.outline
+  module:
+    - file
+    - image
+    - video
+id: paragraph.outline.default
+targetEntityType: paragraph
+bundle: outline
+mode: default
+content:
+  field_outline_file:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_outline_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_outline_video:
+    weight: 2
+    label: above
+    settings:
+      width: '854'
+      height: '480'
+      autoplay: true
+    third_party_settings: {  }
+    type: video_embed_player
+    region: content
+hidden: {  }

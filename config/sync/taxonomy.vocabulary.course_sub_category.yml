@@ -1,0 +1,9 @@
+uuid: 8d27622b-0fd1-4e09-8584-57f17b8e6cab
+langcode: en
+status: true
+dependencies: {  }
+name: 'Course Sub Category'
+vid: course_sub_category
+description: ''
+hierarchy: 0
+weight: 0

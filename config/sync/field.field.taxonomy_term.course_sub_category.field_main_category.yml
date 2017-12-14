@@ -1,16 +1,16 @@
-uuid: ca7c2411-ff23-445a-806d-9922f6564853
+uuid: f7844149-c869-4e1c-a367-292e2823409b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_course_category
-    - node.type.course
+    - field.storage.taxonomy_term.field_main_category
     - taxonomy.vocabulary.category
-id: node.course.field_course_category
-field_name: field_course_category
-entity_type: node
-bundle: course
-label: 'Course Category'
+    - taxonomy.vocabulary.course_sub_category
+id: taxonomy_term.course_sub_category.field_main_category
+field_name: field_main_category
+entity_type: taxonomy_term
+bundle: course_sub_category
+label: 'Main Category'
 description: ''
 required: false
 translatable: false
@@ -25,5 +25,5 @@ settings:
       field: name
       direction: asc
     auto_create: false
-    auto_create_bundle: category
+    auto_create_bundle: ''
 field_type: entity_reference

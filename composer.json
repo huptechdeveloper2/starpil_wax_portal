@@ -49,6 +49,7 @@
         "drupal/smtp": "^1.0@beta",
         "drupal/social_login": "^1.6",
         "drupal/video": "^1.2",
+        "drupal/videojs": "^1.0",
         "drupal/votingapi": "^3.0@alpha",
         "drupal/votingapi_widgets": "^1.0@alpha",
         "drupal/webform": "^5.0@beta",

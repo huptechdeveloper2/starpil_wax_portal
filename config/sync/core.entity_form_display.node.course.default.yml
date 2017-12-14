@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.course.field_course_category
     - field.field.node.course.field_course_goal
     - field.field.node.course.field_course_introduction
+    - field.field.node.course.field_course_sub_category
     - field.field.node.course.field_duration_of_course
     - field.field.node.course.field_equipment
     - field.field.node.course.field_open_date
@@ -17,7 +18,7 @@ dependencies:
   module:
     - datetime
     - field_group
-    - file
+    - paragraphs
     - path
     - text
     - video
@@ -25,34 +26,36 @@ third_party_settings:
   field_group:
     group_introduction:
       children:
-        - title
         - field_course_introduction
-        - field_course_goal
         - field_course_about_judgement
+        - field_course_goal
       parent_name: ''
       weight: 0
-      format_type: fieldset
+      format_type: tab
       format_settings:
-        id: ''
-        classes: ''
+        id: introduction
+        classes: introduction
+        formatter: open
         description: ''
         required_fields: true
       label: Introduction
     group_course_details:
       children:
+        - title
         - body
         - field_teacher_introduction_video
-        - field_teacher_video
         - field_open_date
         - field_duration_of_course
         - field_course_category
+        - field_course_sub_category
         - field_equipment
       parent_name: ''
       weight: 1
-      format_type: fieldset
+      format_type: tab
       format_settings:
-        id: course_details
-        classes: ''
+        id: course-details
+        classes: course-details-class
+        formatter: closed
         description: ''
         required_fields: true
       label: 'Course Details'
@@ -61,10 +64,11 @@ third_party_settings:
         - field_outline
       parent_name: ''
       weight: 2
-      format_type: fieldset
+      format_type: tab
       format_settings:
         id: outline
-        classes: ''
+        classes: outline-class
+        formatter: closed
         description: ''
         required_fields: true
       label: Outline
@@ -75,7 +79,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 2
+    weight: 5
     settings:
       rows: 9
       summary_rows: 3
@@ -84,7 +88,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -97,16 +101,13 @@ content:
     type: text_textarea
     region: content
   field_course_category:
-    weight: 7
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    weight: 9
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_course_goal:
-    weight: 4
+    weight: 7
     settings:
       rows: 5
       placeholder: ''
@@ -114,22 +115,20 @@ content:
     type: text_textarea
     region: content
   field_course_introduction:
-    weight: 3
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_duration_of_course:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
+  field_course_sub_category:
+    weight: 10
+    settings: {  }
     third_party_settings: {  }
-    type: string_textfield
+    type: options_select
     region: content
-  field_equipment:
+  field_duration_of_course:
     weight: 8
     settings:
       size: 60
@@ -137,25 +136,38 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_equipment:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_open_date:
-    weight: 5
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_outline:
-    weight: 11
+    type: entity_reference_paragraphs
+    weight: 5
     settings:
-      progress_indicator: throbber
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: file_generic
     region: content
   field_teacher_introduction_video:
-    weight: 3
+    weight: 6
     settings:
       file_extensions: 'mp4 ogv webm'
       file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
-      max_filesize: ''
+      max_filesize: 100M
       uri_scheme: public
       progress_indicator: throbber
     third_party_settings: {  }
@@ -190,7 +202,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 1
+    weight: 4
     region: content
     settings:
       size: 60

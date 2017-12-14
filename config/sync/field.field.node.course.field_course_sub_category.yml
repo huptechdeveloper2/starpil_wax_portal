@@ -1,16 +1,16 @@
-uuid: ca7c2411-ff23-445a-806d-9922f6564853
+uuid: f2ad5371-c370-44c1-a27d-62dfc523c365
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_course_category
+    - field.storage.node.field_course_sub_category
     - node.type.course
-    - taxonomy.vocabulary.category
-id: node.course.field_course_category
-field_name: field_course_category
+    - taxonomy.vocabulary.course_sub_category
+id: node.course.field_course_sub_category
+field_name: field_course_sub_category
 entity_type: node
 bundle: course
-label: 'Course Category'
+label: 'Course Sub Category'
 description: ''
 required: false
 translatable: false
@@ -20,10 +20,10 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      category: category
+      course_sub_category: course_sub_category
     sort:
       field: name
       direction: asc
     auto_create: false
-    auto_create_bundle: category
+    auto_create_bundle: ''
 field_type: entity_reference

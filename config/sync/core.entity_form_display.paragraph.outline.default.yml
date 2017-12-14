@@ -1,0 +1,48 @@
+uuid: d4f30462-a056-49d8-ba2c-c4a2f90ccff7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.outline.field_outline_file
+    - field.field.paragraph.outline.field_outline_image
+    - field.field.paragraph.outline.field_outline_video
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.outline
+  module:
+    - file
+    - image
+    - video
+id: paragraph.outline.default
+targetEntityType: paragraph
+bundle: outline
+mode: default
+content:
+  field_outline_file:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_outline_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_outline_video:
+    weight: 2
+    settings:
+      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
+      allowed_providers:
+        youtube: youtube
+      uri_scheme: public
+    third_party_settings: {  }
+    type: video_embed
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

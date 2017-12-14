@@ -9,7 +9,7 @@ dependencies:
     - field.storage.node.field_outline
     - node.type.course
   module:
-    - file
+    - entity_reference_revisions
     - node
     - text
     - user
@@ -434,8 +434,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: file_default
-          settings: {  }
+          type: entity_reference_revisions_entity_view
+          settings:
+            view_mode: default
           group_column: ''
           group_columns: {  }
           group_rows: true

@@ -1,0 +1,21 @@
+uuid: d5932588-dcde-44b1-b958-a80f44b55822
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_you_wan_a_be
+  module:
+    - options
+    - user
+id: user.user.field_you_wan_a_be
+field_name: field_you_wan_a_be
+entity_type: user
+bundle: user
+label: 'You Wan a be'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -4,6 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.register
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_biography
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_you_wan_a_be
     - field.field.user.user.user_picture
   module:
     - user
@@ -20,7 +25,12 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  commerce_remote_id: true
   contact: true
+  field_biography: true
+  field_first_name: true
+  field_last_name: true
+  field_you_wan_a_be: true
   language: true
   path: true
   simplenews: true
