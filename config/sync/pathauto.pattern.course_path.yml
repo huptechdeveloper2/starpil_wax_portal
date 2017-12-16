@@ -1,0 +1,22 @@
+uuid: c459988c-ed6e-42ec-b288-298ad9311c84
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: course_path
+label: 'Course Path'
+type: 'canonical_entities:node'
+pattern: 'course/[node:title]'
+selection_criteria:
+  4aa43178-f27e-4384-a3f6-13b0de0a27d2:
+    id: node_type
+    bundles:
+      course: course
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 4aa43178-f27e-4384-a3f6-13b0de0a27d2
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -36,11 +36,12 @@ content:
     weight: 2
     settings:
       file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
-      allowed_providers:
-        youtube: youtube
       uri_scheme: public
+      file_extensions: 'mp4 ogv webm'
+      max_filesize: ''
+      progress_indicator: throbber
     third_party_settings: {  }
-    type: video_embed
+    type: video_upload
     region: content
 hidden:
   created: true

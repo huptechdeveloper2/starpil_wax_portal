@@ -8,9 +8,9 @@
     width: auto !important;
     margin-top: 0 !important;
 }
-.form-item input[type="checkbox"] {
+/*.form-item input[type="checkbox"] {
     height: auto !important;
-}
+}*/
 
 
 
@@ -280,6 +280,14 @@
 .page-node-type-course .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
     border: 0;
 }
+.page-node-type-course .page-header {
+    display: none;
+}
+.page-node-type-course .main-container {
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
 
 /*####### Header menu #############*/
 /*#navbar-collapse ul li.last-item {

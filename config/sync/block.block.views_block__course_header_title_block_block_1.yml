@@ -1,0 +1,25 @@
+uuid: 4494b9d4-951f-4f7f-ba03-571c5cafce3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.course_header_title_block
+  module:
+    - views
+  theme:
+    - megacourse
+id: views_block__course_header_title_block_block_1
+theme: megacourse
+region: heaer_node_title
+weight: 0
+provider: null
+plugin: 'views_block:course_header_title_block-block_1'
+settings:
+  id: 'views_block:course_header_title_block-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }

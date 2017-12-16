@@ -1,5 +1,6 @@
 module:
   address: 0
+  addtoany: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
   ajaxify_submit_forms: 0
@@ -10,6 +11,7 @@ module:
   breakpoint: 0
   change_pwd_page: 0
   ckeditor: 0
+  clientside_validation: 0
   color: 0
   comment: 0
   commerce: 0

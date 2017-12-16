@@ -85,15 +85,7 @@
   {% endif %}
   {{ title_suffix }}
 
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes.addClass('author') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
+  
 
   <div{{ content_attributes.addClass('content') }}>
     <div class="col-md-5">
@@ -104,9 +96,7 @@
                                     {{content.field_teacher_introduction_video}}
                                 </div>
                             </div>
-                            <div class="price">
-                                 Free
-                             </div>
+                            <div class="price">{{content.field_course_price}}</div>
                             <a href="#" class="take-this-course mc-btn btn-style-1">Take this course</a>
                         </div>
 
@@ -160,20 +150,15 @@
                         <div class="widget widget_share">
                             <i class="icon md-forward"></i>
                             <h4 class="xsm black bold">Share course</h4>
-                            <div class="share-body">
-                                <a href="#" class="twitter" title="twitter">
-                                    <i class="icon md-twitter"></i>
-                                </a>
-                                <a href="#" class="pinterest" title="pinterest">
-                                    <i class="icon md-pinterest-1"></i>
-                                </a>
-                                <a href="#" class="facebook" title="facebook">
-                                    <i class="icon md-facebook-1"></i>
-                                </a>
-                                <a href="#" class="google-plus" title="google plus">
-                                    <i class="icon md-google-plus"></i>
-                                </a>
-                            </div>
+                            <span class="addtoany-links">
+                            <span class="a2a_kit a2a_kit_size_32 a2a_default_style addtoany_list">
+                              <a class="a2a_button_facebook fb"></a>
+                              <a class="a2a_button_pinterest pinterest"></a>
+                              <a class="a2a_button_twitter twitter"></a>
+                              <a class="a2a_button_google_plus plus"></a>
+                            </span>
+                            <script async src="https://static.addtoany.com/menu/page.js"></script>
+                            </span>
                         </div>
                     </div>
     </div>

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.course.field_course_category
     - field.field.node.course.field_course_goal
     - field.field.node.course.field_course_introduction
+    - field.field.node.course.field_course_price
     - field.field.node.course.field_course_sub_category
     - field.field.node.course.field_duration_of_course
     - field.field.node.course.field_equipment
@@ -16,6 +17,7 @@ dependencies:
     - field.field.node.course.field_teacher_introduction_video
     - node.type.course
   module:
+    - commerce_price
     - datetime
     - field_group
     - paragraphs
@@ -24,54 +26,77 @@ dependencies:
     - video
 third_party_settings:
   field_group:
+    group_course:
+      children:
+        - group_introduction
+        - group_c
+        - group_outline
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: add_course_id
+        classes: add_course_class
+        direction: vertical
+      label: Course
     group_introduction:
       children:
         - field_course_introduction
         - field_course_about_judgement
         - field_course_goal
-      parent_name: ''
-      weight: 0
+      parent_name: group_course
+      weight: 14
       format_type: tab
       format_settings:
-        id: introduction
-        classes: introduction
+        label: '1. Introduction'
         formatter: open
         description: ''
         required_fields: true
-      label: Introduction
-    group_course_details:
+        id: course_introduction_id
+        classes: course_introduction_class
+      label: '1. Introduction'
+    group_c:
       children:
         - title
         - body
         - field_teacher_introduction_video
-        - field_open_date
-        - field_duration_of_course
+        - field_course_price
         - field_course_category
         - field_course_sub_category
         - field_equipment
-      parent_name: ''
-      weight: 1
+        - field_open_date
+        - field_duration_of_course
+      parent_name: group_course
+      weight: 15
       format_type: tab
       format_settings:
-        id: course-details
-        classes: course-details-class
+        label: '2. Course Details'
         formatter: closed
         description: ''
         required_fields: true
-      label: 'Course Details'
+        id: course_detail_id
+        classes: course_detail_class
+      label: '2. Course Details'
     group_outline:
       children:
         - field_outline
-      parent_name: ''
-      weight: 2
+        - created
+        - uid
+        - promote
+        - sticky
+        - path
+        - status
+      parent_name: group_course
+      weight: 17
       format_type: tab
       format_settings:
-        id: outline
-        classes: outline-class
+        label: '3. Outline'
         formatter: closed
         description: ''
         required_fields: true
-      label: Outline
+        id: outline_id
+        classes: outline_class
+      label: '3. Outline'
 id: node.course.default
 targetEntityType: node
 bundle: course
@@ -79,7 +104,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 5
+    weight: 17
     settings:
       rows: 9
       summary_rows: 3
@@ -88,12 +113,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
   field_course_about_judgement:
-    weight: 5
+    weight: 18
     settings:
       rows: 5
       placeholder: ''
@@ -101,13 +126,13 @@ content:
     type: text_textarea
     region: content
   field_course_category:
-    weight: 9
+    weight: 20
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_course_goal:
-    weight: 7
+    weight: 19
     settings:
       rows: 5
       placeholder: ''
@@ -115,21 +140,27 @@ content:
     type: text_textarea
     region: content
   field_course_introduction:
-    weight: 4
+    weight: 17
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_course_price:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: commerce_price_default
+    region: content
   field_course_sub_category:
-    weight: 10
+    weight: 21
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_duration_of_course:
-    weight: 8
+    weight: 24
     settings:
       size: 60
       placeholder: ''
@@ -137,7 +168,7 @@ content:
     type: string_textfield
     region: content
   field_equipment:
-    weight: 11
+    weight: 22
     settings:
       size: 60
       placeholder: ''
@@ -145,14 +176,14 @@ content:
     type: string_textfield
     region: content
   field_open_date:
-    weight: 7
+    weight: 23
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_outline:
     type: entity_reference_paragraphs
-    weight: 5
+    weight: 19
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -163,7 +194,7 @@ content:
     third_party_settings: {  }
     region: content
   field_teacher_introduction_video:
-    weight: 6
+    weight: 18
     settings:
       file_extensions: 'mp4 ogv webm'
       file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
@@ -175,7 +206,7 @@ content:
     region: content
   path:
     type: path
-    weight: 8
+    weight: 25
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -183,26 +214,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 23
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 26
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 24
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 4
+    weight: 16
     region: content
     settings:
       size: 60
@@ -210,7 +241,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 21
     settings:
       match_operator: CONTAINS
       size: 60

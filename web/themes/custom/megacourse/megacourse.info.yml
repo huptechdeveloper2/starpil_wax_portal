@@ -11,6 +11,7 @@ regions:
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
   header: 'Top Bar'
+  heaer_node_title: 'Node Header Title'
   highlighted: 'Highlighted'
   help: 'Help'
   slide: 'slide'

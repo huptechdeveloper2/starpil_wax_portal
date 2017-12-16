@@ -109,6 +109,17 @@
   {% endblock %}
 {% endif %}
 
+<!-- //node header title// -->
+
+{% if page.heaer_node_title %}
+  {% block heaer_node_title %}
+    <div class="heaer_node_title">
+      {{ page.heaer_node_title }}
+    </div>
+  {% endblock %}
+{% endif %}
+
+
 {# Main #}
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">

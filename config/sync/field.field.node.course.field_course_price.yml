@@ -1,0 +1,27 @@
+uuid: 48dd04ef-b57a-49e1-8155-19f00aef981d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_price
+    - node.type.course
+  module:
+    - commerce_price
+id: node.course.field_course_price
+field_name: field_course_price
+entity_type: node
+bundle: course
+label: 'Course Price'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    number: '0'
+    currency_code: USD
+default_value_callback: ''
+settings:
+  available_currencies:
+    - '0'
+    - USD
+field_type: commerce_price
