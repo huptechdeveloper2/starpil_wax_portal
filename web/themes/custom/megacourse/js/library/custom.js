@@ -10,6 +10,10 @@ jQuery( ".private-message-inbox-thread-link" ).click(function() {
   window.load();
 });
 
+// jQuery("#ui-id-5").click(function(){
+// 	alert( "Handler for .click() called." );
+//     // jQuery("p").css("display", "none");
+// });
 // jQuery( document ).ready(function() {
 //     jQuery("#navbar-collapse ul li:last-child").addClass("last-item");
 // });

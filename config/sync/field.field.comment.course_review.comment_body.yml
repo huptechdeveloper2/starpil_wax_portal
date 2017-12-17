@@ -1,0 +1,21 @@
+uuid: 718852f5-2471-4ed1-9758-684460a2c6e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.course_review
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.course_review.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: course_review
+label: Comment
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

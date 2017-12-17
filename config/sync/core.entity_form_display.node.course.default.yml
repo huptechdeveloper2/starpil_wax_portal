@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.course.body
     - field.field.node.course.field_course_about_judgement
     - field.field.node.course.field_course_category
+    - field.field.node.course.field_course_comments
     - field.field.node.course.field_course_goal
     - field.field.node.course.field_course_introduction
     - field.field.node.course.field_course_price
@@ -17,6 +18,7 @@ dependencies:
     - field.field.node.course.field_teacher_introduction_video
     - node.type.course
   module:
+    - comment
     - commerce_price
     - datetime
     - field_group
@@ -130,6 +132,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_course_comments:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
     region: content
   field_course_goal:
     weight: 19

@@ -1,26 +1,26 @@
-uuid: 79c23fa3-109b-40c0-85e0-ca8f18d45476
+uuid: 108d48e4-7aad-4be6-98f4-19abfaed9053
 langcode: en
 status: true
 dependencies:
   config:
-    - comment.type.comment
-    - field.field.comment.comment.comment_body
+    - comment.type.course_review
+    - field.field.comment.course_review.comment_body
   module:
     - text
-_core:
-  default_config_hash: 77Ye1kR-P6AaiGfEO8mnXNSr7nqtnP3PiiVBwJeGGMI
-id: comment.comment.default
+id: comment.course_review.default
 targetEntityType: comment
-bundle: comment
+bundle: course_review
 mode: default
 content:
   comment_body:
     label: hidden
     type: text_default
     weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
 hidden:
-  links: true
   private_message_link: true

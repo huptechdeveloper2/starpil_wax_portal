@@ -1,0 +1,8 @@
+uuid: 1a29eef3-0068-4537-8c8d-80cb91f054f4
+langcode: en
+status: true
+dependencies: {  }
+id: course_review
+label: 'Course review'
+target_entity_type_id: block_content
+description: ''
