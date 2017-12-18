@@ -1,0 +1,30 @@
+uuid: dc94feab-5abb-4741-98a1-2cfb7d3bbc52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_rating
+    - node.type.course
+  module:
+    - fivestar
+id: node.course.field_course_rating
+field_name: field_course_rating
+entity_type: node
+bundle: course
+label: 'Course Rating'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    rating: '60'
+    target: null
+default_value_callback: ''
+settings:
+  stars: '5'
+  allow_clear: 0
+  allow_revote: 1
+  allow_ownvote: 1
+  rated_while: viewing
+  target: ''
+field_type: fivestar

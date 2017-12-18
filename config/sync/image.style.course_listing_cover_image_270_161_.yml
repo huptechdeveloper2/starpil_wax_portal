@@ -1,0 +1,14 @@
+uuid: 1d893280-774b-4c03-be4a-de0a248c4956
+langcode: en
+status: true
+dependencies: {  }
+name: course_listing_cover_image_270_161_
+label: 'Course listing Cover Image(270*161)'
+effects:
+  548e2b9b-2113-4af1-bd7a-9f6756f92e36:
+    uuid: 548e2b9b-2113-4af1-bd7a-9f6756f92e36
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 270
+      height: 161

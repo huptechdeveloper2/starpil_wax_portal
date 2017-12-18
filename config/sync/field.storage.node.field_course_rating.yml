@@ -1,0 +1,20 @@
+uuid: ba21f838-5d0f-46b1-92dd-fce15d2d958c
+langcode: en
+status: true
+dependencies:
+  module:
+    - fivestar
+    - node
+id: node.field_course_rating
+field_name: field_course_rating
+entity_type: node
+type: fivestar
+settings:
+  voting_tag: vote
+module: fivestar
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

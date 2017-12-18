@@ -1,0 +1,31 @@
+uuid: f2270faa-5f19-452d-adb0-2417cfc56e01
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8f1798bf-8833-4176-a677-0bbaf6f59ada'
+  module:
+    - block_content
+    - system
+  theme:
+    - megacourse
+id: courselistingpagebanner
+theme: megacourse
+region: heaer_node_title
+weight: -15
+provider: null
+plugin: 'block_content:8f1798bf-8833-4176-a677-0bbaf6f59ada'
+settings:
+  id: 'block_content:8f1798bf-8833-4176-a677-0bbaf6f59ada'
+  label: 'Course Listing Page Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /courses
+    negate: false
+    context_mapping: {  }

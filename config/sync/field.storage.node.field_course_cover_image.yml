@@ -1,14 +1,14 @@
-uuid: 23795e40-e6e5-4622-8a2d-f692a1e2e799
+uuid: 7bf86476-1d46-4bfe-a8bf-9eeaeca2a377
 langcode: en
 status: true
 dependencies:
   module:
     - file
     - image
-    - paragraphs
-id: paragraph.field_outline_image
-field_name: field_outline_image
-entity_type: paragraph
+    - node
+id: node.field_course_cover_image
+field_name: field_course_cover_image
+entity_type: node
 type: image
 settings:
   uri_scheme: public
@@ -23,7 +23,7 @@ settings:
   display_default: false
 module: image
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

@@ -1,0 +1,29 @@
+uuid: 4a118e91-bca3-449a-bb00-08719817aac3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.course_listing
+  module:
+    - system
+    - views
+  theme:
+    - megacourse
+id: exposedformcourse_listingpage_1
+theme: megacourse
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:course_listing-page_1'
+settings:
+  id: 'views_exposed_filter_block:course_listing-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /courses
+    negate: false
+    context_mapping: {  }

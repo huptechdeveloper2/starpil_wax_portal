@@ -33,6 +33,7 @@
         "drupal/core": "~8.4",
         "drupal/deactivate_account": "^1.0@alpha",
         "drupal/field_group": "^1.0",
+        "drupal/fivestar": "1.x-dev",
         "drupal/flexslider": "^2.0@beta",
         "drupal/imce": "^1.6",
         "drupal/login_popup": "^1.0",

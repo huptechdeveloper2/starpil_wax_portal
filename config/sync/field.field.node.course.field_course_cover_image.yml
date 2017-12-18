@@ -1,17 +1,17 @@
-uuid: 14fa9d03-ef3d-4701-9551-e7e1b18a58d8
+uuid: b85853e0-1993-42d3-81c2-19e45e9c1911
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_outline_image
-    - paragraphs.paragraphs_type.outline
+    - field.storage.node.field_course_cover_image
+    - node.type.course
   module:
     - image
-id: paragraph.outline.field_outline_image
-field_name: field_outline_image
-entity_type: paragraph
-bundle: outline
-label: 'Outline Image'
+id: node.course.field_course_cover_image
+field_name: field_course_cover_image
+entity_type: node
+bundle: course
+label: 'Course Cover Image'
 description: ''
 required: false
 translatable: false

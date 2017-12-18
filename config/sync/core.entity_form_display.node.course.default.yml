@@ -7,21 +7,27 @@ dependencies:
     - field.field.node.course.field_course_about_judgement
     - field.field.node.course.field_course_category
     - field.field.node.course.field_course_comments
+    - field.field.node.course.field_course_cover_image
     - field.field.node.course.field_course_goal
     - field.field.node.course.field_course_introduction
     - field.field.node.course.field_course_price
+    - field.field.node.course.field_course_rating
     - field.field.node.course.field_course_sub_category
+    - field.field.node.course.field_course_tag
     - field.field.node.course.field_duration_of_course
     - field.field.node.course.field_equipment
     - field.field.node.course.field_open_date
     - field.field.node.course.field_outline
     - field.field.node.course.field_teacher_introduction_video
+    - image.style.thumbnail
     - node.type.course
   module:
     - comment
     - commerce_price
     - datetime
     - field_group
+    - fivestar
+    - image
     - paragraphs
     - path
     - text
@@ -62,9 +68,11 @@ third_party_settings:
         - title
         - body
         - field_teacher_introduction_video
+        - field_course_cover_image
         - field_course_price
         - field_course_category
         - field_course_sub_category
+        - field_course_tag
         - field_equipment
         - field_open_date
         - field_duration_of_course
@@ -128,7 +136,7 @@ content:
     type: text_textarea
     region: content
   field_course_category:
-    weight: 20
+    weight: 21
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -138,6 +146,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: comment_default
+    region: content
+  field_course_cover_image:
+    weight: 19
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_course_goal:
     weight: 19
@@ -156,19 +172,32 @@ content:
     type: text_textarea
     region: content
   field_course_price:
-    weight: 19
+    weight: 20
     settings: {  }
     third_party_settings: {  }
     type: commerce_price_default
     region: content
+  field_course_rating:
+    weight: 28
+    settings:
+      fivestar_widget: modules/contrib/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
   field_course_sub_category:
-    weight: 21
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_course_tag:
+    weight: 23
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_duration_of_course:
-    weight: 24
+    weight: 26
     settings:
       size: 60
       placeholder: ''
@@ -176,7 +205,7 @@ content:
     type: string_textfield
     region: content
   field_equipment:
-    weight: 22
+    weight: 24
     settings:
       size: 60
       placeholder: ''
@@ -184,7 +213,7 @@ content:
     type: string_textfield
     region: content
   field_open_date:
-    weight: 23
+    weight: 25
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
@@ -249,7 +278,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 21
+    weight: 22
     settings:
       match_operator: CONTAINS
       size: 60

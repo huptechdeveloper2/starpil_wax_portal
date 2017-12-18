@@ -1,0 +1,9 @@
+uuid: db1bba7c-36c7-4e96-9f73-e12c86143339
+langcode: en
+status: true
+dependencies: {  }
+name: 'Tags Courses'
+vid: tags_courses
+description: ''
+hierarchy: 0
+weight: 0

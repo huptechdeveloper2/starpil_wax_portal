@@ -4,14 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.outline.field_outline_file
-    - field.field.paragraph.outline.field_outline_image
-    - field.field.paragraph.outline.field_outline_video
-    - image.style.medium
     - paragraphs.paragraphs_type.outline
   module:
     - file
-    - image
-    - video
 id: paragraph.outline.default
 targetEntityType: paragraph
 bundle: outline
@@ -23,28 +18,5 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: file_default
-    region: content
-  field_outline_image:
-    weight: 1
-    label: hidden
-    settings:
-      image_style: medium
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_outline_video:
-    weight: 2
-    label: hidden
-    settings:
-      width: '300'
-      height: '300'
-      controls: true
-      preload: metadata
-      autoplay: false
-      loop: false
-      muted: false
-    third_party_settings: {  }
-    type: video_player_list
     region: content
 hidden: {  }

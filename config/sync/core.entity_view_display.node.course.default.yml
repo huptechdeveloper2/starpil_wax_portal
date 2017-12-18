@@ -3,14 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment.default
     - field.field.node.course.body
     - field.field.node.course.field_course_about_judgement
     - field.field.node.course.field_course_category
     - field.field.node.course.field_course_comments
+    - field.field.node.course.field_course_cover_image
     - field.field.node.course.field_course_goal
     - field.field.node.course.field_course_introduction
     - field.field.node.course.field_course_price
+    - field.field.node.course.field_course_rating
     - field.field.node.course.field_course_sub_category
+    - field.field.node.course.field_course_tag
     - field.field.node.course.field_duration_of_course
     - field.field.node.course.field_equipment
     - field.field.node.course.field_open_date
@@ -22,6 +26,8 @@ dependencies:
     - commerce_price
     - datetime
     - entity_reference_revisions
+    - fivestar
+    - image
     - text
     - user
     - video
@@ -66,6 +72,15 @@ content:
     third_party_settings: {  }
     type: comment_default
     region: content
+  field_course_cover_image:
+    weight: 17
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   field_course_goal:
     weight: 3
     label: hidden
@@ -89,9 +104,25 @@ content:
     third_party_settings: {  }
     type: commerce_price_default
     region: content
+  field_course_rating:
+    weight: 16
+    label: above
+    settings:
+      fivestar_widget: modules/contrib/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
   field_course_sub_category:
     weight: 11
     label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_course_tag:
+    weight: 15
+    label: above
     settings:
       link: true
     third_party_settings: {  }

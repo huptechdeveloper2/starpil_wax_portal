@@ -4,14 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.outline.field_outline_file
-    - field.field.paragraph.outline.field_outline_image
-    - field.field.paragraph.outline.field_outline_video
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.outline
   module:
     - file
-    - image
-    - video
 id: paragraph.outline.default
 targetEntityType: paragraph
 bundle: outline
@@ -23,25 +18,6 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
-    region: content
-  field_outline_image:
-    weight: 1
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_outline_video:
-    weight: 2
-    settings:
-      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
-      uri_scheme: public
-      file_extensions: 'mp4 ogv webm'
-      max_filesize: ''
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: video_upload
     region: content
 hidden:
   created: true
