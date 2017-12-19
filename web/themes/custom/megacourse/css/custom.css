@@ -376,12 +376,12 @@
     transform: translateY(-50%);
     transition: all 0.3s linear 0s;
 }
-#edit-field-course-tag-target-id div:first-child {
+/*#edit-field-course-tag-target-id div:first-child {
     display: none;
 }
 #edit-field-course-category-target-id div:first-child {
     display: none;
-}
+}*/
 #block-exposedformcourse-listingpage-1 {
     border-right: 1px solid #D4D4D4;
 }
@@ -393,4 +393,22 @@
 }
 .mc-item {
     margin: 15px 0;
+}
+
+.tb-cell .form-actions {
+    height: 40px;
+    width: 241px;
+    padding-top: 6%;
+}
+
+.fa-angle-down {
+    display: none;
+}
+.flexslider {
+    margin: 0px !important;
+}
+.flex-control-nav {
+    bottom: 0px !important;
+    top: 90% !important;
+
 }

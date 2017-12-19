@@ -1,0 +1,6 @@
+name: Course Exposed Custom
+description: Creates a custom form for course listing exposed filter.
+package: custom
+type: module
+version: 1.0
+core: 8.x

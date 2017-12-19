@@ -1,0 +1,26 @@
+uuid: 8880a2d1-06e6-45f9-96cd-a6f0810afabf
+langcode: en
+status: true
+dependencies:
+  module:
+    - course_exposed
+    - system
+  theme:
+    - megacourse
+id: courseexposedcustom
+theme: megacourse
+region: slide
+weight: -16
+provider: null
+plugin: course_exposed_block
+settings:
+  id: course_exposed_block
+  label: 'Course Exposed Custom'
+  provider: course_exposed
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
