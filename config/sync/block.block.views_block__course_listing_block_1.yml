@@ -1,0 +1,30 @@
+uuid: c960466e-fa24-4ce6-bc45-c9e86a4b86a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.course_listing
+  module:
+    - system
+    - views
+  theme:
+    - megacourse
+id: views_block__course_listing_block_1
+theme: megacourse
+region: course_listing
+weight: -16
+provider: null
+plugin: 'views_block:course_listing-block_1'
+settings:
+  id: 'views_block:course_listing-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

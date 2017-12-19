@@ -335,6 +335,9 @@
 
 
 /*########## Course Listing Page ###############*/
+.path-courses {
+    background-color: #eee;
+}
 .path-courses .page-header {
     display: none;
 }
@@ -372,4 +375,22 @@
     top: 50%;
     transform: translateY(-50%);
     transition: all 0.3s linear 0s;
+}
+#edit-field-course-tag-target-id div:first-child {
+    display: none;
+}
+#edit-field-course-category-target-id div:first-child {
+    display: none;
+}
+#block-exposedformcourse-listingpage-1 {
+    border-right: 1px solid #D4D4D4;
+}
+.form-item-field-course-tag-target-id {
+    border-bottom: 1px solid #D4D4D4;
+}
+.view-id-course_listing .content-item h4 {
+    min-height: 60px;
+}
+.mc-item {
+    margin: 15px 0;
 }

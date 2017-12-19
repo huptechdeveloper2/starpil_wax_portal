@@ -18,6 +18,7 @@ regions:
   top_header: 'User page Top Header'
   content: 'Content'
   front_hoe_it_works: 'front how it works'
+  course_listing: 'Front Course Listing'
   sidebar_first: 'Primary'
   sidebar_second: 'Secondary'
   first_footer: 'Upper Footer'

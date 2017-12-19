@@ -11,7 +11,7 @@ dependencies:
 id: howitworkshomepageblock
 theme: megacourse
 region: front_hoe_it_works
-weight: 0
+weight: -17
 provider: null
 plugin: 'block_content:f3a047d2-2daf-41d5-9f10-220a4576c6c8'
 settings:
