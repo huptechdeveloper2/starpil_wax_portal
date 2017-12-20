@@ -1,4 +1,18 @@
-
+/*######## Home Page ########*/
+.path-frontpage .page-header {
+    display: none;
+}
+.online-offline-about-us {
+    padding: 70px 0;
+}
+.mc-item-2 .ft-item {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;s
+}
+#views-exposed-form-course-listing-page-1 .js-form-item-title{
+    display: none;
+}
 /*////// home page slider //////////*/
 .flexslider {
     border: 0 !important;
@@ -376,12 +390,12 @@
     transform: translateY(-50%);
     transition: all 0.3s linear 0s;
 }
-/*#edit-field-course-tag-target-id div:first-child {
+#edit-field-course-tag-target-id div:first-child {
     display: none;
 }
 #edit-field-course-category-target-id div:first-child {
     display: none;
-}*/
+}
 #block-exposedformcourse-listingpage-1 {
     border-right: 1px solid #D4D4D4;
 }

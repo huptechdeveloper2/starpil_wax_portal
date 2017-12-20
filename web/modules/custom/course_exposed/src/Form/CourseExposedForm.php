@@ -16,23 +16,26 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
  */
 class CourseExposedForm extends FormBase {
   /**
-   * {@inheritdoc}
+   * Form ID
    */
   public function getFormId() {
     return 'course_exposed_form';
   }
 
   /**
-   * {@inheritdoc}
+   * Build Form
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
+    // Get Term list Form Vocabulary Name'category'
     $categories = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree('category');
     foreach ($categories as $key => $value) {
       $categoryOption[$value->tid] = $value->name;
     }
     $all_cate_default = array('All'=>'All categories');
     $cateOption = $all_cate_default + $categoryOption;
+
+    // Get Term list Form Vocabulary Name'tags_courses'
     $tags = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree('tags_courses');
     foreach ($tags as $k => $v) {
       $tagOption[$v->tid] = $v->name;
@@ -40,7 +43,7 @@ class CourseExposedForm extends FormBase {
     $all_tag_default = array('All'=>'Beginner level');
     $tagallOption = $all_tag_default + $tagOption;
     
-
+    // Create Form Fields
     $form['course_body'] = array(
       '#type' => 'textfield',
       '#prefix' => '<div class="course-keyword">',
@@ -81,13 +84,13 @@ class CourseExposedForm extends FormBase {
   }
 
   /**
-   * {@inheritdoc}
+   * Validate Function
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
   }
 
   /**
-   * {@inheritdoc}
+   * Submit Function handler
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     foreach ($form_state->getValues() as $key => $value) {
@@ -101,11 +104,30 @@ class CourseExposedForm extends FormBase {
         $title = $value;
       }
     }
+
+    // Check For the value
+
+    if ($category_target_id == 'All') {
+      $cate_url = '';
+    } else {
+      $cate_url = '&field_course_category_target_id='.$category_target_id;
+    }
+    if ($tag_target_id == 'All') {
+      $tag_url = '';
+    } else {
+      $tag_url = '&field_course_tag_target_id='.$tag_target_id;
+    }
+    if ($title == '') {
+      $title_url = 'title=';
+    } else {
+      $title_url = 'title='.$title;
+    }
+
     global $base_url;
-    // $url = $base_url.'/courses?field_course_category_target_id='.$category_target_id;
-    $url = $base_url.'/courses?title='.$title.'&field_course_tag_target_id='.$category_target_id.'&field_course_category_target_id='.$tag_target_id;
+    
+    $url = $base_url.'/courses?'.$title_url.$cate_url.$tag_url;
     $response = new RedirectResponse($url);
-    $response->send(); // don't send the response yourself inside controller and form.
+    $response->send(); 
     return;
   }
 }
