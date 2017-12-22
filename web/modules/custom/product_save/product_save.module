@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * Implements hook_entity_presave().
+ */
+
+
+use Drupal\commerce_product\Entity\ProductVariation;
+use Drupal\commerce_product\Entity\Product;
+use Drupal\commerce_price\Price;
+
+function product_save_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->bundle() == 'course') {
+
+    // ###### LOAD NODE VALUES ########
+
+    $n_nid = $entity->get('nid')->value;
+    $n_uid = $entity->getOwnerId();
+    $n_title = $entity->get('title')->value;
+    $n_price = $entity->get('field_course_price')->number;
+    $n_currancy = $entity->get('field_course_price')->currency_code;
+    $n_created = $entity->get('created')->value;
+    $current_time = time();
+
+    // ###### lOAD PRODUCTS TO CHECK NEW/EXS. ########
+
+    $Allproducts = db_query("SELECT `product_id`, `sku` FROM `commerce_product_variation_field_data` WHERE 1")->fetchAll();
+    foreach ($Allproducts as $Pkey => $Pvalue) {
+      $sku_product[$Pvalue->product_id] = $Pvalue->sku;
+    }
+    $node_sku = 'wax_portal_'.$n_nid;
+
+    // ###### PRODUCT CRAETE & UPDATE ########
+
+    if (in_array($node_sku, $sku_product)) {
+
+    // ###### UPDATE PRODUCT ########
+
+      foreach ($sku_product as $p_id => $p_sku) {
+        if ($p_sku == $node_sku) {
+          $ex_product = $p_id;
+        }
+      }
+      $Update_product = \Drupal\commerce_product\Entity\Product::load($ex_product);
+      $Update_product->set('title',$n_title);
+      $Update_product->save();
+    } else {
+
+    // ###### CRAETE PRODUCT ########
+
+        $store = \Drupal\commerce_store\Entity\Store::load(1);
+        $variation = \Drupal\commerce_product\Entity\ProductVariation::create([
+          'type' => 'default',
+          'sku' => 'wax_portal_'.$n_nid,
+          'title' => $n_title,
+          'status' => 1,
+          'price' => new \Drupal\commerce_price\Price($n_price, $n_currancy),
+        ]);
+        $variation->save();
+
+        $product = \Drupal\commerce_product\Entity\Product::create([
+          'uid' => $n_uid, // The user id that created the product.
+          'type' => 'default', // Just like variation, the default product type is 'default'.
+          'title' => $n_title,
+          'stores' => [$store], // The store we created/loaded above.
+          'variations' => [$variation], // The variation we created above.
+        ]);
+        $product->save();
+
+        // You can also add a variation to a product using the addVariation() method.
+        $product->addVariation($variation);
+        $product->save();
+    }
+
+    // ###### SET CREATED PRODUCT AS PRODUCT REFRERNCE ########
+
+
+  }
+}

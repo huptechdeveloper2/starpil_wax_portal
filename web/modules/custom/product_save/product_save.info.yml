@@ -1,0 +1,6 @@
+name: Product Save On Node Save
+description: On Node Save Create Product OR Update Product
+package: custom
+type: module
+version: 1.0
+core: 8.x
