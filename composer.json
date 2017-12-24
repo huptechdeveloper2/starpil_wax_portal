@@ -27,6 +27,7 @@
         "drupal/block_class": "^1.0@alpha",
         "drupal/bootstrap": "^3.6",
         "drupal/change_pwd_page": "^1.0@beta",
+        "drupal/clientside_validation": "^1.0@RC",
         "drupal/commerce": "^2.2",
         "drupal/commerce_paypal": "^1.0@beta",
         "drupal/console": "^1.0.2",
