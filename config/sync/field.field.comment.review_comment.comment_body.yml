@@ -1,16 +1,16 @@
-uuid: 718852f5-2471-4ed1-9758-684460a2c6e7
+uuid: 675c7aee-fdfe-4716-854d-e886e8d99d4f
 langcode: en
 status: true
 dependencies:
   config:
-    - comment.type.course_review
+    - comment.type.review_comment
     - field.storage.comment.comment_body
   module:
     - text
-id: comment.course_review.comment_body
+id: comment.review_comment.comment_body
 field_name: comment_body
 entity_type: comment
-bundle: course_review
+bundle: review_comment
 label: Comment
 description: ''
 required: true

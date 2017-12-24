@@ -1,0 +1,33 @@
+uuid: 850cb43a-c3bb-4862-9977-41c265b8eebf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reviews
+    - node.type.course
+  module:
+    - comment
+id: node.course.field_reviews
+field_name: field_reviews
+entity_type: node
+bundle: course
+label: Reviews
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    status: 2
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 50
+  form_location: true
+  anonymous: 0
+  preview: 1
+field_type: comment

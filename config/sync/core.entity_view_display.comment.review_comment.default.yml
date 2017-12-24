@@ -1,0 +1,36 @@
+uuid: 29b0afd4-e770-47ee-81a9-31d0a47c736a
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review_comment
+    - field.field.comment.review_comment.comment_body
+    - field.field.comment.review_comment.field_reviews
+  module:
+    - fivestar
+    - text
+id: comment.review_comment.default
+targetEntityType: comment
+bundle: review_comment
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_reviews:
+    weight: 101
+    label: above
+    settings:
+      fivestar_widget: modules/contrib/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  private_message_link: true

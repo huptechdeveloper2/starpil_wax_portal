@@ -1,0 +1,8 @@
+uuid: 6da46330-35a4-4fb5-809a-b8b37df71aec
+langcode: en
+status: true
+dependencies: {  }
+id: review_comment
+label: 'Review comment'
+target_entity_type_id: node
+description: 'This is for reviews of course'

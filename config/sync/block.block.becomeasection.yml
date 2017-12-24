@@ -1,0 +1,20 @@
+uuid: 9fa1b728-d634-4293-b424-1f47a8803ea2
+langcode: en
+status: false
+dependencies:
+  module:
+    - become_a_section
+  theme:
+    - megacourse
+id: becomeasection
+theme: megacourse
+region: course_listing
+weight: 0
+provider: null
+plugin: become_a_section_block
+settings:
+  id: become_a_section_block
+  label: 'Become A Section'
+  provider: become_a_section
+  label_display: '0'
+visibility: {  }

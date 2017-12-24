@@ -1,0 +1,6 @@
+name: Become A Section
+description: Creates a Block Showing become a section of front page footer.
+package: custom
+type: module
+version: 1.0
+core: 8.x

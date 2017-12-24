@@ -1,15 +1,17 @@
-uuid: 1090df6d-b9a4-4095-bef5-3e9e9b82fe42
+uuid: 9c5950c7-aed4-44d5-a0b3-7bc3086a3ff8
 langcode: en
 status: true
 dependencies:
   config:
-    - comment.type.course_review
-    - field.field.comment.course_review.comment_body
+    - comment.type.review_comment
+    - field.field.comment.review_comment.comment_body
+    - field.field.comment.review_comment.field_reviews
   module:
+    - fivestar
     - text
-id: comment.course_review.default
+id: comment.review_comment.default
 targetEntityType: comment
-bundle: course_review
+bundle: review_comment
 mode: default
 content:
   author:
@@ -22,6 +24,13 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  field_reviews:
+    weight: 12
+    settings:
+      fivestar_widget: modules/contrib/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
     region: content
   subject:
     type: string_textfield
