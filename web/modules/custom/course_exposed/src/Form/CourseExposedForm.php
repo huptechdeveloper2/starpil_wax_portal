@@ -28,6 +28,7 @@ class CourseExposedForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
 
     // Get Term list Form Vocabulary Name'category'
+    $categoryOption = array();
     $categories = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree('category');
     foreach ($categories as $key => $value) {
       $categoryOption[$value->tid] = $value->name;
@@ -36,12 +37,12 @@ class CourseExposedForm extends FormBase {
     $cateOption = $all_cate_default + $categoryOption;
 
     // Get Term list Form Vocabulary Name'tags_courses'
+    $tagOption = array();
     $tags = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree('tags_courses');
     foreach ($tags as $k => $v) {
       $tagOption[$v->tid] = $v->name;
     }
 
-    $tagOption = array();
     $all_tag_default = array('All'=>'Beginner level');
     $tagallOption = $all_tag_default + $tagOption;
     
