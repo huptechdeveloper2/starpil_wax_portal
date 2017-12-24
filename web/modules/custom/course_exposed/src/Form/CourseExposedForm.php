@@ -40,6 +40,8 @@ class CourseExposedForm extends FormBase {
     foreach ($tags as $k => $v) {
       $tagOption[$v->tid] = $v->name;
     }
+
+    $tagOption = array();
     $all_tag_default = array('All'=>'Beginner level');
     $tagallOption = $all_tag_default + $tagOption;
     
