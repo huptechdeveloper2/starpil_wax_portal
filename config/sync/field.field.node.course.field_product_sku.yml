@@ -1,0 +1,22 @@
+uuid: 2c12b885-4e4f-4caf-94d6-28562c5d1039
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_sku
+    - node.type.course
+  module:
+    - serial
+id: node.course.field_product_sku
+field_name: field_product_sku
+entity_type: node
+bundle: course
+label: 'Product SKU'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: serial

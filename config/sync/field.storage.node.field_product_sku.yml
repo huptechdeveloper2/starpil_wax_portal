@@ -1,0 +1,19 @@
+uuid: 0cd434ed-2479-455c-888a-fed1be5e71be
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - serial
+id: node.field_product_sku
+field_name: field_product_sku
+entity_type: node
+type: serial
+settings: {  }
+module: serial
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

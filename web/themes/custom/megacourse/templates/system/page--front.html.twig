@@ -199,21 +199,16 @@
   
   {% if page.course_listing %}
     {% block course_listing %}
-        <section id="mc-section-3" class="mc-section-3 section">
-              <div class="container">
-                  <!-- FEATURE -->
-                  <div class="feature-course">
-                      <h4 class="title-box text-uppercase">FEATURE COURSE</h4>
-                      <a href="courses" class="all-course mc-btn btn-style-1">View all</a>
-                      <div class="row">
-                          <div class="feature-slider owl-carousel owl-theme" style="display: block; opacity: 1;">
+    <section id="mc-section-3" class="mc-section-3 section">
+    <div class="container">
+        <!-- FEATURE -->
+    <div class="feature-course">
+        <h4 class="title-box text-uppercase">FEATURE COURSE</h4>
+        <a href="courses" class="all-course mc-btn btn-style-1">View all</a>
                            {{ page.course_listing }}
-                          </div>
-                      </div>
-                  </div>
-                  <!-- END / FEATURE -->
-              </div>
-          </section>
+    </div>
+    </div>
+    </section>
       {% endblock %}
   {% endif %}
 

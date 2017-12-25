@@ -1,0 +1,28 @@
+uuid: 76b05d6a-85dc-4b3a-ad33-91046ba35093
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - field.storage.node.field_product_refrence
+    - node.type.course
+id: node.course.field_product_refrence
+field_name: field_product_refrence
+entity_type: node
+bundle: course
+label: 'Product Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product'
+  handler_settings:
+    target_bundles:
+      default: default
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

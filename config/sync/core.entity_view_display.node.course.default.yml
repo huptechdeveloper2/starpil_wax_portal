@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.review_comment.default
     - field.field.node.course.body
     - field.field.node.course.field_course_about_judgement
     - field.field.node.course.field_course_category
@@ -18,6 +19,8 @@ dependencies:
     - field.field.node.course.field_equipment
     - field.field.node.course.field_open_date
     - field.field.node.course.field_outline
+    - field.field.node.course.field_product_refrence
+    - field.field.node.course.field_product_sku
     - field.field.node.course.field_reviews
     - field.field.node.course.field_teacher_introduction_video
     - node.type.course
@@ -28,6 +31,7 @@ dependencies:
     - entity_reference_revisions
     - fivestar
     - image
+    - serial
     - text
     - user
     - video
@@ -161,6 +165,22 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_product_refrence:
+    weight: 20
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_product_sku:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: serial_default_formatter
     region: content
   field_reviews:
     weight: 18

@@ -366,6 +366,19 @@
 .file, .file-link {
     width: auto !important;
 }
+.page-node-type-course .add-to-cart {
+  display: inline-block;
+  float: right;
+}
+.page-node-type-course .add-to-cart .field--label {
+  display: none;
+}
+.page-node-type-course .add-to-cart .field--name-title {
+  display: none;
+}
+.page-node-type-course .add-to-cart .field--name-price {
+  display: none;
+}
 /*####### Header menu #############*/
 /*#navbar-collapse ul li.last-item {
     position: relative;
