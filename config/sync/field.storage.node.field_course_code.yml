@@ -1,18 +1,16 @@
-uuid: b68f84a1-a777-4e2a-b96c-5d7064b1f236
+uuid: b1a2bb2f-879b-428b-b46c-556db1791c8e
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_equipment
-field_name: field_equipment
+    - serial
+id: node.field_course_code
+field_name: field_course_code
 entity_type: node
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+type: serial
+settings: {  }
+module: serial
 locked: false
 cardinality: 1
 translatable: true

@@ -42,6 +42,11 @@ function product_save_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
         }
       }
       $Update_product = \Drupal\commerce_product\Entity\Product::load($ex_product);
+      $Update_variance = $Update_product->variations->target_id;
+      $Loadvariation = \Drupal\commerce_product\Entity\ProductVariation::load($Update_variance);
+      $Loadvariation->price->number = $n_price;
+      $Loadvariation->price->currency_code = $n_currancy;
+      $Loadvariation->save();
       $Update_product->set('title',$n_title);
       $Update_product->save();
     } else {
@@ -71,7 +76,7 @@ function product_save_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
       $product->addVariation($variation);
       $product->save();
 
-      // ###### SET CREATED PRODUCT AS PRODUCT REFRERNCE ########
+      // ###### SET CREATED PRODUCT AS PRODUCT REFERERNCE ########
       $created_product_id = $product->get('product_id')->value;
       $entity->field_product_refrence->target_id = $created_product_id;
     }

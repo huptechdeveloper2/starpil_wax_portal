@@ -10,8 +10,8 @@ field_name: field_duration_of_course
 entity_type: node
 bundle: course
 label: 'Duration Of Course'
-description: ''
-required: false
+description: '(ex. ''5 Days'', ''3 week'', ''15 hours''  )'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

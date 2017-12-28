@@ -22,11 +22,11 @@
   {% if content %}
   <div class="avatar-acount">
     <div class="changes-avatar">
-        <div class="img-acount">{{- content -}}</div>
+        <div class="img-acount">{{ content.user_picture}}</div>
     </div>   
     <div class="info-acount">
         <h3 class="md black">{{ username }}</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+        <p>{{ content.field_biography }} </p>
         <div class="profile-email-address">
             <div class="profile-email">
                 <h5>Email</h5>

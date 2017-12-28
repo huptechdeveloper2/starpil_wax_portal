@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.course.body
     - field.field.node.course.field_course_about_judgement
     - field.field.node.course.field_course_category
+    - field.field.node.course.field_course_code
     - field.field.node.course.field_course_comments
     - field.field.node.course.field_course_cover_image
     - field.field.node.course.field_course_goal
@@ -25,15 +26,12 @@ dependencies:
     - image.style.thumbnail
     - node.type.course
   module:
-    - comment
     - commerce_price
     - datetime
     - field_group
-    - fivestar
     - image
     - paragraphs
     - path
-    - serial
     - text
     - video
 third_party_settings:
@@ -145,12 +143,6 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_course_comments:
-    weight: 27
-    settings: {  }
-    third_party_settings: {  }
-    type: comment_default
-    region: content
   field_course_cover_image:
     weight: 19
     settings:
@@ -180,13 +172,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: commerce_price_default
-    region: content
-  field_course_rating:
-    weight: 28
-    settings:
-      fivestar_widget: modules/contrib/fivestar/widgets/basic/basic.css
-    third_party_settings: {  }
-    type: fivestar_stars
     region: content
   field_course_sub_category:
     weight: 22
@@ -233,27 +218,6 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
-  field_product_refrence:
-    weight: 31
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_product_sku:
-    weight: 30
-    settings: {  }
-    third_party_settings: {  }
-    type: serial_default_widget
-    region: content
-  field_reviews:
-    weight: 29
-    settings: {  }
-    third_party_settings: {  }
-    type: comment_default
     region: content
   field_teacher_introduction_video:
     weight: 18
@@ -310,4 +274,10 @@ content:
       placeholder: ''
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_course_code: true
+  field_course_comments: true
+  field_course_rating: true
+  field_product_refrence: true
+  field_product_sku: true
+  field_reviews: true

@@ -368,7 +368,11 @@
 }
 .page-node-type-course .add-to-cart {
   display: inline-block;
-  float: right;
+  /*float: right;*/
+}
+.page-node-type-course .bookmark-this {
+    display: inline-block;
+    float: right;
 }
 .page-node-type-course .add-to-cart .field--label {
   display: none;
@@ -378,6 +382,12 @@
 }
 .page-node-type-course .add-to-cart .field--name-price {
   display: none;
+}
+.list-disc li {
+    list-style: none;
+}
+.list-disc {
+    padding-left: 0px !important;
 }
 /*####### Header menu #############*/
 /*#navbar-collapse ul li.last-item {
@@ -422,7 +432,10 @@
 .video-course-intro .video-place {
     position: initial !important;
 }
-
+/*########## Wish-List Page ###############*/
+.path-wish-list {
+    background-color: #eee;
+}
 
 /*########## Course Listing Page ###############*/
 .path-courses {
@@ -500,5 +513,34 @@
 .flex-control-nav {
     bottom: 0px !important;
     top: 90% !important;
+}
 
+/*########## Wish-List Page ###############*/
+
+.view-id-wish_list .table tr th {
+    vertical-align: middle;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #666;
+    padding: 14px 20px;
+}
+.view-id-wish_list .table tbody tr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.view-id-wish_list .table tbody tr td {
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 18px 15px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.view-id-wish_list .table tbody tr td a{
+    position: relative;
+    display: block;
+    padding-left: 20px; 
 }

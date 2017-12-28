@@ -98,13 +98,14 @@
                             </div>
                             <div class="price">{{content.field_course_price}}</div>
                             <div class="add-to-cart">{{content.field_product_refrence}}</div>
+                            <div class="bookmark-this">{{ content.flag_bookmark }}</div>
                         </div>
 
                         <div class="new-course">
                             <div class="item course-code">
                                 <i class="icon md-barcode"></i>
                                 <h4><a href="#">Course Code</a></h4>
-                                <p class="detail-course"># A 15273</p>
+                                <p class="detail-course">{{ content.field_course_code }}</p>
                             </div>
                             <div class="item course-code">
                                 <i class="icon md-time"></i>
@@ -127,7 +128,7 @@
                                     </div>
                                     <div class="info-instructor">
                                         <cite class="sm black"><a href="#">{{ author_name }}</a></cite>
-                                        <p>{{content.body}}</p>
+                                        <p>{{ node.Owner.field_biography.value }}</p>
                                     </div>
                                 </li>
                             </ul>

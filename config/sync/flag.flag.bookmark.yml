@@ -1,0 +1,34 @@
+uuid: 8a6f359f-6df0-48d1-9974-5eaee6355ad9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - flag_bookmark
+_core:
+  default_config_hash: FzsbWf8iNn1S7RwhYITqQQWA8Sy9geFb7z5DcT8PsEM
+id: bookmark
+label: Bookmark
+bundles:
+  - course
+entity_type: node
+global: false
+weight: 0
+flag_short: Wishlist
+flag_long: 'Add this post to your Wish-list'
+flag_message: 'This post has been added to your Wish-list'
+unflag_short: 'Remove Wishlist'
+unflag_long: 'Remove this post from your Wish-list'
+unflag_message: 'This post has been removed from your Wish-list'
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: reload
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+  i18n: null
+linkTypeConfig: {  }
