@@ -212,6 +212,14 @@
       {% endblock %}
   {% endif %}
 
+  <!-- Become Section -->
+  
+  {% if page.become_section %}
+    {% block become_section %}
+         {{ page.become_section }}
+    {% endblock %}
+  {% endif %}
+
 
 <footer id="footer" class="footer" role="contentinfo">
   {% if page.first_footer %}

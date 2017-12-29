@@ -6,18 +6,18 @@
         Learning();
         scrollStyle();
 
-        jQuery(".feature-slider").owlCarousel({
-            autoPlay: 10000,
-            items: 4,
-            itemsDesktop : [1199,4],
-            itemsDesktopSmall : [979,3],
-            itemsTablet: [768,2],
-            itemsTabletSmall: [600,1],
-            slideSpeed: 300,
-            navigation: true,
-            pagination: false,
-            navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
-        });
+        // jQuery(".feature-slider").owlCarousel({
+        //     autoPlay: 10000,
+        //     items: 4,
+        //     itemsDesktop : [1199,4],
+        //     itemsDesktopSmall : [979,3],
+        //     itemsTablet: [768,2],
+        //     itemsTabletSmall: [600,1],
+        //     slideSpeed: 300,
+        //     navigation: true,
+        //     pagination: false,
+        //     navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
+        // });
 
 
 

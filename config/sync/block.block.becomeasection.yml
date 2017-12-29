@@ -1,6 +1,6 @@
 uuid: 9fa1b728-d634-4293-b424-1f47a8803ea2
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - become_a_section
@@ -8,8 +8,8 @@ dependencies:
     - megacourse
 id: becomeasection
 theme: megacourse
-region: course_listing
-weight: 0
+region: become_section
+weight: -17
 provider: null
 plugin: become_a_section_block
 settings:

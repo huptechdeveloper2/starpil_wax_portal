@@ -12,7 +12,7 @@ dependencies:
 id: views_block__course_listing_block_1
 theme: megacourse
 region: course_listing
-weight: -16
+weight: -18
 provider: null
 plugin: 'views_block:course_listing-block_1'
 settings:
