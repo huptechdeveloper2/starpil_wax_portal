@@ -45,9 +45,10 @@ third_party_settings:
       weight: 0
       format_type: tabs
       format_settings:
+        label: Course
+        direction: vertical
         id: add_course_id
         classes: add_course_class
-        direction: vertical
       label: Course
     group_introduction:
       children:
@@ -59,13 +60,13 @@ third_party_settings:
       weight: 14
       format_type: tab
       format_settings:
-        label: '1. Introduction'
+        label: '1. Basic Information'
         formatter: open
         description: ''
         required_fields: true
         id: course_introduction_id
         classes: course_introduction_class
-      label: '1. Introduction'
+      label: '1. Basic Information'
     group_c:
       children:
         - body
@@ -82,13 +83,13 @@ third_party_settings:
       weight: 15
       format_type: tab
       format_settings:
-        label: '2. Course Details'
+        label: '2. Design Course'
         formatter: closed
         description: ''
         required_fields: true
         id: course_detail_id
         classes: course_detail_class
-      label: '2. Course Details'
+      label: '2. Design Course'
     group_outline:
       children:
         - field_outline

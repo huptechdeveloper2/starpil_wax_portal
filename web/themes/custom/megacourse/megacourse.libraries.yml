@@ -14,12 +14,13 @@ global-styling:
     js/library/jquery.appear.min.js: {}
     js/library/jquery.easing.min.js: {}
     js/library/jquery.magnific-popup.min.js: {}
+    # js/library/jquery.owl.carousel.js: {}
     js/library/perfect-scrollbar.min.js: {}
     js/library/jquery.flexslider-min.js: {}
     js/library/jquery.flexslider.js: {}
-    #js/library/jquery.owl.carousel.js: {}
+    js/library/jquery.owl.carousel.js: {}
     js/library/custom.js: {}
-    js/scripts.js: {}
+    #js/scripts.js: {}
   dependencies:
     - core/jquery
 

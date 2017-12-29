@@ -544,3 +544,93 @@
     display: block;
     padding-left: 20px; 
 }
+
+/*########## Add Course ###############*/
+.path-node {
+    background-color: #eee;
+}
+.node-course-form {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #646472;
+    line-height: 1.6em; 
+}
+#cke_1_top {
+    display: none;
+}
+#cke_1_bottom {
+    display: none;
+}
+#cke_2_top {
+    display: none;
+}
+#cke_2_bottom {
+    display: none;
+}
+#cke_3_top {
+    display: none;
+}
+#cke_3_bottom {
+    display: none;
+}
+#cke_4_top {
+    display: none;
+}
+#cke_4_bottom {
+    display: none;
+}
+#course-detail-id--content {
+    background-color: white;
+}
+.text-format-wrapper .filter-wrapper {
+    display: none;
+}
+.add_course_class ul li.vertical-tab-button {
+    background-color: #37abf2;
+    color: #fff;
+    display: block;
+    line-height: 1.5em;
+    padding: 10px 15px !important;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.add_course_class ul li.vertical-tab-button a {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+.tab-content {
+    margin-top: 0px !important;
+}
+#course-introduction-id--content {
+    background-color: white;
+}
+.tabs-left>.tab-content, .tabs-right>.tab-content {
+    border: 0px !important;
+}
+.node-course-form .form-actions {
+    float: right;
+}
+#edit-title-0-value {
+    border: 1px solid #d1d1d1;
+}
+.node-course-form ul.vertical-tabs-list {
+    padding-top: 15px;
+}
+.node-course-form .field-edit-link {
+    display: none;
+}
+.form-item-field-teacher-introduction-video-0 .form-managed-file {
+    width: 30%;
+    border: 1px solid #d1d1d1;
+    height: 200px;
+}
+.form-item-field-course-cover-image-0 .image-widget {
+    width: 30%;
+    border: 1px solid #d1d1d1;
+    height: 200px;
+}
