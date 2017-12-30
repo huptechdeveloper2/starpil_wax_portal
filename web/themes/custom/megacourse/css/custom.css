@@ -585,7 +585,40 @@
 .text-format-wrapper .filter-wrapper {
     display: none;
 }
-.add_course_class ul li.vertical-tab-button {
+.add_course_class ul li {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #666;
+    background-color: #DDD;
+    line-height: 1.5em;
+    padding: 10px 15px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.add_course_class ul li.selected {
+    background-color: #37abf2;
+    color: #fff;
+}
+.add_course_class ul li.selected a {
+    color: #fff !important;
+}
+.add_course_class ul li {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #666;
+    background-color: #DDD;
+    line-height: 1.5em;
+    padding: 10px 15px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+/*.add_course_class ul li.vertical-tab-button {
     background-color: #37abf2;
     color: #fff;
     display: block;
@@ -595,11 +628,11 @@
     -moz-border-radius: 6px;
     border-radius: 6px;
     margin-bottom: 10px;
-}
+}*/
 .add_course_class ul li.vertical-tab-button a {
     padding-top: 0px !important;
     padding-bottom: 0px !important;
-    color: white;
+    color: #666;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
 }
@@ -633,4 +666,44 @@
     width: 30%;
     border: 1px solid #d1d1d1;
     height: 200px;
+}
+.node-course-form #edit-field-teacher-introduction-video-wrapper .form-managed-file .form-control {
+    height: 100%;
+    padding-left: 15%;
+    padding-top: 30%;
+}
+.node-course-form #edit-field-course-cover-image-wrapper .form-managed-file .form-control {
+    height: 100%;
+    padding-left: 15%;
+    padding-top: 30%;
+}
+.node-course-form .form-type-commerce-price .form-item input {
+    width: 30%;
+    border: 1px solid #d1d1d1;
+}
+.node-course-form  .select-wrapper {
+    width: 30%;
+    display: block !important;
+}
+.node-course-form .field--name-field-equipment .form-item input {
+    border: 1px solid #d1d1d1;
+}
+.node-course-form input[type="date"].form-control, input[type="time"].form-control, input[type="datetime-local"].form-control, input[type="month"].form-control {
+    border: 1px solid #d1d1d1;
+}
+.node-course-form .field--name-field-duration-of-course .form-item input {
+    border: 1px solid #d1d1d1;
+}
+.node-course-form button.tabledrag-toggle-weight {
+    display: none;
+}
+#field-outline-values .paragraph-type-top {
+    display: none;
+}
+#edit-field-outline-0-top-links-remove-button {
+    display: none;
+}
+.node-course-form .form-managed-file {
+    width: 30%;
+    border: 1px solid #d1d1d1;
 }

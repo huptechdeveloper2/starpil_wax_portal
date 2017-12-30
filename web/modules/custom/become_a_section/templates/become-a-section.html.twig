@@ -21,12 +21,21 @@
                  </div>
             </div>
 
-            <div class="col-lg-4">
+            {% if logged_in %}
+             <div class="col-lg-4">
+                <div class="before-footer-link">
+                    <a href="/courses" class="mc-btn btn-style-2">Become a member</a>
+                    <a href="/node/add/courses" class="mc-btn btn-style-1">Become a teacher</a>
+                </div>
+            </div>
+              {% else %}
+              <div class="col-lg-4">
                 <div class="before-footer-link">
                     <a href="#top" class="mc-btn btn-style-2">Become a member</a>
                     <a href="#top" class="mc-btn btn-style-1">Become a teacher</a>
                 </div>
-            </div>
+              </div>
+            {% endif %}
         </div>
     </div>
 </section>
