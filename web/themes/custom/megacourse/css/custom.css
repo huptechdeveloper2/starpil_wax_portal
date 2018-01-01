@@ -707,3 +707,22 @@
     width: 30%;
     border: 1px solid #d1d1d1;
 }
+#views-exposed-form-blogs-listing-page-1 .form-inline .form-control {
+    border: 1px solid #d1d1d1;
+    margin-top: 10px !important;
+}
+#views-exposed-form-blogs-listing-page-1 label {
+    font-weight: 700;
+    color: #262626;
+    border-bottom: 1px solid #d4d4d4;
+    padding-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    line-height: 1.5em;
+}
+#contact-message-feedback-form .js-form-item-subject-0-value input {
+    border-bottom: 1px solid #d4d4d4;
+}
+.form-item input, .form-email input, .form-password input, .form-fullname input, .form-firstname input, .form-lastname input, .form-location input, .form-yourname input, .form-yourmail input, .form-phone input, .form-datebirth input {
+    width: auto;
+}
