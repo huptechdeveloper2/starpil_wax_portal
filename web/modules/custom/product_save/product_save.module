@@ -24,11 +24,10 @@ function product_save_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
 
     // ###### lOAD PRODUCTS TO CHECK NEW/EXS. ########
 
-    $Allproducts = db_query("SELECT `product_id`, `sku` FROM `commerce_product_variation_field_data` WHERE 1")->fetchAll();
+    $Allproducts = db_query("SELECT `product_id`, `sku` FROM `commerce_product_variation_field_data`")->fetchAll();
     foreach ($Allproducts as $Pkey => $Pvalue) {
       $sku_product[$Pvalue->product_id] = $Pvalue->sku;
     }
-    
 
     // ###### PRODUCT CRAETE & UPDATE ########
 
@@ -77,7 +76,7 @@ function product_save_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
       $product->save();
 
       // ###### SET CREATED PRODUCT AS PRODUCT REFERERNCE ########
-      $created_product_id = $product->get('product_id')->value;
+      $created_product_id = $product->id();
       $entity->field_product_refrence->target_id = $created_product_id;
     }
   }

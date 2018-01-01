@@ -32,6 +32,7 @@ dependencies:
     - image
     - paragraphs
     - path
+    - serial
     - text
     - video
 third_party_settings:
@@ -99,8 +100,10 @@ third_party_settings:
         - sticky
         - path
         - status
+        - field_product_refrence
+        - field_product_sku
       parent_name: group_course
-      weight: 17
+      weight: 16
       format_type: tab
       format_settings:
         label: '3. Outline'
@@ -220,6 +223,21 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     region: content
+  field_product_refrence:
+    type: entity_reference_autocomplete
+    weight: 26
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_product_sku:
+    type: serial_default_widget
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_teacher_introduction_video:
     weight: 18
     settings:
@@ -233,7 +251,7 @@ content:
     region: content
   path:
     type: path
-    weight: 25
+    weight: 24
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -241,21 +259,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 23
+    weight: 22
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 26
+    weight: 25
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 24
+    weight: 23
     region: content
     third_party_settings: {  }
   title:
@@ -268,7 +286,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 22
+    weight: 21
     settings:
       match_operator: CONTAINS
       size: 60
@@ -279,6 +297,4 @@ hidden:
   field_course_code: true
   field_course_comments: true
   field_course_rating: true
-  field_product_refrence: true
-  field_product_sku: true
   field_reviews: true

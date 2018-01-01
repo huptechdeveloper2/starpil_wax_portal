@@ -723,6 +723,6 @@
 #contact-message-feedback-form .js-form-item-subject-0-value input {
     border-bottom: 1px solid #d4d4d4;
 }
-.form-item input, .form-email input, .form-password input, .form-fullname input, .form-firstname input, .form-lastname input, .form-location input, .form-yourname input, .form-yourmail input, .form-phone input, .form-datebirth input {
+/*.form-item input, .form-email input, .form-password input, .form-fullname input, .form-firstname input, .form-lastname input, .form-location input, .form-yourname input, .form-yourmail input, .form-phone input, .form-datebirth input {
     width: auto;
-}
+}*/
