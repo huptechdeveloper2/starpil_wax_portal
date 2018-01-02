@@ -1,0 +1,22 @@
+uuid: c6e0a8e8-1fbc-41e4-a328-57d2f3095755
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_paypal
+id: paypal_express_checkout
+label: 'Paypal Express Checkout'
+weight: -10
+plugin: paypal_express_checkout
+configuration:
+  api_username: huptechdeveloper-facilitator_api1.gmail.com
+  api_password: ZXC6WC3PBDMBDNWK
+  shipping_prompt: shipping_skip
+  signature: AJl1dt6HKFjg4eshTbaC9x9ukD65AbgVT6E2SaYoZkbg6IC7SdpqvdNn
+  solution_type: Mark
+  display_label: PayPal
+  mode: test
+  payment_method_types:
+    - credit_card
+conditions: {  }
+conditionOperator: AND

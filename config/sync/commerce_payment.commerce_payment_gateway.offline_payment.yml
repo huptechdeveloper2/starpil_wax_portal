@@ -6,7 +6,7 @@ dependencies:
     - commerce_payment_example
 id: offline_payment
 label: 'Offline Payment'
-weight: null
+weight: -10
 plugin: example_offsite_redirect
 configuration:
   redirect_method: post
