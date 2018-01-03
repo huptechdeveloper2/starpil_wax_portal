@@ -94,6 +94,7 @@ module:
   user_profile_forms_alter: 0
   video: 0
   videojs: 0
+  views_accordion: 0
   views_ui: 0
   votingapi: 0
   votingapi_widgets: 0

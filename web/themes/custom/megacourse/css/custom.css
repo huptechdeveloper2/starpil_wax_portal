@@ -726,3 +726,9 @@
 /*.form-item input, .form-email input, .form-password input, .form-fullname input, .form-firstname input, .form-lastname input, .form-location input, .form-yourname input, .form-yourmail input, .form-phone input, .form-datebirth input {
     width: auto;
 }*/
+li.review {
+    list-style: none;
+}
+li.comment {
+    list-style: none;
+}
