@@ -1,0 +1,6 @@
+name: Faq Block Section
+description: Creates a Block Showing faq page block.
+package: custom
+type: module
+version: 1.0
+core: 8.x

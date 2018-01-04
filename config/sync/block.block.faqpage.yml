@@ -1,0 +1,26 @@
+uuid: 603ddcd7-3d7f-4b8b-ac56-6c70ddb91d60
+langcode: en
+status: true
+dependencies:
+  module:
+    - faq_block
+    - system
+  theme:
+    - megacourse
+id: faqpage
+theme: megacourse
+region: faq_block
+weight: -18
+provider: null
+plugin: faq_block
+settings:
+  id: faq_block
+  label: 'Faq Page'
+  provider: faq_block
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /faq
+    negate: false
+    context_mapping: {  }

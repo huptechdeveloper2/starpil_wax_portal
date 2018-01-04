@@ -732,3 +732,9 @@ li.review {
 li.comment {
     list-style: none;
 }
+.view-id-faq .views-row .views-row {
+    margin-top: 20px;
+}
+.view-id-faq .view-content {
+    padding-bottom: 60px;
+}

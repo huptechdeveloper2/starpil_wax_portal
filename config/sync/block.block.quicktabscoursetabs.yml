@@ -11,7 +11,7 @@ dependencies:
 id: quicktabscoursetabs
 theme: megacourse
 region: content
-weight: -16
+weight: -17
 provider: null
 plugin: 'quicktabs_block:course_tabs'
 settings:

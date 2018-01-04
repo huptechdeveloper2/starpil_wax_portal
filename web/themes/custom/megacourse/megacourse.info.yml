@@ -16,6 +16,7 @@ regions:
   help: 'Help'
   slide: 'slide'
   top_header: 'User page Top Header'
+  faq_block: 'Faq Page'
   content: 'Content'
   front_hoe_it_works: 'front how it works'
   course_listing: 'Front Course Listing'
