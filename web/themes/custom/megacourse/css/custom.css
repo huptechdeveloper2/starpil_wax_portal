@@ -18,6 +18,13 @@
     border: 0 !important;
 }
 /*##################### forms #######################*/
+.commerce-checkout-flow .form-item input {
+    width: auto !important;
+}
+.contact-form .form-item input {
+    width: auto !important;
+}
+
 .form-item input {
     /*width: auto !important;*/
     margin-top: 0 !important;
@@ -369,6 +376,15 @@
 .page-node-type-course .add-to-cart {
   display: inline-block;
   /*float: right;*/
+}
+.path-cart .form-actions .btn, .path-cart .form-actions .btn-group {
+    float: right;
+}
+.path-cart #footer {
+    margin-top: 75px;
+}
+.commerce-checkout-flow .form-item input {
+    border: 1px solid #d1d1d1;
 }
 .page-node-type-course .bookmark-this {
     display: inline-block;
