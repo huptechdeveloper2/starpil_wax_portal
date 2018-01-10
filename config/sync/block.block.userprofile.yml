@@ -12,7 +12,7 @@ dependencies:
 id: userprofile
 theme: megacourse
 region: sidebar_first
-weight: 0
+weight: -16
 provider: null
 plugin: 'system_menu_block:user-profile'
 settings:

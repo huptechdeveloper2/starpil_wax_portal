@@ -92,9 +92,15 @@
                     <div class="sidebar-course-intro"> 
                         <div class="video-course-intro">
                             <div class="inner">
-                                <div class="video-place">
+                                {% if node.field_teacher_introduction_video.value %}
+                                  <div class="video-place">
                                     {{content.field_teacher_introduction_video}}
-                                </div>
+                                  </div>
+                                  {% else %}
+                                  <div class="video-place">
+                                    {{content.field_course_cover_image}}
+                                  </div>
+                                {% endif %}
                             </div>
                             <div class="price">{{content.field_course_price}}</div>
                             <div class="add-to-cart">{{content.field_product_refrence}}</div>

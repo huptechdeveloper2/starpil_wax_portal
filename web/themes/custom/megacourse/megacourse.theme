@@ -34,3 +34,11 @@ function megacourse_preprocess_user(&$variables) {
 function megacourse_preprocess_node(&$variables) {
   $variables['coursetabsblock'] = entity_load('block', 'quicktabscoursetabs')->getPlugin()->build(); 
 }
+
+function megacourse_preprocess_page(&$variables) {
+  $block = \Drupal\block\Entity\Block::load('privatemessagenotification_2');
+  $block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($block);
+ $variables['notification'] = $block_content;
+}
