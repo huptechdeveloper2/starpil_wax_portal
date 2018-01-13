@@ -754,3 +754,6 @@ li.comment {
 .view-id-faq .view-content {
     padding-bottom: 60px;
 }
+#edit-get-notification {
+    width: auto !important;
+}

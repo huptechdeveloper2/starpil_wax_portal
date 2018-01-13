@@ -82,10 +82,16 @@
 
         {# Navigation (collapsible) #}
         {% if page.navigation_collapsible %}
-          <div id="navbar-collapse" class="navbar-collapse collapse">
-          <div class="col-md-11 header-main-menu">{{ page.navigation_collapsible }}</div>
-          <div class="col-md-1 header-message-notification">{{ notification }}</div>
-          </div>
+          {% if user_notification %}
+            <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="col-md-11 header-main-menu">{{ page.navigation_collapsible }}</div>
+            <div class="col-md-1 header-message-notification">{{ notification }}</div>
+            </div>
+          {% else %}
+            <div id="navbar-collapse" class="navbar-collapse collapse">
+              {{ page.navigation_collapsible }}
+            </div>
+          {% endif %}
         {% endif %}
         {% if not navbar_attributes.hasClass(container) %}
           <!-- </div> -->

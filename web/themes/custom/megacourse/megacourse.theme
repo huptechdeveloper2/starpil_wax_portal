@@ -18,8 +18,9 @@ function megacourse_theme_suggestions_block_alter(array &$suggestions, array $va
   }
 }
 
-// get user profile fields to use in template file
-
+/**
+** get user profile fields to use in template file
+*/
 function megacourse_preprocess_user(&$variables) {
 
 	$user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
@@ -31,14 +32,35 @@ function megacourse_preprocess_user(&$variables) {
   //$variables['upicture'] = $picture = $user->get('user_picture')->entity->url();
 }
 
+/**
+** Call hook_node_presave to get quick tab block in course detail page
+*/
 function megacourse_preprocess_node(&$variables) {
   $variables['coursetabsblock'] = entity_load('block', 'quicktabscoursetabs')->getPlugin()->build(); 
 }
 
+/**
+** get hook_preprocess_page to set some variables
+*/
 function megacourse_preprocess_page(&$variables) {
   $block = \Drupal\block\Entity\Block::load('privatemessagenotification_2');
   $block_content = \Drupal::entityTypeManager()
     ->getViewBuilder('block')
     ->view($block);
  $variables['notification'] = $block_content;
+
+   // user notification
+   $user = \Drupal::currentUser()->id();
+   $query = db_query("SELECT `notifyuid`, `get_notify` FROM `user_not_tab` WHERE `notifyuid` = '$user'")->fetchAll();
+   if (isset($query) && !empty($query)) {
+     $get_notify = $query['0']->get_notify;
+     if ($get_notify == '1') {
+       $user_notification = '1';
+     }else{
+        $user_notification = '';
+     }
+   }else{
+    $user_notification = '';
+   }
+    $variables['user_notification'] = $user_notification;
 }

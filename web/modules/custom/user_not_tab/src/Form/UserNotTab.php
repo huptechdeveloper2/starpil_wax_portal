@@ -23,10 +23,22 @@ class UserNotTab extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+
+    // CHECK NOTIFICATION STATUS FOR LOGIN USER
+    $user_id = \Drupal::currentUser()->id();
+    $query = db_query("SELECT `notifyuid`, `get_notify` FROM `user_not_tab` WHERE `notifyuid` = '$user_id'")->fetchAll();
+    $user_noti = $query['0']->get_notify;
+    if ($user_noti == '1') {
+      $default = TRUE;
+    } else {
+      $default = FALSE;
+    }
     
+    // BUILD FORM
     $form['get_notification'] = array(
 	  '#type' => 'checkbox',
 	  '#title' => $this->t('Show me Notifications Related To Courses.'),
+    '#default_value' => $default,
 	   );
 
     $form['submit'] = [
@@ -50,12 +62,11 @@ class UserNotTab extends FormBase {
         $get_notify = $value;
       }
     }
-    // $get_notify = $form_state->getValues('get_notification');
     // Check user has already fill that form or not
-    $query = \Drupal::database()->select('user_not_tab', 'unt');
-    $query->fields('unt', ['notifyuid']);
-    $result = $query->execute();
-    $row = $result->fetchAssoc();
+    $query = db_query("SELECT `notifyuid` as `uid` FROM `user_not_tab`")->fetchAll();
+    foreach ($query as $key => $value) {
+      $row[] = $value->uid;
+    }
     if (in_array($user_id, $row)) {
       \Drupal::database()->update('user_not_tab')
         ->condition('notifyuid' , $user_id)
