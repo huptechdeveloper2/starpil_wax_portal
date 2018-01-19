@@ -1,0 +1,8 @@
+uuid: af300eb5-6ec8-4867-ab18-b0afa80c18e0
+langcode: en
+status: true
+dependencies: {  }
+id: a2b7c9dc-20ba-44e5-a61b-58791c98699d
+label: 'Menu token link configuration'
+linkid: 'internal:/user/[current-user:uid]/teacher'
+configurationSerialized: 'a:4:{s:18:"menu_token_enabled";i:1;s:36:"remove_if_replacement_is_not_present";i:0;s:4:"node";a:2:{i:0;s:4:"none";i:1;i:0;}s:4:"user";a:2:{i:0;s:4:"none";i:1;i:0;}}'

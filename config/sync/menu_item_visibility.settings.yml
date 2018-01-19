@@ -7,3 +7,14 @@ mlid:
   'menu_link_content:bcc3b6a1-4837-4f44-a500-d3b949a13aab':
     roles: {  }
     access_check: false
+  'menu_link_content:8ab72a8f-2fd6-4a02-a942-b9188364599f':
+    roles: {  }
+    access_check: false
+  'menu_link_content:a2b7c9dc-20ba-44e5-a61b-58791c98699d':
+    roles:
+      - administrator
+    access_check: false
+  'menu_link_content:1cd5db0c-bc66-4c5c-a5ba-9e3d56fcdaaa':
+    roles:
+      - authenticated
+    access_check: false

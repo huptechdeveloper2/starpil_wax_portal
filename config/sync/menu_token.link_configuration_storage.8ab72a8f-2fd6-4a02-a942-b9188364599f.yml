@@ -1,0 +1,8 @@
+uuid: 8a50b644-c2fa-4445-b84f-d4ad869cb008
+langcode: en
+status: true
+dependencies: {  }
+id: 8ab72a8f-2fd6-4a02-a942-b9188364599f
+label: 'Menu token link configuration'
+linkid: 'internal:/user/[current-user:uid]/simplenews'
+configurationSerialized: 'a:4:{s:18:"menu_token_enabled";i:1;s:36:"remove_if_replacement_is_not_present";i:0;s:4:"node";a:2:{i:0;s:4:"none";i:1;i:0;}s:4:"user";a:2:{i:0;s:4:"none";i:1;i:0;}}'

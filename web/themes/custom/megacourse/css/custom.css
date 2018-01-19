@@ -443,6 +443,16 @@
 .path-user #edit-private-messages {
     display: none;
 }
+.path-user .breadcrumb {
+    display: none;
+}
+.path-user nav.tabs {
+    display: none;
+}
+#simplenews-subscriber-account-form .form-item input {
+    width: auto !important;
+    height: 20px !important;
+}
 
 /*course detial page*/
 .video-course-intro .video-place {
@@ -565,11 +575,18 @@
 .path-node {
     background-color: #eee;
 }
+.path-node .col-sm-12 {
+    margin-bottom: 50px;
+}
 .node-course-form {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     color: #646472;
     line-height: 1.6em; 
+}
+.node-course-form  label{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
 }
 #cke_1_top {
     display: none;
@@ -674,24 +691,20 @@
     display: none;
 }
 .form-item-field-teacher-introduction-video-0 .form-managed-file {
-    width: 30%;
     border: 1px solid #d1d1d1;
-    height: 200px;
+    padding: 1%;
 }
 .form-item-field-course-cover-image-0 .image-widget {
-    width: 30%;
     border: 1px solid #d1d1d1;
-    height: 200px;
+    padding: 1%;
 }
 .node-course-form #edit-field-teacher-introduction-video-wrapper .form-managed-file .form-control {
     height: 100%;
-    padding-left: 15%;
-    padding-top: 30%;
+    padding-top: 1%;
 }
 .node-course-form #edit-field-course-cover-image-wrapper .form-managed-file .form-control {
     height: 100%;
-    padding-left: 15%;
-    padding-top: 30%;
+    padding-top: 1%;
 }
 .node-course-form .form-type-commerce-price .form-item input {
     width: 30%;
@@ -719,9 +732,16 @@
 #edit-field-outline-0-top-links-remove-button {
     display: none;
 }
-.node-course-form .form-managed-file {
-    width: 30%;
+.node-course-form #edit-field-outline-0-subform-field-outline-file--THHE2V7wfDI .form-managed-file {
+    /*width: 30%;*/
     border: 1px solid #d1d1d1;
+    padding: 1%;
+}
+.node-course-form .paragraph-type-title {
+    display: none;
+}
+.form-item-field-product-refrence-0-target-id {
+    display: none;
 }
 #views-exposed-form-blogs-listing-page-1 .form-inline .form-control {
     border: 1px solid #d1d1d1;
