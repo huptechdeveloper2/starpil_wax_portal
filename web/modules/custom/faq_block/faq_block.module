@@ -14,7 +14,7 @@ function faq_block_theme($existing, $type, $theme, $path) {
                 'courses'=> null,
                 'students'=> null,
                 'teachers'=> null,
-                'tuitionpaid'=> null
+                'total_price'=> null
             ),
         )
     );

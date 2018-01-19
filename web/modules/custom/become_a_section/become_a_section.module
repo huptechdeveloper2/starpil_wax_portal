@@ -14,7 +14,8 @@ function become_a_section_theme($existing, $type, $theme, $path) {
                 'courses'=> null,
                 'students'=> null,
                 'teachers'=> null,
-                'tuitionpaid'=> null
+                'total_price'=> null,
+                'teache_role'=> null
             ),
         )
     );

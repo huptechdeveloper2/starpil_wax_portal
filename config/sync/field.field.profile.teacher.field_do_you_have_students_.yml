@@ -1,0 +1,21 @@
+uuid: 95b0dcbf-5162-4238-bd2d-664ec01ace63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_do_you_have_students_
+    - profile.type.teacher
+  module:
+    - options
+id: profile.teacher.field_do_you_have_students_
+field_name: field_do_you_have_students_
+entity_type: profile
+bundle: teacher
+label: 'Do you have students?'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

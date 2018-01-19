@@ -1,0 +1,38 @@
+uuid: c5463a2c-d1bd-4dfb-8b4f-2076766f2e1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.teacher.field_do_you_have_students_
+    - field.field.profile.teacher.field_do_you_have_teaching_exper
+    - field.field.profile.teacher.field_have_you_created_video_bef
+    - profile.type.teacher
+  module:
+    - options
+id: profile.teacher.default
+targetEntityType: profile
+bundle: teacher
+mode: default
+content:
+  field_do_you_have_students_:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_do_you_have_teaching_exper:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_have_you_created_video_bef:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

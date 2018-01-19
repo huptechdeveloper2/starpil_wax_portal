@@ -1,0 +1,21 @@
+uuid: 2f9c759d-f4b8-43d3-8792-4fff445389ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_have_you_created_video_bef
+    - profile.type.teacher
+  module:
+    - options
+id: profile.teacher.field_have_you_created_video_bef
+field_name: field_have_you_created_video_bef
+entity_type: profile
+bundle: teacher
+label: 'Have you created video before'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

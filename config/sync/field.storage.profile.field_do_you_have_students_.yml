@@ -1,22 +1,22 @@
-uuid: 30743b73-b2ae-40af-be0f-b049f35687c9
+uuid: 2a5b6afa-f29a-4905-af60-877c7203428f
 langcode: en
 status: true
 dependencies:
   module:
     - options
-    - user
-id: user.field_you_wan_a_be
-field_name: field_you_wan_a_be
-entity_type: user
+    - profile
+id: profile.field_do_you_have_students_
+field_name: field_do_you_have_students_
+entity_type: profile
 type: list_string
 settings:
   allowed_values:
     -
-      value: Teacher
-      label: Teacher
+      value: 'Yes'
+      label: 'Yes'
     -
-      value: Student
-      label: Student
+      value: 'No'
+      label: 'No'
   allowed_values_function: ''
 module: options
 locked: false

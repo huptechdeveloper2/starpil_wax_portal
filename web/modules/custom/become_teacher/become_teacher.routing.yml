@@ -1,0 +1,21 @@
+become_teacher.multistep_one:
+  path: '/become-teacher/onboarding'
+  defaults:
+    _form: '\Drupal\become_teacher\Form\Multistep\MultistepOneForm'
+    _title: 'First form'
+  requirements:
+    _permission: 'access content'
+become_teacher.multistep_two:
+  path: '/become-teacher/set-up'
+  defaults:
+    _form: '\Drupal\become_teacher\Form\Multistep\MultistepTwoForm'
+    _title: 'Second form'
+  requirements:
+    _permission: 'access content'
+become_teacher.multistep_three:
+  path: '/become-teacher/complete'
+  defaults:
+    _form: '\Drupal\become_teacher\Form\Multistep\MultistepThreeForm'
+    _title: 'Third form'
+  requirements:
+    _permission: 'access content'

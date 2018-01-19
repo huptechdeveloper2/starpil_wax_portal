@@ -10,7 +10,7 @@
                         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
                         {% if logged_in %}
                         <div class="form-submit-1">
-                            <a href="/node/add/courses" class="mc-btn btn-style-1">Create Course</a>
+                            <a href="{{ url('<front>') }}node/add/courses" class="mc-btn btn-style-1">Create Course</a>
                         </div>
                           {% else %}
                         <div class="form-submit-1">
@@ -54,7 +54,7 @@
                         </div>
                          <div class="mc-count-item">
                             <h4>Teachers</h4>
-                            <p><span class="countup">10,389</span></p>
+                            <p><span class="countup">{{ teachers }}</span></p>
                         </div>
                         <div class="mc-count-item">
                             <h4>Students</h4>
@@ -62,7 +62,7 @@
                         </div>
                         <div class="mc-count-item">
                             <h4>Tuition Paid</h4>
-                            <p>$ <span class="countup">{{ teachers }}</span></p>
+                            <p>$ <span class="countup">{{ total_price }}</span></p>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,21 @@
+uuid: 42696b0d-6efd-4161-a9bf-ab7d51f32a46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_do_you_have_teaching_exper
+    - profile.type.teacher
+  module:
+    - options
+id: profile.teacher.field_do_you_have_teaching_exper
+field_name: field_do_you_have_teaching_exper
+entity_type: profile
+bundle: teacher
+label: 'do you have teaching experience?'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

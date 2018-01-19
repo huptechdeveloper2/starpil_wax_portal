@@ -1,0 +1,31 @@
+uuid: ac316e71-1fa8-4b8c-8649-02e586ff5238
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:718579ae-e710-4e04-b758-81e82b97610b'
+  module:
+    - block_content
+    - system
+  theme:
+    - megacourse
+id: gettingsetup
+theme: megacourse
+region: content
+weight: -19
+provider: null
+plugin: 'block_content:718579ae-e710-4e04-b758-81e82b97610b'
+settings:
+  id: 'block_content:718579ae-e710-4e04-b758-81e82b97610b'
+  label: 'getting set up'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /become-teacher/set-up
+    negate: false
+    context_mapping: {  }

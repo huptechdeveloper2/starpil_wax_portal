@@ -1,0 +1,31 @@
+uuid: 3dcbf7b2-b500-4798-9f7f-5d8b460edf23
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:67f61cb2-7028-4b89-b9d5-52ca569ac43b'
+  module:
+    - block_content
+    - system
+  theme:
+    - megacourse
+id: publishingacourse
+theme: megacourse
+region: content
+weight: -18
+provider: null
+plugin: 'block_content:67f61cb2-7028-4b89-b9d5-52ca569ac43b'
+settings:
+  id: 'block_content:67f61cb2-7028-4b89-b9d5-52ca569ac43b'
+  label: 'Publishing a Course'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /become-teacher/complete
+    negate: false
+    context_mapping: {  }

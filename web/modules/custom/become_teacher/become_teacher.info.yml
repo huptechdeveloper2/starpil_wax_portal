@@ -1,0 +1,6 @@
+name: Become a Teacher
+description: Become a teacher multistep form
+package: custom
+type: module
+version: 1.0
+core: 8.x

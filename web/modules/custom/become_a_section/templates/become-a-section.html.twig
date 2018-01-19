@@ -17,15 +17,19 @@
                  </div>
                  <div class="mc-count-item">
                      <h4>Tuition Paid</h4>
-                     <p>$ <span class="countup">793,361,890</span></p>
+                     <p>$ <span class="countup">{{ total_price }}</span></p>
                  </div>
             </div>
 
             {% if logged_in %}
              <div class="col-lg-4">
                 <div class="before-footer-link">
-                    <a href="/courses" class="mc-btn btn-style-2">Become a member</a>
-                    <a href="/node/add/courses" class="mc-btn btn-style-1">Become a teacher</a>
+                    <a href="{{ url('<front>') }}courses" class="mc-btn btn-style-2">Become a Student</a>
+                    {% if teache_role %}
+                    <a href="{{ url('<front>') }}node/add/courses" class="mc-btn btn-style-1">Create Course</a>
+                    {% else %}
+                    <a href="{{ url('<front>') }}become-teacher/onboarding" class="mc-btn btn-style-1">Become a teacher</a>
+                    {% endif %}
                 </div>
             </div>
               {% else %}

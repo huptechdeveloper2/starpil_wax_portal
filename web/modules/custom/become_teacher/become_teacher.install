@@ -1,0 +1,35 @@
+<?php
+
+function become_teacher_schema() {
+  $schema['become_teacher'] = array(
+    'fields' => array(
+      'user_uid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "User's {users}.uid.",
+      ),
+      'field_do_you_have_students_'=>array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "User will get notification",
+      ),
+      'field_do_you_have_teaching_exper'=>array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "User will get notification",
+      ),
+      'field_have_you_created_video_bef'=>array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "User will get notification",
+      ),
+    ),
+  );
+
+  return $schema;
+
+}

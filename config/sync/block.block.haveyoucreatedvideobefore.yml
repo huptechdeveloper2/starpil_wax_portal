@@ -1,0 +1,31 @@
+uuid: 01f5c76a-55a5-42e9-96e3-4c97eb91fc22
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0510c915-1d3c-4c74-9579-955484f57949'
+  module:
+    - block_content
+    - system
+  theme:
+    - megacourse
+id: haveyoucreatedvideobefore
+theme: megacourse
+region: content
+weight: -20
+provider: null
+plugin: 'block_content:0510c915-1d3c-4c74-9579-955484f57949'
+settings:
+  id: 'block_content:0510c915-1d3c-4c74-9579-955484f57949'
+  label: 'Have You Created Video before'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /become-teacher/onboarding
+    negate: false
+    context_mapping: {  }

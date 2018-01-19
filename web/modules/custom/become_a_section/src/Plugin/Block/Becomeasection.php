@@ -23,16 +23,26 @@ class Becomeasection extends BlockBase {
 
     // $host = \Drupal::request()->getSchemeAndHttpHost();
     $course = db_query("SELECT count(`nid`) as courses FROM `node` WHERE `type` = 'course'")->fetchAll();
-    $user = db_query("SELECT COUNT(`uid`) as users FROM `users`")->fetchAll();
-    $teacher = db_query("SELECT COUNT(`uid`) as teacher FROM `node_field_data` WHERE `type` ='course'")->fetchAll();
+    $user = db_query("SELECT DISTINCT(`uid`) as users FROM `commerce_order` WHERE `checkout_step` = 'complete'")->fetchAll();
+    $teacher = db_query("SELECT COUNT(`entity_id`) as teacher FROM `user__roles` WHERE `roles_target_id` = 'teacher'")->fetchAll();
+    $total_price = db_query("SELECT SUM(`total_price__number`) as price FROM `commerce_order` WHERE `checkout_step` = 'complete'")->fetchAll();
     foreach ($course as $key => $value) {
       $courses = $value->courses;
     }
-    foreach ($user as $k => $v) {
-      $users = $v->users;
-    }
+      $users = count($user);
     foreach ($teacher as $te_key => $te_value) {
       $teachers = $te_value->teacher;
+    }
+    foreach ($total_price as $price_key => $price_value) {
+      $total_price = round($price_value->price);
+    }
+
+    $user_object = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+    $roles = $user_object->getRoles();
+    if (in_array('teacher', $roles)) {
+     $teache_role = '1';
+    } else {
+     $teache_role = '';
     }
     
     return array(
@@ -41,6 +51,8 @@ class Becomeasection extends BlockBase {
             '#courses' => $courses,
             '#students' => $users,
             '#teachers' => $teachers,
+            '#teache_role' => $teache_role,
+            '#total_price' => $total_price
     );
   }
 

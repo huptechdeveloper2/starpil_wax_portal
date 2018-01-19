@@ -7,6 +7,7 @@ module:
   automated_cron: 0
   back_button: 0
   become_a_section: 0
+  become_teacher: 0
   better_exposed_filters: 0
   block: 0
   block_content: 0

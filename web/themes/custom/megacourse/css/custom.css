@@ -757,3 +757,113 @@ li.comment {
 #edit-get-notification {
     width: auto !important;
 }
+
+/*###### multistep-form ###########*/
+#multistep-form-one .form-item input {
+    width: auto !important;
+    height: 30px !important;
+}
+#multistep-form-two .form-item input {
+    width: auto !important;
+    height: 30px !important;
+}
+#multistep-form-three .form-item input {
+    width: auto !important;
+    height: 30px !important;
+}
+.path-become-teacher .page-header {
+    display: none;
+}
+.path-become-teacher .mc-text {
+    padding-right: 5%;
+}
+.path-become-teacher .welcome-to-waxportal {
+    margin-top: 50px;
+}
+.path-become-teacher .welcome-to-waxportal {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.path-become-teacher .welcome-to-waxportal {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#edit-created-before--wrapper legend span {
+    font-size: 30px;
+    font-weight: 600;
+    color: #262626;
+    padding-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+}
+#edit-created-before--wrapper #edit-created-before .radio {
+    font-size: 18px;
+    min-height: 30px !important;
+}
+#multistep-form-one {
+    margin-bottom: 50px;
+}
+#multistep-form-one #edit-actions {
+    margin-left: 5%;
+}
+#edit-teached-before--wrapper legend span {
+    font-size: 30px;
+    font-weight: 600;
+    color: #262626;
+    padding-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+}
+#edit-teached-before--wrapper #edit-teached-before .radio {
+    font-size: 18px;
+    min-height: 30px !important;
+}
+#multistep-form-two {
+    margin-bottom: 50px;
+}
+#multistep-form-two #edit-actions {
+    margin-left: 5%;
+}
+#edit-have-students--wrapper legend span {
+    font-size: 30px;
+    font-weight: 600;
+    color: #262626;
+    padding-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+}
+#edit-have-students--wrapper #edit-have-students .radio {
+    font-size: 18px;
+    min-height: 30px !important;
+}
+#multistep-form-three {
+    margin-bottom: 50px;
+}
+#multistep-form-three #edit-actions {
+    margin-left: 5%;
+}
+/*.teacher-result {
+    margin-right: 8%;
+    background: white;
+}*/
+.result-questions {
+    padding: 5%;
+    font-weight: 600;
+    font-size: 16px;
+    background: white;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 6px 10px #888888;
+}
+.result-questions span {
+    color: grey;
+}
+.result-answear {
+    padding: 2% 5% 10%;
+    background: white;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 6px 8px #888888;
+}
+.start-over {
+    float: right;
+}
+
+

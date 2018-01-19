@@ -1,0 +1,30 @@
+uuid: ab1f4766-ae1c-4282-97f7-ae8a95bef718
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_have_you_created_video_bef
+field_name: field_have_you_created_video_bef
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'No'
+      label: 'No'
+    -
+      value: 'A little'
+      label: 'A little'
+    -
+      value: Often
+      label: Often
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
