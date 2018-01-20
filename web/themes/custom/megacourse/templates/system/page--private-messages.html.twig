@@ -82,15 +82,25 @@
 
         {# Navigation (collapsible) #}
         {% if page.navigation_collapsible %}
-          {% if user_notification %}
-            <div id="navbar-collapse" class="navbar-collapse collapse">
-            <div class="col-md-11 header-main-menu">{{ page.navigation_collapsible }}</div>
-            <div class="col-md-1 header-message-notification">{{ notification }}</div>
-            </div>
-          {% else %}
-            <div id="navbar-collapse" class="navbar-collapse collapse">
-              {{ page.navigation_collapsible }}
-            </div>
+          {% if logged_in %}
+              {% if user_notification %}
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                <div class="col-md-11 header-main-menu">{{ page.navigation_collapsible }}</div>
+                <div class="col-md-1 header-message-notification">{{ notification }}</div>
+                </div>
+              {% else %}
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                  {{ page.navigation_collapsible }}
+                </div>
+              {% endif %}
+            {% else %}
+              <div id="navbar-collapse" class="navbar-collapse collapse">
+                <div class="col-md-10 header-main-menu">{{ page.navigation_collapsible }}</div>
+                <div class="col-md-2 login-registration-link">
+                  <div class="login-menu-link">{{ loginlink }}</div>
+                  <div class="register-menu-link">{{ registerlink }}</div>
+                </div>
+              </div>
           {% endif %}
         {% endif %}
         {% if not navbar_attributes.hasClass(container) %}

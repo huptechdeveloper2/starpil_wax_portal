@@ -48,6 +48,18 @@ function megacourse_preprocess_page(&$variables) {
     ->getViewBuilder('block')
     ->view($block);
  $variables['notification'] = $block_content;
+ 
+ $login_block = \Drupal\block\Entity\Block::load('loginformpopup');
+  $login_block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($login_block);
+ $variables['loginlink'] = $login_block_content;
+
+ $register_block = \Drupal\block\Entity\Block::load('registerformpopup');
+  $register_block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($register_block);
+ $variables['registerlink'] = $register_block_content;
 
    // user notification
    $user = \Drupal::currentUser()->id();

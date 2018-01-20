@@ -885,5 +885,26 @@ li.comment {
 .start-over {
     float: right;
 }
-
+/*################# login & Registatrtion Links ###############*/
+.login-menu-link #block-loginformpopup .Login-popup-link a, .register-menu-link #block-registerformpopup .Register-popup-link a {
+    position: relative;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 65px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.login-menu-link, .register-menu-link {
+    display: inline-block;
+}
+.login-menu-link {
+    margin-right: 15%;
+}
 
