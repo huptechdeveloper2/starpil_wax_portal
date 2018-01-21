@@ -875,7 +875,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -940,7 +940,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1004,7 +1004,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1067,7 +1067,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1132,7 +1132,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1196,7 +1196,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1259,7 +1259,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1323,7 +1323,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1380,7 +1380,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
             text: "<div class=\"col-sm-6 col-md-3\">\n<div class=\"mc-item mc-item-2\">\n    <div class=\"image-heading\">\n        {{ field_course_cover_image }}\n    </div>\n    <div class=\"meta-categories\"><a href=\"#\">{{ field_course_tag }}</a></div>\n    <div class=\"content-item\">\n        <div class=\"image-author\">\n            {{ user_picture }}\n        </div>\n        <h4><a href=\"course-intro.html\">{{ title }}</a></h4>\n        <div class=\"name-author\">\n            By <a href=\"#\">{{ uid }}</a>\n        </div>\n    </div>\n    <div class=\"ft-item\">\n        <div class=\"view-info\">\n            <i class=\"icon md-users\"></i>\n            2568\n        </div>\n        <div class=\"comment-info\">\n            <i class=\"icon md-comment\"></i>\n            {{ comment_count }}\n        </div>\n        <div class=\"price\">\n            {{ field_course_price }}\n        </div>\n    </div>\n</div>\n</div>"
@@ -1452,7 +1452,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1517,7 +1517,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1581,7 +1581,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1644,7 +1644,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1709,7 +1709,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1773,7 +1773,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1836,7 +1836,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1900,7 +1900,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1957,7 +1957,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
             text: "<div class=\"col-sm-6 col-md-4\">\n<div class=\"mc-item mc-item-2\">\n    <div class=\"image-heading\">\n        {{ field_course_cover_image }}\n    </div>\n    <div class=\"meta-categories\"><a href=\"#\">{{ field_course_tag }}</a></div>\n    <div class=\"content-item\">\n        <div class=\"image-author\">\n            {{ user_picture }}\n        </div>\n        <h4><a href=\"course-intro.html\">{{ title }}</a></h4>\n        <div class=\"name-author\">\n            By <a href=\"#\">{{ uid }}</a>\n        </div>\n    </div>\n    <div class=\"ft-item\">\n        <div class=\"view-info\">\n            <i class=\"icon md-users\"></i>\n            2568\n        </div>\n        <div class=\"comment-info\">\n            <i class=\"icon md-comment\"></i>\n            {{ comment_count }}\n        </div>\n        <div class=\"price\">\n            {{ field_course_price }}\n        </div>\n    </div>\n</div>\n</div>"
