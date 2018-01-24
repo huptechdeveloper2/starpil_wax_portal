@@ -907,4 +907,14 @@ li.comment {
 .login-menu-link {
     margin-right: 15%;
 }
+@media screen and (min-width: 480px) {
+    .tb-cell .form-actions {
+        padding-top: 0px !important;
+    }
+}
+@media screen and (min-width: 480px) {
+    .mc-btn {
+        margin-top: 0px !important;
+    }
+}
 
