@@ -917,4 +917,7 @@ li.comment {
         margin-top: 0px !important;
     }
 }
+.mc-item .name-author {
+    margin-top: 0px !important;
+}
 

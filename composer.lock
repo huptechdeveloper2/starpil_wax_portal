@@ -1602,17 +1602,17 @@
         },
         {
             "name": "drupal/bootstrap",
-            "version": "3.8.0",
+            "version": "3.9.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/bootstrap",
-                "reference": "8.x-3.8"
+                "reference": "8.x-3.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap-8.x-3.8.zip",
-                "reference": "8.x-3.8",
-                "shasum": "b7f3534dd2131e80e37d93ff7e9a98527d6a4d66"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap-8.x-3.9.zip",
+                "reference": "8.x-3.9",
+                "shasum": "2095ebf22b147a096d34ebbc428dfb62ea01f89b"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1623,8 +1623,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.8",
-                    "datestamp": "1516145584",
+                    "version": "8.x-3.9",
+                    "datestamp": "1516430285",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2431,6 +2431,61 @@
             ],
             "description": "Drupal Console Extend Plugin",
             "time": "2017-07-28T17:11:54+00:00"
+        },
+        {
+            "name": "drupal/contribute",
+            "version": "5.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/contribute",
+                "reference": "8.x-5.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/contribute-8.x-5.0-beta3.zip",
+                "reference": "8.x-5.0-beta3",
+                "shasum": "8ee067c4b9472b51af90b9481e4302527080129c"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-5.x": "5.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-5.0-beta3",
+                    "datestamp": "1515761285",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "gdoteof",
+                    "homepage": "https://www.drupal.org/user/393016"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Provides status report message which encourage users or organizations to join the Drupal community, become a member of Drupal Association, and contribute back to Drupal.",
+            "homepage": "https://www.drupal.org/project/contribute",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/contribute",
+                "issues": "https://www.drupal.org/project/issues/contribute"
+            }
         },
         {
             "name": "drupal/core",
@@ -3644,21 +3699,22 @@
         },
         {
             "name": "drupal/menu_token",
-            "version": "1.0.0-alpha1",
+            "version": "1.0.0-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/menu_token",
-                "reference": "8.x-1.0-alpha1"
+                "reference": "8.x-1.0-alpha2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/menu_token-8.x-1.0-alpha1.zip",
-                "reference": "8.x-1.0-alpha1",
-                "shasum": "97652b6de021aaad606cb6f99e27967413fe4431"
+                "url": "https://ftp.drupal.org/files/projects/menu_token-8.x-1.0-alpha2.zip",
+                "reference": "8.x-1.0-alpha2",
+                "shasum": "261510a3db4018849acfa70e62879d1a084ff320"
             },
             "require": {
+                "drupal/contribute": "*",
                 "drupal/core": "~8.0",
-                "drupal/token": "*"
+                "drupal/token": "^1.0"
             },
             "type": "drupal-module",
             "extra": {
@@ -3666,8 +3722,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha1",
-                    "datestamp": "1507833544",
+                    "version": "8.x-1.0-alpha2",
+                    "datestamp": "1516392484",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -3680,8 +3736,9 @@
             ],
             "authors": [
                 {
-                    "name": "alexweber",
-                    "homepage": "https://www.drupal.org/user/850856"
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/353073/committers",
+                    "role": "Developer"
                 },
                 {
                     "name": "dealancer",
@@ -3696,6 +3753,10 @@
                     "homepage": "https://www.drupal.org/user/761344"
                 },
                 {
+                    "name": "nhaarish",
+                    "homepage": "https://www.drupal.org/user/3388728"
+                },
+                {
                     "name": "peter.draucbaher",
                     "homepage": "https://www.drupal.org/user/2409142"
                 },
@@ -3705,9 +3766,10 @@
                 }
             ],
             "description": "Menu Token module provides tokens, that can be used in title or in path of menu items (links).",
-            "homepage": "https://www.drupal.org/project/menu_token",
+            "homepage": "http://drupal.org/project/menu_token",
             "support": {
-                "source": "http://cgit.drupalcode.org/menu_token"
+                "source": "http://cgit.drupalcode.org/menu_token",
+                "issues": "http://drupal.org/project/issues/menu_token"
             }
         },
         {
