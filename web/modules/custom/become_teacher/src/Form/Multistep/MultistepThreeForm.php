@@ -107,7 +107,7 @@ class MultistepThreeForm extends MultistepFormBase {
     $user->addRole('teacher');
     $user1 = $user->save();
 
-    drupal_set_message("Let's create Your Course");
+    //drupal_set_message("Let's create Your Course");
     global $base_url;
     $url = $base_url.'/become-teacher/result';
     $response = new RedirectResponse($url);

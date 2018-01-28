@@ -52,7 +52,8 @@ class Becomeasection extends BlockBase {
             '#students' => $users,
             '#teachers' => $teachers,
             '#teache_role' => $teache_role,
-            '#total_price' => $total_price
+            '#total_price' => $total_price,
+            '#cache' => ['max-age' => 0,]
     );
   }
 
