@@ -588,7 +588,7 @@
     font-family: 'Lato', sans-serif;
     font-size: 20px;
 }
-#cke_1_top {
+/*#cke_1_top {
     display: none;
 }
 #cke_1_bottom {
@@ -611,13 +611,13 @@
 }
 #cke_4_bottom {
     display: none;
-}
+}*/
 #course-detail-id--content {
     background-color: white;
 }
-.text-format-wrapper .filter-wrapper {
-    display: none;
-}
+/*.text-format-wrapper .filter-wrapper {
+    //display: none;
+}*/
 .add_course_class ul li {
     display: block;
     font-family: 'Lato', sans-serif;
@@ -687,9 +687,9 @@
 .node-course-form ul.vertical-tabs-list {
     padding-top: 15px;
 }
-.node-course-form .field-edit-link {
+/*.node-course-form .field-edit-link {
     display: none;
-}
+}*/
 .form-item-field-teacher-introduction-video-0 .form-managed-file {
     border: 1px solid #d1d1d1;
     padding: 1%;
@@ -723,7 +723,7 @@
 .node-course-form .field--name-field-duration-of-course .form-item input {
     border: 1px solid #d1d1d1;
 }
-.node-course-form button.tabledrag-toggle-weight {
+/*.node-course-form button.tabledrag-toggle-weight {
     display: none;
 }
 #field-outline-values .paragraph-type-top {
@@ -731,7 +731,7 @@
 }
 #edit-field-outline-0-top-links-remove-button {
     display: none;
-}
+}*/
 .node-course-form #edit-field-outline-0-subform-field-outline-file--THHE2V7wfDI .form-managed-file {
     /*width: 30%;*/
     border: 1px solid #d1d1d1;
