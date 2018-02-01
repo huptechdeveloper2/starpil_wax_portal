@@ -984,7 +984,7 @@ display:
           type: image
           settings:
             image_style: course_listing_cover_image_270_161_
-            image_link: ''
+            image_link: content
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -1561,7 +1561,7 @@ display:
           type: image
           settings:
             image_style: course_listing_cover_image_270_161_
-            image_link: ''
+            image_link: content
           group_column: ''
           group_columns: {  }
           group_rows: true

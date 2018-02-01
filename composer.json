@@ -49,6 +49,7 @@
         "drupal/private_message": "^1.0@beta",
         "drupal/profile": "^1.0@RC",
         "drupal/quicktabs": "^3.0@alpha",
+        "drupal/recaptcha": "^2.2",
         "drupal/recreate_block_content": "^2.0",
         "drupal/serial": "1.x-dev",
         "drupal/simplenews": "^1.0@alpha",

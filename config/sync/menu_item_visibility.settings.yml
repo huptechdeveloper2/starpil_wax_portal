@@ -18,3 +18,6 @@ mlid:
     roles:
       - authenticated
     access_check: false
+  'menu_link_content:418557a1-b0b0-4579-9e82-f5f18b10402a':
+    roles: {  }
+    access_check: false
