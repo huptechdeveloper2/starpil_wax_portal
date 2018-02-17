@@ -117,6 +117,9 @@
         "patches": {
             "drupal/ajaxifyforms": {
                "Redirect after login": "patches/ajaxify_submit_forms.patch"
+            },
+            "drupal/fivestar": {
+               "make start clickable": "patches/click_response_typeerror_fivestar.patch"
             }
         }
     }

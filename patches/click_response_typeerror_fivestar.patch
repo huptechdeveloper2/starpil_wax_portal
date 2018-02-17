@@ -1,0 +1,13 @@
+diff --git a/assets/js/fivestar.js b/assets/js/fivestar.js
+index 5fe2274..2b92304 100644
+--- a/assets/js/fivestar.js
++++ b/assets/js/fivestar.js
+@@ -56,7 +56,7 @@
+       } else {
+         $this_star = $this.closest('.star');
+       }
+-      $this_star.prevAll('.star').andSelf().addClass('on');
++      $this_star.prevAll('.star').addBack().addClass('on');
+       $this_star.nextAll('.star').removeClass('on');
+       if (value === 0) {
+         $this_star.removeClass('on');

@@ -18,5 +18,20 @@ jQuery( ".private-message-inbox-thread-link" ).click(function() {
 //     jQuery("#navbar-collapse ul li:last-child").addClass("last-item");
 // });
 
+  $('body').on('keydown', '.user-login-form', function(e) {
+    var key = e.which;
+    if (key == 13) {
+      // As ASCII code for ENTER key is "13"
+      $('.modal-dialog .form-submit').click(); // Submit form code
+    }
+  });
+  $('body').on('keydown', '.user-register-form', function(e) {
+    var key = e.which;
+    if (key == 13) {
+      // As ASCII code for ENTER key is "13"
+      $('.modal-dialog .form-submit').click(); // Submit form code
+    }
+  });
+
 
 })(jQuery);
