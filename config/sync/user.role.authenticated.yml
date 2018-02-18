@@ -31,5 +31,6 @@ permissions:
   - 'update paragraph content outline'
   - 'use private messaging system'
   - 'use text format basic_html'
+  - 'use text format full_html'
   - 'view commerce_product'
   - 'view paragraph content outline'
