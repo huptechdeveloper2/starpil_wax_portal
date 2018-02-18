@@ -67,26 +67,36 @@
  */
 #}
 
-<li class="review">
-    <div class="body-review">
-        <div class="review-author">
-            <a href="#">
-                {{ user_picture }}
-                <i class="icon md-email"></i>
-                <i class="icon md-user-plus"></i>
-            </a>
-        </div>
-        <div class="content-review">
-            <h4 class="sm black">
-                <a href="#">{{ author }}</a>
-            </h4>
-            <div class="rating">
-                {{ content.field_reviews }}
-            </div>
+<article{{ attributes.addClass('js-comment') }}>
+  {#
+    Hide the "new" indicator by default, let a piece of JavaScript ask the
+    server which comments are new for the user. Rendering the final "new"
+    indicator here would break the render cache.
+  #}
+  <mark class="hidden" data-comment-timestamp="{{ new_indicator_timestamp }}"></mark>
 
-            <em>{{ created }}</em>
-            <h4><b>{{ title }}</b></h4>
-            <p>{{ content.comment_body }}</p>
-        </div>
-    </div>
-</li>
+  <footer>
+    {{ user_picture }}
+    <p>{{ submitted }}</p>
+
+    {#
+      Indicate the semantic relationship between parent and child comments for
+      accessibility. The list is difficult to navigate in a screen reader
+      without this information.
+    #}
+    {% if parent %}
+      <p class="visually-hidden">{{ parent }}</p>
+    {% endif %}
+
+    {{ permalink }}
+  </footer>
+
+  <div{{ content_attributes }}>
+    {% if title %}
+      {{ title_prefix }}
+      <h3{{ title_attributes }}>{{ title }}</h3>
+      {{ title_suffix }}
+    {% endif %}
+    {{ content }}
+  </div>
+</article>

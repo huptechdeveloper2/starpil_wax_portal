@@ -1,5 +1,5 @@
 diff --git a/ajaxify_submit_forms.module b/ajaxify_submit_forms.module
-index cfbe720..4a33987 100644
+index cfbe720..284ad63 100644
 --- a/ajaxify_submit_forms.module
 +++ b/ajaxify_submit_forms.module
 @@ -7,6 +7,7 @@
@@ -19,13 +19,19 @@ index cfbe720..4a33987 100644
    $form_id = $form['form_id']['#value'];
  
    $selector = "ajaxify_submit_form_" . $form_id;
-@@ -68,7 +69,9 @@ function ajaxify_submit_forms_form_ajax_callback($form, FormStateInterface & $fo
+@@ -68,7 +69,15 @@ function ajaxify_submit_forms_form_ajax_callback($form, FormStateInterface & $fo
      // Default reload the page printing the status message.
      $output[] = $messages;
      $output[] = $form;
 -    $response->addCommand(new HtmlCommand($render_selector, $output));
-+    $command = new RedirectCommand('/user');
-+    $response->addCommand($command);
++    if ($form_id = 'node_course_form') {
++      $command = new RedirectCommand('/admin-approval-notice');
++      $response->addCommand($command);
++    } else {
++      $command = new RedirectCommand('/user');
++      $response->addCommand($command);
++    }
++    
 +    // $response->addCommand(new HtmlCommand($render_selector, $output));
    }
  

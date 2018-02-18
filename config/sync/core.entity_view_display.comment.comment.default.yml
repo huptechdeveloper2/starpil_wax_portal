@@ -21,6 +21,10 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
-  links: true
   private_message_link: true
