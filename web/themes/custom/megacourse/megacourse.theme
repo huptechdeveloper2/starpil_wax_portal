@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Bootstrap sub-theme.
@@ -12,21 +13,24 @@
  * @param array $suggestions
  * @param array $variables
  */
+
 function megacourse_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+
   if (isset($variables['elements']['content']['#block_content'])) {
     array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
   }
+
 }
 
 /**
 ** get user profile fields to use in template file
 */
+
 function megacourse_preprocess_user(&$variables) {
 
 	$user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
   /** @var User $account */
   $account = $variables['elements']['#user'];
-
   $variables['username'] = $account->getDisplayName();
   $variables['umail'] = $user->get('mail')->value;
   //$variables['upicture'] = $picture = $user->get('user_picture')->entity->url();
@@ -35,6 +39,7 @@ function megacourse_preprocess_user(&$variables) {
 /**
 ** Call hook_node_presave to get quick tab block in course detail page
 */
+
 function megacourse_preprocess_node(&$variables) {
   $variables['coursetabsblock'] = entity_load('block', 'quicktabscoursetabs')->getPlugin()->build(); 
 }
@@ -42,37 +47,96 @@ function megacourse_preprocess_node(&$variables) {
 /**
 ** get hook_preprocess_page to set some variables
 */
+
 function megacourse_preprocess_page(&$variables) {
+
   $block = \Drupal\block\Entity\Block::load('privatemessagenotification_2');
   $block_content = \Drupal::entityTypeManager()
     ->getViewBuilder('block')
     ->view($block);
- $variables['notification'] = $block_content;
- 
- $login_block = \Drupal\block\Entity\Block::load('loginformpopup');
+  $variables['notification'] = $block_content;
+
+  $login_block = \Drupal\block\Entity\Block::load('loginformpopup');
   $login_block_content = \Drupal::entityTypeManager()
     ->getViewBuilder('block')
     ->view($login_block);
- $variables['loginlink'] = $login_block_content;
+  $variables['loginlink'] = $login_block_content;
 
- $register_block = \Drupal\block\Entity\Block::load('registerformpopup');
+  $register_block = \Drupal\block\Entity\Block::load('registerformpopup');
   $register_block_content = \Drupal::entityTypeManager()
     ->getViewBuilder('block')
     ->view($register_block);
- $variables['registerlink'] = $register_block_content;
+  $variables['registerlink'] = $register_block_content;
 
    // user notification
    $user = \Drupal::currentUser()->id();
    $query = db_query("SELECT `notifyuid`, `get_notify` FROM `user_not_tab` WHERE `notifyuid` = '$user'")->fetchAll();
    if (isset($query) && !empty($query)) {
      $get_notify = $query['0']->get_notify;
+
      if ($get_notify == '1') {
        $user_notification = '1';
-     }else{
+     }
+     else {
         $user_notification = '';
      }
-   }else{
+   }
+   else {
     $user_notification = '';
    }
-    $variables['user_notification'] = $user_notification;
+
+  $variables['user_notification'] = $user_notification;
+
+  $url = \Drupal\Core\Url::fromRoute('<current>');
+  $path = $url->getInternalPath();
+  $nid = explode('/', $path)['1'];
+  $node = '';
+  $node = \Drupal\node\Entity\Node::load($nid);
+
+  // Check for the current user is purchase the node or not //
+  if (!empty($node) && isset($node)) {
+
+    if ($node->getType() == 'course') {
+
+        $product_id = '';
+
+        if (!empty($node) && isset($node)) {
+          $product_id = $node->get('field_product_refrence')->getValue()[0]['target_id'];
+        }
+        $entity_orders = array();
+        $comOrdersId = array();
+        $entity_orders = db_query("SELECT `order_id` FROM `commerce_order_item` WHERE `purchased_entity`= $product_id")->fetchAll();
+        $comOrdersId = db_query("SELECT `order_id` FROM `commerce_order` WHERE `state` = 'completed'")->fetchAll();
+
+        foreach ($entity_orders as $key => $value) {
+          $entityOrders[] = $value->order_id;
+        }
+
+        foreach ($comOrdersId as $comOrdersId_key => $comOrdersId_value) {
+          $comOrdrs[] = $comOrdersId_value->order_id;
+        }
+
+        if (!empty($comOrdrs) && isset($comOrdrs)) {
+
+          $CompOrders = array_intersect($entityOrders,$comOrdrs);
+
+          foreach ($CompOrders as $CompOrderskey => $CompOrdersvalue) {
+            $UsersComp = db_query("SELECT `uid` FROM `commerce_order` WHERE `order_id` = $CompOrdersvalue")->fetchAll();
+          }
+
+          foreach ($UsersComp as $UsersCompkey => $UsersCompvalue) {
+            $usersList[] = $UsersCompvalue->uid;
+          }
+
+          $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+          $CurrentUserId = $user->id();
+
+          if(in_array($CurrentUserId, $usersList)){
+            $variables['userpurchased'] = 'completed';
+            // dump($variables['userpurchased']);
+            // exit();
+          }
+        }
+    }
+  }
 }
