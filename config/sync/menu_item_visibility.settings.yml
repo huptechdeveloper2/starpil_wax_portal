@@ -21,3 +21,8 @@ mlid:
   'menu_link_content:418557a1-b0b0-4579-9e82-f5f18b10402a':
     roles: {  }
     access_check: false
+  'menu_link_content:a1383767-f3ac-4c77-90d3-95b0c0b47e74':
+    roles:
+      - administrator
+      - teacher
+    access_check: false
