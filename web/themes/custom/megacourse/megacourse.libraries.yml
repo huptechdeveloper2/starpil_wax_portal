@@ -19,6 +19,9 @@ global-styling:
     js/library/jquery.flexslider-min.js: {}
     js/library/jquery.flexslider.js: {}
     js/library/jquery.owl.carousel.js: {}
+    js/library/socket.io.js: {}
+    js/library/RTCPeerConnection-v1.5.js: {}
+    js/library/conference.js: {}
     js/library/custom.js: {}
     #js/scripts.js: {}
   dependencies:
