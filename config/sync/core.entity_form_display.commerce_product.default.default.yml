@@ -5,6 +5,7 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.default
     - field.field.commerce_product.default.body
+    - field.field.commerce_product.default.field_product_conference_id
     - field.field.commerce_product.default.stores
     - field.field.commerce_product.default.variations
   module:
@@ -33,6 +34,14 @@ content:
     weight: 5
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_product_conference_id:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   path:
     type: path

@@ -87,6 +87,62 @@ function megacourse_preprocess_page(&$variables) {
 
   $variables['user_notification'] = $user_notification;
 
+  // $url = \Drupal\Core\Url::fromRoute('<current>');
+  // $path = $url->getInternalPath();
+  // $nid = explode('/', $path)['1'];
+  // $node = '';
+  // $node = \Drupal\node\Entity\Node::load($nid);
+
+  // // Check for the current user is purchase the node or not //
+  // if (!empty($node) && isset($node)) {
+
+  //   if ($node->getType() == 'course') {
+
+  //       $product_id = '';
+
+  //       if (!empty($node) && isset($node)) {
+  //         $product_id = $node->get('field_product_refrence')->getValue()[0]['target_id'];
+  //       }
+  //       $entity_orders = array();
+  //       $comOrdersId = array();
+  //       $entity_orders = db_query("SELECT `order_id` FROM `commerce_order_item` WHERE `purchased_entity`= $product_id")->fetchAll();
+  //       $comOrdersId = db_query("SELECT `order_id` FROM `commerce_order` WHERE `state` = 'completed'")->fetchAll();
+
+  //       foreach ($entity_orders as $key => $value) {
+  //         $entityOrders[] = $value->order_id;
+  //       }
+
+  //       foreach ($comOrdersId as $comOrdersId_key => $comOrdersId_value) {
+  //         $comOrdrs[] = $comOrdersId_value->order_id;
+  //       }
+
+  //       if (!empty($comOrdrs) && isset($comOrdrs)) {
+
+  //         $CompOrders = array_intersect($entityOrders,$comOrdrs);
+
+  //         foreach ($CompOrders as $CompOrderskey => $CompOrdersvalue) {
+  //           $UsersComp = db_query("SELECT `uid` FROM `commerce_order` WHERE `order_id` = $CompOrdersvalue")->fetchAll();
+  //         }
+
+  //         foreach ($UsersComp as $UsersCompkey => $UsersCompvalue) {
+  //           $usersList[] = $UsersCompvalue->uid;
+  //         }
+
+  //         $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+  //         $CurrentUserId = $user->id();
+
+  //         if(in_array($CurrentUserId, $usersList)){
+  //           $variables['userpurchased'] = 'completed';
+  //           // dump($variables['userpurchased']);
+  //           // exit();
+  //         }
+  //       }
+  //   }
+  // }
+}
+
+function megacourse_preprocess(&$variables) {
+
   $url = \Drupal\Core\Url::fromRoute('<current>');
   $path = $url->getInternalPath();
   $nid = explode('/', $path)['1'];
@@ -105,6 +161,8 @@ function megacourse_preprocess_page(&$variables) {
         }
         $entity_orders = array();
         $comOrdersId = array();
+        $UsersComp = array();
+        $usersList = array();
         $entity_orders = db_query("SELECT `order_id` FROM `commerce_order_item` WHERE `purchased_entity`= $product_id")->fetchAll();
         $comOrdersId = db_query("SELECT `order_id` FROM `commerce_order` WHERE `state` = 'completed'")->fetchAll();
 
@@ -131,10 +189,11 @@ function megacourse_preprocess_page(&$variables) {
           $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
           $CurrentUserId = $user->id();
 
-          if(in_array($CurrentUserId, $usersList)){
-            $variables['userpurchased'] = 'completed';
-            // dump($variables['userpurchased']);
-            // exit();
+          if (!empty($usersList) && isset($usersList)) {
+
+            if(in_array($CurrentUserId, $usersList)){
+              $variables['userpurchased'] = 'completed';
+            }
           }
         }
     }

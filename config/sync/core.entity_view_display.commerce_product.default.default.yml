@@ -5,6 +5,7 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.default
     - field.field.commerce_product.default.body
+    - field.field.commerce_product.default.field_product_conference_id
     - field.field.commerce_product.default.stores
     - field.field.commerce_product.default.variations
   module:
@@ -24,6 +25,22 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_product_conference_id:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   variations:
     type: commerce_add_to_cart
     weight: 1

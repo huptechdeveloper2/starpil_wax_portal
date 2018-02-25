@@ -81,3 +81,19 @@ function product_save_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
     }
   }
 }
+
+  function product_save_node_insert(Drupal\Core\Entity\EntityInterface $entity) {
+
+      if ($entity->bundle() == 'course') {
+        $nodeId = $entity->id();
+        $usrId = \Drupal::currentUser()->id();
+        $RefrenceProId = $entity->get('field_product_refrence')->getString();
+        $node_confrenceId = 'starpill_' . $nodeId . $RefrenceProId;
+
+        // Update Refrence Product
+        $RefrenceProObj = \Drupal\commerce_product\Entity\Product::load($RefrenceProId);
+        $RefrenceProObj->set('field_product_conference_id', $node_confrenceId);
+        $RefrenceProObj->save();
+
+      }
+  }
