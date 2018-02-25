@@ -24,7 +24,7 @@ index cfbe720..284ad63 100644
      $output[] = $messages;
      $output[] = $form;
 -    $response->addCommand(new HtmlCommand($render_selector, $output));
-+    if ($form_id = 'node_course_form') {
++    if ($form_id == 'node_course_form') {
 +      $command = new RedirectCommand('/admin-approval-notice');
 +      $response->addCommand($command);
 +    } else {
