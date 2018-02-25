@@ -115,6 +115,9 @@
         },
         "enable-patching": true,
         "patches": {
+            "drupal/ajaxifyforms": {
+               "Redirect after login": "patches/ajaxify_submit_course_form.patch"
+            },
             "drupal/fivestar": {
                "make start clickable": "patches/click_response_typeerror_fivestar.patch"
             }
