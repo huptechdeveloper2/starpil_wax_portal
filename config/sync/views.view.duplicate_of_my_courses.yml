@@ -1,4 +1,4 @@
-uuid: 7215593c-7952-4b0b-a989-b592dac01b83
+uuid: 55c1b462-7ab8-44a1-a0b4-3ac1197ff85d
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ dependencies:
     - commerce_product
     - node
     - user
-id: my_courses
-label: 'My Courses'
+id: duplicate_of_my_courses
+label: 'Duplicate of My Courses'
 module: views
 description: ''
 tag: ''
@@ -68,36 +68,11 @@ display:
             offset: false
             offset_label: Offset
       style:
-        type: table
+        type: default
         options:
           grouping: {  }
           row_class: ''
           default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            title: title
-            field_product_conference_id: field_product_conference_id
-          info:
-            title:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_product_conference_id:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
       row:
         type: fields
         options:
@@ -163,8 +138,8 @@ display:
           label: 'Product Conference Id'
           exclude: false
           alter:
-            alter_text: true
-            text: '<div class="{{ field_product_conference_id }}">{{ field_product_conference_id }}</div>'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -306,7 +281,7 @@ display:
           plugin_id: numeric
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -317,16 +292,16 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.commerce_product.field_product_conference_id'
-  page_2:
+  page_1:
     display_plugin: page
-    id: page_2
-    display_title: 'Page 2'
-    position: 2
+    id: page_1
+    display_title: Page
+    position: 1
     display_options:
       display_extenders: {  }
-      path: my-courses
+      path: my-coursess
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'

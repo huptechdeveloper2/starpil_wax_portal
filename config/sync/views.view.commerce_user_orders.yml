@@ -469,8 +469,8 @@ display:
           label: 'Product Conference Id'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div class=\"\n{{ field_product_conference_id }}\"> \n{{ field_product_conference_id }}</div>"
             make_link: false
             path: ''
             absolute: false
@@ -663,9 +663,9 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.commerce_product.field_product_conference_id'
-  order_page:
+  page_1:
     display_plugin: page
-    id: order_page
+    id: page_1
     display_title: 'User orders'
     position: 1
     display_options:

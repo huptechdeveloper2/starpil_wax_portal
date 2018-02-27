@@ -1,0 +1,6 @@
+name: Starpill Webrtc
+description: For starpill video functionality.
+package: custom
+type: module
+version: 1.0
+core: 8.x

@@ -1,0 +1,4 @@
+starpill-webrtc:
+  version: 1.x
+  js:
+    js/starpill-webrtc.js: {}
