@@ -1,4 +1,5 @@
-starpill-webrtc:
-  version: 1.x
+starpill_webrtc.webrtc:
   js:
-    js/starpill-webrtc.js: {}
+    js/starpill_webrtc.js: {}
+  dependencies:
+    - core/jquery

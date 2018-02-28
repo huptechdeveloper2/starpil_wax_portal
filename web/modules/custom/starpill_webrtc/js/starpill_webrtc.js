@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    alert('123');
     var config = {
     openSocket: function (config) {
         var SIGNALING_SERVER = 'https://socketio-over-nodejs2.herokuapp.com:443/',

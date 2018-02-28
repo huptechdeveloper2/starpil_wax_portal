@@ -1,0 +1,9 @@
+<?php
+
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function starpill_webrtc_page_attachments_alter(&$page) {
+  $page['#attached']['library'][] = 'starpill_webrtc/starpill_webrtc.webrtc';
+}
